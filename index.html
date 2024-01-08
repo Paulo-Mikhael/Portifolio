@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Portfólio teste</title>
+    <title>Meu portifólio</title>
 </head>
 <body>
     <div class="header">
@@ -20,8 +20,24 @@
         <div class="header-bar header-about">
             <a href="">Sobre mim</a>
         </div>
-        <div class="header-image">
-            <img src="tres-barras-preto.png" alt="tres-barras-preto.png">
+        <div class="header-mobile-button" onclick="menuShow()">
+            <button>
+                <img class="mobile-icon" src="tres-barras-preto.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="mobile-menu open">
+        <div class="header-bar header-home">
+            <a href="">Home</a>
+        </div>
+        <div class="header-bar header-projects">
+            <a href="">Projetos</a>
+        </div>
+        <div class="header-bar header-contato">
+            <a href="">Contatos</a>
+        </div>
+        <div class="header-bar header-about">
+            <a href="">Sobre mim</a>
         </div>
     </div>
     <div class="contend">
@@ -74,5 +90,6 @@
         <img src="placa-do-github.png" alt="placa-do-github.png">
         <a target="_blank" href="https://github.com/Paulo-Mikhael">paulo-mikhael</a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
