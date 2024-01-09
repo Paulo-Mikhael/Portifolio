@@ -6,15 +6,26 @@
 .open{
     display: none !important;
 }
-.light-mode{
-    --background-white:  rgb(206, 204, 204);
-    --hover-white: rgb(211, 210, 210);
+:root{
+    --background-white:#171923;
+    --hover-white:#232535;
+    --font-color:#c5cddb;
+    --mobile-menu-color: #ffffff;
+}
+.lightMode{
+    --background-white:  #cecccc;
+    --hover-white: #dfdede;
+    --font-color: #000000;
+    --mobile-menu-color: #a7a6a6;
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(206, 204, 204);
+    background-color: var(--background-white);
 }
-.header .header-about{
+p{
+    color: var(--font-color);
+}
+.header .moon-icon{
     margin-right: 0;
 }
 .header{
@@ -31,14 +42,15 @@ body{
 }
 .header-bar{
     margin-right: 50px;
+    cursor: pointer;
 }
 .header-bar a{
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
     padding: 9px;
 }
 .header-bar a:hover{
-    background-color: rgb(223, 222, 222);
+    background-color: var(--hover-white);
     border-radius: 6px;
 }
 .header .header-home a{
@@ -75,6 +87,7 @@ body{
     flex-direction: column;
     list-style-type: none;
     align-items: start;
+    color: var(--font-color);
 }
 .contend .description{
     display: flex;
@@ -89,7 +102,7 @@ body{
 }
 .contend .final-word{
     padding: 20px;
-    margin-top: 23.8%;
+    margin-top: 18%;
     border-radius: 6px;
 }
 .contatos img{
@@ -126,13 +139,13 @@ body{
         margin: 0;
         padding: 20px;
         border-radius: 3%;
-        border: 1px solid black;
+        border: 1px solid var(--font-color);
         margin-bottom: 30px;
     }
     .contend .description .work{
         padding: 20px;
         border-radius: 3%;
-        border: 1px solid black;
+        border: 1px solid var(--font-color);
         margin-right: 1%;
     }
 }
@@ -143,6 +156,7 @@ body{
     .header .header-mobile-button button{
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
     .header .header-mobile-button img{
         width: 25px;
@@ -151,21 +165,23 @@ body{
     .header .header-mobile-button{ 
         display: block;
         padding-right: 4%;
-        cursor: pointer;
+    }
+    .mobile-menu .header-home{
+        font-weight: 700;
     }
     .mobile-menu .header-bar{
         display: block;
     }
     .header{
         margin: 0;
-        background-color: rgb(167, 166, 166);
+        background-color: var(--mobile-menu-color);
         display: flex;
         justify-content: right;
     }
     .mobile-menu{
         width: 100%;
-        height: 27%;
-        background-color: rgb(167, 166, 166);
+        height: 37%;
+        background-color: var(--mobile-menu-color);
         display: flex;
         justify-content: center;
         align-items: center;
