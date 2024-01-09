@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Meu portifólio</title>
 </head>
-<body>
+<body class="lightMode">
     <div class="header">
         <div class="header-bar header-home">
             <a href="">Home</a>
@@ -20,9 +20,12 @@
         <div class="header-bar header-about">
             <a href="">Sobre mim</a>
         </div>
+        <div class="header-bar">
+            <a class="moon-icon" id="toggle">🌑</a>
+        </div>
         <div class="header-mobile-button" onclick="menuShow()">
             <button>
-                <img class="mobile-icon" src="tres-barras-preto.png" alt="">
+                <img class="mobile-icon" src="img/tres-barras-preto.png" alt="">
             </button>
         </div>
     </div>
@@ -39,11 +42,14 @@
         <div class="header-bar header-about">
             <a href="">Sobre mim</a>
         </div>
+        <div class="header-bar moon-icon">
+            <a id="t#oggle">🌑</a>
+        </div>
     </div>
     <div class="contend">
         <div class="perfil">
             <div class="picture">
-                <img src="moldura_perfil_preto.png" alt="moldura_perfil_preto.png">
+                <img class="perfil-image" src="img/moldura_perfil_preto.png" alt="moldura_perfil_preto.png">
             </div>
             <div class="name">
                 <p>Paulo Miguel</p>
@@ -72,24 +78,24 @@
             <br>
             <hr>
             <div class="final-word">
-                Olá, me chamo Paulo Miguel Bentes<br>
-                do Nascimento, eu trabalho com<br>
-                desenvolvimento de software e sites<br>
-                comercias ou temáticos.
+                <p>Olá, me chamo Paulo Miguel Bentes<br>
+                    do Nascimento, eu trabalho com<br>
+                    desenvolvimento de software e sites<br>
+                    comercias ou temáticos.</p>
             </div>
         </div>
     </div>
     <div class="contatos">
-        <img src="telefone.png" alt="telefone.png">
-        <img src="whatsapp.png" alt="whatsapp.png">
+        <img src="img/telefone.png" alt="telefone.png">
+        <img src="img/whatsapp.png" alt="whatsapp.png">
         <a target="_blank" href="https://web.whatsapp.com/">92 99281-3253</a>
-        <img src="instagram.png" alt="instagram.png">
+        <img src="img/instagram.png" alt="instagram.png">
         <a target="_blank" href="https://www.instagram.com/pa__miguel?igsh=MWxoYzdqNGluZWcyaA==">@pa__miguel</a>
-        <img src="linkedin.png" alt="linkedin.png"> 
+        <img src="img/linkedin.png" alt="linkedin.png"> 
         <a target="_blank" href="https://www.linkedin.com/in/paulo-miguel-4b706022b/">Paulo Miguel</a>
-        <img src="placa-do-github.png" alt="placa-do-github.png">
+        <img src="img/placa-do-github.png" alt="placa-do-github.png">
         <a target="_blank" href="https://github.com/Paulo-Mikhael">paulo-mikhael</a>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
