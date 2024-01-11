@@ -70,3 +70,31 @@ function modeSwitch(){
   }
   root.classList.toggle("lightMode")
 }
+
+function ajustarConfiguracao() {
+  // Obtenha a posição atual de rolagem vertical
+  var scrollTop = window.scrollY;
+
+  // Verifique a posição de rolagem e ajuste as configurações conforme necessário
+  if (scrollTop > 50) {
+    // Exemplo: Alterar a cor de fundo quando a rolagem atinge 200 pixels
+    document.getElementById('bar').style.position = 'fixed'
+    document.getElementById('bar').style.marginTop = '0px'
+    document.getElementById('bar').style.height = '50px'
+    document.getElementById('bar').style.borderBottom = '2px solid var(--mobile-menu-border)'
+
+  } else {
+    // Reverter a mudança quando a rolagem for menor que 200 pixels
+    document.getElementById('bar').style.position = ''
+    
+    if (screen.width <= 650){
+      document.getElementById('bar').style.marginTop = '0px'
+    }else{
+      document.getElementById('bar').style.marginTop = '15px'
+    }
+    document.getElementById('bar').style.height = '40px'
+    document.getElementById('bar').style.borderBottom = ''
+  }
+}
+
+window.addEventListener("scroll", ajustarConfiguracao)
