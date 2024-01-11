@@ -23,6 +23,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-white);
+    height: 1000px;
 }
 p{
     color: var(--font-color);
@@ -37,7 +38,7 @@ p{
     height: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 .header .header-mobile-button{
     display: none;
@@ -190,6 +191,7 @@ p{
         align-items: center;
         flex-direction: column;
         position: absolute;
+        margin-top: 0px;
     }
     .mobile-menu .header-bar{
         width: 100%;
