@@ -31,6 +31,7 @@ function menuShow(){
 const toggle = document.querySelector("#toggle")
 const toggleMobile = document.querySelector(".moon-icon-mobile")
 const mobileMenu = document.querySelector('.mobile-menu')
+const emProgresso = document.querySelectorAll('#progresso')
 toggle.addEventListener("click", modeSwitch)
 toggleMobile.addEventListener("click", modeSwitch)
 let isDark=true
@@ -50,7 +51,7 @@ function modeSwitch(){
       document.querySelector('.mobile-icon').src="img/x-branco.png"
     }
     
-
+    emProgresso.src = 'img/em-progresso-branco2.png'
     document.querySelector(".perfil-image").src="img/moldura_perfil_branco.png";
   }
   else
@@ -66,18 +67,16 @@ function modeSwitch(){
       document.querySelector('.mobile-icon').src="img/x-preto.png"
     }
 
-    document.querySelector(".perfil-image").src="img/moldura_perfil_preto_2.png"
+    emProgresso.src = 'img/em-progresso-preto.png'
+    document.querySelector(".perfil-image").src="img/moldura_perfil_preto.png"
   }
   root.classList.toggle("darkMode")
 }
 
 function ajustarConfiguracao() {
-  // Obtenha a posição atual de rolagem vertical
   var scrollTop = window.scrollY;
 
-  // Verifique a posição de rolagem e ajuste as configurações conforme necessário
   if (scrollTop > 45) {
-    // Exemplo: Alterar a cor de fundo quando a rolagem atinge 200 pixels
     document.getElementById('bar').style.position = 'fixed'
     document.getElementById('bar').style.marginTop = '0px'
     document.getElementById('bar').style.height = '50px'
@@ -87,7 +86,6 @@ function ajustarConfiguracao() {
 
     document.getElementById('mobile-home').style.borderTop = ''
   } else {
-    // Reverter a mudança quando a rolagem for menor que 200 pixels
     document.getElementById('bar').style.position = ''
     if (screen.width <= 650){
       document.getElementById('bar').style.marginTop = '0px'
