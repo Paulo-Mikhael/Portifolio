@@ -40,6 +40,7 @@ function modeSwitch(){
   let root=document.body
   if (isDark)
   {
+    toggleMobile.innerHTML="☀️";
     toggle.innerHTML="☀️";
     
     if (mobileMenu.classList.contains('open'))
@@ -53,9 +54,16 @@ function modeSwitch(){
     
     emProgresso.src = 'img/em-progresso-branco2.png'
     document.querySelector(".perfil-image").src="img/moldura_perfil_branco.png";
+    if (screen.width <= 650){
+      document.getElementById("contend-text").style.backgroundImage = "none"
+      document.getElementById("contend-text").style.backgroundColor = "#171923"
+    }else{
+      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background.png)"
+    }
   }
   else
   {
+    toggleMobile.innerHTML="🌑";
     toggle.innerHTML="🌑";
 
     if (mobileMenu.classList.contains('open'))
@@ -69,6 +77,13 @@ function modeSwitch(){
 
     emProgresso.src = 'img/em-progresso-preto.png'
     document.querySelector(".perfil-image").src="img/moldura_perfil_preto.png"
+    
+    if (screen.width <= 650){
+      document.getElementById("contend-text").style.backgroundImage = "none"
+      document.getElementById("contend-text").style.backgroundColor = "#cecccc"
+    }else{
+      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background-branco.png)"
+    }
   }
   root.classList.toggle("darkMode")
 }
@@ -76,28 +91,16 @@ function modeSwitch(){
 function ajustarConfiguracao() {
   var scrollTop = window.scrollY;
 
-  if (scrollTop > 45) {
+  if (scrollTop > 10) {
     document.getElementById('bar').style.position = 'fixed'
     document.getElementById('bar').style.marginTop = '0px'
-    document.getElementById('bar').style.height = '50px'
-    document.getElementById('bar').style.borderBottom = '2px solid var(--mobile-menu-border)'
 
     document.getElementById('mobile-bar').style.marginTop = '52px'
 
-    document.getElementById('mobile-home').style.borderTop = ''
   } else {
     document.getElementById('bar').style.position = ''
-    if (screen.width <= 650){
-      document.getElementById('bar').style.marginTop = '0px'
-    }else{
-      document.getElementById('bar').style.marginTop = '15px'
-    }
-    document.getElementById('bar').style.height = '40px'
-    document.getElementById('bar').style.borderBottom = ''
 
     document.getElementById('mobile-bar').style.marginTop = '0px'
-
-    document.getElementById('mobile-home').style.borderTop = '2px solid var(--mobile-menu-border)'
   }
 }
 
