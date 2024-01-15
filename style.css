@@ -7,11 +7,11 @@
     display: none !important;
 }
 :root {
-    --background-white:  #cecccc;
-    --hover-white: #dfdede;
-    --font-color: #353535;
+    --background-white:  #e0e0e0;
+    --hover-white: #d7dee0;
+    --font-color: #36516e;
     --mobile-menu-color: #cecccc;
-    --mobile-menu-border: #929292;
+    --mobile-menu-border: #889aa5;
   }
 .darkMode{
     --background-white:#171923;
@@ -21,6 +21,8 @@
     --mobile-menu-border: #afafaf;
 }
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-white);
 }
@@ -36,17 +38,14 @@ p{
 h1{
     color: var(--font-color);
 }
-.header .moon-icon{
-    margin-right: 0;
-}
 .header{
-    margin-top: 15px;
     background-color: var(--background-white);
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    border-bottom: 2px solid var(--mobile-menu-border);
 }
 .header .header-mobile-button{
     display: none;
@@ -55,10 +54,10 @@ h1{
     display: none;
 }
 .header-bar{
-    margin-right: 50px;
     cursor: pointer;
 }
 .header-bar a{
+    margin-right: 50px;
     text-decoration: none;
     color: var(--font-color);
     padding: 9px;
@@ -71,15 +70,17 @@ h1{
     font-weight: 700;
 }
 .contend{
-    width: 90%;
-    padding-top: 5%;
-    height: 450px;
-    margin-left: 3%;
+    background-image: url(../img/Portifolio-background.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 500px;
     font-size: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding-left: 2%;
+    border-bottom: 2px solid var(--mobile-menu-border);
 }
 .contend .picture{
     text-align: center;
@@ -168,29 +169,33 @@ h1{
     margin-right: 0;
     display: block;
 }
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1400px){
     hr{
         display: none;
     }
     .contend{
-        display: block;
+        width: 98%;
     }
     .contend .perfil{
-        margin: 0;
         display: flex;
         flex-direction: column;
-        margin-right: 1%;
-        text-align: center;
     }
     .projects .works{
         overflow: hidden;
     }
 }
-@media screen and (max-width: 650px){
-    .contend .description{
-        flex-direction: column;
+@media screen and (max-width: 1000px){
+    .contend{
+        background-position: 40% 50%;
     }
-    .header-bar{
+}
+@media screen and (max-width: 650px){
+    .contend{
+        background-position: 10% 90%;
+        background-image: none;
+        background-color: #171923;
+    }
+    .header .header-bar{
         display: none;
     }
     .header .header-mobile-button button{
@@ -216,7 +221,7 @@ h1{
         justify-content: right;
     }
     .mobile-menu{
-        width: 99%;
+        width: 100%;
         background-color: var(--background-white);
         display: flex;
         align-items: center;
@@ -225,15 +230,19 @@ h1{
     }
     .mobile-menu .header-bar{
         width: 100%;
-        margin-left: 55px;
+        padding-left: 55px;
         font-size: 20px;
         border-bottom: 2px solid var(--mobile-menu-border);
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 50px;
     }
     .mobile-menu .header-bar:hover{
         background-color: var(--hover-white);
+    }
+    .mobile-menu .moon-icon-mobile{
+        padding-left: 8px;
     }
     .projects .works{
         display: flex;
