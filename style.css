@@ -6,13 +6,13 @@
 .open{
     display: none !important;
 }
-:root{
-    --background-white:  #b9b5b5;
+:root {
+    --background-white:  #cecccc;
     --hover-white: #dfdede;
-    --font-color: #4b4b4b;
+    --font-color: #353535;
     --mobile-menu-color: #cecccc;
     --mobile-menu-border: #929292;
-}
+  }
 .darkMode{
     --background-white:#171923;
     --hover-white:#232535;
@@ -23,7 +23,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-white);
-    height: 100pc;
 }
 .blur-effect {
     width: 100%;
@@ -72,13 +71,15 @@ h1{
     font-weight: 700;
 }
 .contend{
+    width: 90%;
     padding-top: 5%;
     height: 450px;
-    margin-left: 1%;
-    text-align: center;
+    margin-left: 3%;
     font-size: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-left: 2%;
 }
 .contend .picture{
     text-align: center;
@@ -86,7 +87,6 @@ h1{
 .contend .picture img{  
     height: 288px;
     width: 288px;
-    margin-bottom: 0px;
 }
 .contend .name{
     font-size: 35px;
@@ -100,31 +100,7 @@ h1{
 }
 .contend .perfil{
     margin-top: 15px;
-    text-align: left;
-    margin-right: 15%;
-}
-.contend .description ul{
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    align-items: start;
-    color: var(--font-color);
-}
-.contend .description{
-    display: flex;
-    flex-direction: column;
-}
-.contend .description .work{
-    margin-top: 15px;
-}
-.contend .description p{
-    margin: 0;
-}
-.contend .final-word{
-    padding: 20px;
-    margin-top: 18%;
-    border-radius: 6px;
-    text-align: left;
+    text-align: center;
 }
 .contatos img{
     margin-right: 5px;
@@ -142,7 +118,7 @@ h1{
     margin-right: 15px;
 }
 .projects{
-    margin-top: 65px;
+    margin-top: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -154,11 +130,43 @@ h1{
     font-size: 25px;
 }
 .projects .works{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
     margin-top: 30px;
-    width: 80%;
-    height: 20pc;
+    width: 90%;
+    height: 29pc;
     border-radius: 8px;
-    background-color: var(--mobile-menu-border);
+    background-color: var(--hover-white);
+    border: 2px solid var(--mobile-menu-border);
+}
+.projects .works .work-images{
+    margin: 10px;
+    background-color: var(--font-color);
+    width: 250px;
+    height: 430px;
+    border-radius: 10px;
+}
+.projects .works .work-images img{
+    width: 250px;
+    height: 430px;
+    border-radius: 10px;
+}
+.projects .works .work-images:hover{
+    width: 280px;
+    height: 460px;
+    transition: all 200ms;
+}
+.projects .works .work-images img:hover{
+    width: 280px;
+    height: 460px;
+    transition: all 200ms;
+}
+.projects .works .work-last{
+    align-items: center;
+    margin-right: 0;
+    display: block;
 }
 @media screen and (max-width: 1300px){
     hr{
@@ -174,27 +182,8 @@ h1{
         margin-right: 1%;
         text-align: center;
     }
-    .contend .description{
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-    }
-    .contend .description .final-word{
-        margin: 0;
-        padding: 40px;
-        margin-top: 35px;
-        margin-left: 1%;
-        border-radius: 3%;
-        border: 1px solid var(--font-color);
-        margin-bottom: 30px;
-    }
-    .contend .description .work{
-        padding: 20px;
-        border-radius: 3%;
-        border: 1px solid var(--font-color);
-        margin-right: 2%;
+    .projects .works{
+        overflow: hidden;
     }
 }
 @media screen and (max-width: 650px){
@@ -245,6 +234,37 @@ h1{
     }
     .mobile-menu .header-bar:hover{
         background-color: var(--hover-white);
+    }
+    .projects .works{
+        display: flex;
+        width: 60%;
+        height: 99%;
+    }
+    .projects .works .work-images{
+        background-color: var(--font-color);
+        width: 250px;
+        height: 430px;
+        border-radius: 10px;
+    }
+    .projects .works .work-images img{
+        width: 250px;
+        height: 430px;
+        border-radius: 10px;
+    }
+    .projects .works .work-images:hover{
+        width: 280px;
+        height: 460px;
+        transition: all 200ms;
+    }
+    .projects .works .work-images img:hover{
+        width: 280px;
+        height: 460px;
+        transition: all 200ms;
+    }
+    .projects .works .work-last{
+        align-items: center;
+        margin-right: 0;
+        display: block;
     }
 }
 @media screen and (max-width: 300px){
