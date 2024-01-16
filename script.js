@@ -31,7 +31,8 @@ function menuShow(){
 const toggle = document.querySelector("#toggle")
 const toggleMobile = document.querySelector(".moon-icon-mobile")
 const mobileMenu = document.querySelector('.mobile-menu')
-const emProgresso = document.querySelectorAll('#progresso')
+const codeIcon = document.querySelector("#code-icon")
+
 toggle.addEventListener("click", modeSwitch)
 toggleMobile.addEventListener("click", modeSwitch)
 let isDark=true
@@ -42,6 +43,7 @@ function modeSwitch(){
   {
     toggleMobile.innerHTML="☀️";
     toggle.innerHTML="☀️";
+    codeIcon.src = "img/code-img-branco.png"
     
     if (mobileMenu.classList.contains('open'))
     {
@@ -52,8 +54,8 @@ function modeSwitch(){
       document.querySelector('.mobile-icon').src="img/x-branco.png"
     }
     
-    emProgresso.src = 'img/em-progresso-branco2.png'
     document.querySelector(".perfil-image").src="img/moldura_perfil_branco.png";
+
     if (screen.width <= 650){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#171923"
@@ -65,6 +67,7 @@ function modeSwitch(){
   {
     toggleMobile.innerHTML="🌑";
     toggle.innerHTML="🌑";
+    codeIcon.src = "img/code-img-preto.png"
 
     if (mobileMenu.classList.contains('open'))
     {
@@ -75,7 +78,6 @@ function modeSwitch(){
       document.querySelector('.mobile-icon').src="img/x-preto.png"
     }
 
-    emProgresso.src = 'img/em-progresso-preto.png'
     document.querySelector(".perfil-image").src="img/moldura_perfil_preto.png"
     
     if (screen.width <= 650){
@@ -85,6 +87,7 @@ function modeSwitch(){
       document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background-branco.png)"
     }
   }
+  toggleMobile.style.paddingLeft = "4px"
   root.classList.toggle("darkMode")
 }
 
