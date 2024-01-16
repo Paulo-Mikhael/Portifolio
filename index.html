@@ -9,20 +9,25 @@
 </head>
 <body class="darkMode">
     <div class="header" id="bar">
-        <div class="header-bar header-home">
-            <a>Home</a>
+        <div class="code-img">
+            <img id="code-icon" src="img/code-img-branco.png" alt="code-img-branco.png">
         </div>
-        <div class="header-bar header-projects">
-            <a>Projetos</a>
-        </div>
-        <div class="header-bar header-contato">
-            <a>Contatos</a>
-        </div>
-        <div class="header-bar header-about">
-            <a>Sobre mim</a>
-        </div>
-        <div class="header-bar">
-            <a class="moon-icon" id="toggle">☀️</a>
+        <div class="header-tools">
+            <div class="header-bar header-home">
+                <a>Home</a>
+            </div>
+            <div class="header-bar header-projects">
+                <a>Projetos</a>
+            </div>
+            <div class="header-bar header-contato">
+                <a>Contatos</a>
+            </div>
+            <div class="header-bar header-about">
+                <a>Sobre mim</a>
+            </div>
+            <div class="header-bar">
+                <a class="moon-icon" id="toggle">☀️</a>
+            </div>
         </div>
         <div class="header-mobile-button" onclick="menuShow()">
             <button>
@@ -44,7 +49,7 @@
             <a>Sobre mim</a>
         </div>
         <div class="header-bar moon-icon-mobile">
-            <a id="toggleMobile" onclick="menuShow()">🌑</a>
+            <a id="toggle-mobile" onclick="menuShow()">🌑</a>
         </div>
     </div>
     <div class="contend" id="contend-text">
@@ -63,35 +68,24 @@
             </div>
         </div>
     </div>
-    <div class="projects">
-        <div class="title">
-            <h1>Projetos</h1>
-        </div>
-        <div class="works">
-            <a target="_blank" href="https://paulo-mikhael.github.io/menu_responsivo/" class="work-images menu-responsivo">
-                <img src="img/menu-responsivo.png" alt="menu-responsivo.png">
-            </a>
-            <a class="work-images">
-                <img id="progresso" src="img/em-progresso-branco2.png" alt="em-progresso-branco2.png">
-            </a>
-            <a class="work-images">
-                <img id="progresso" src="img/em-progresso-branco2.png" alt="em-progresso-branco2.png">
-            </a>
-            <a class="work-images work-last">
-                <img id="progresso" src="img/em-progresso-branco2.png" alt="em-progresso-branco2.png">
-            </a>
-        </div>
-    </div>
     <div class="contatos">
-        <img src="img/telefone.png" alt="telefone.png">
-        <img src="img/whatsapp.png" alt="whatsapp.png">
-        <a target="_blank" href="https://web.whatsapp.com/">92 99281-3253</a>
-        <img src="img/instagram.png" alt="instagram.png">
-        <a target="_blank" href="https://www.instagram.com/pa__miguel?igsh=MWxoYzdqNGluZWcyaA==">@pa__miguel</a>
-        <img src="img/linkedin.png" alt="linkedin.png"> 
-        <a target="_blank" href="https://www.linkedin.com/in/paulo-miguel-4b706022b/">Paulo Miguel</a>
-        <img src="img/placa-do-github.png" alt="placa-do-github.png">
-        <a target="_blank" href="https://github.com/Paulo-Mikhael">paulo-mikhael</a>
+        <div class="apps fone">
+            <img src="img/whatsapp.png" alt="whatsapp.png">
+            <a target="_blank" href="https://web.whatsapp.com/">92 99281-3253</a>
+            <img src="img/telefone.png" alt="telefone.png">
+        </div>
+        <div class="apps instagram">
+            <img src="img/instagram.png" alt="instagram.png">
+            <a target="_blank" href="https://www.instagram.com/pa__miguel?igsh=MWxoYzdqNGluZWcyaA==">@pa__miguel</a>
+        </div>
+        <div class="apps linkedin">
+            <img src="img/linkedin.png" alt="linkedin.png"> 
+            <a target="_blank" href="https://www.linkedin.com/in/paulo-miguel-4b706022b/">Paulo Miguel</a>
+        </div>
+        <div class="apps github">
+            <img src="img/placa-do-github.png" alt="placa-do-github.png">
+            <a target="_blank" href="https://github.com/Paulo-Mikhael">paulo-mikhael</a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
