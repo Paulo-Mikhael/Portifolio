@@ -6,14 +6,18 @@
 .open{
     display: none !important;
 }
-:root {
+:root{
+    --contatos-hover-borda: #afafaf;
+    --contatos-hover-background: #232535;
     --background-white:  #e0e0e0;
     --hover-white: #d7dee0;
-    --font-color: #36516e;
+    --font-color: #2d5783;
     --mobile-menu-color: #cecccc;
-    --mobile-menu-border: #889aa5;
-  }
+    --mobile-menu-border: #7b94a3;
+}
 .darkMode{
+    --contatos-hover-borda: #7b94a3;
+    --contatos-hover-background: #151830;
     --background-white:#171923;
     --hover-white:#232535;
     --font-color:#c5cddb;
@@ -43,9 +47,13 @@ h1{
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid var(--mobile-menu-border);
+}
+.header .code-img img{
+    width: 25px;
+    height: 25px;
 }
 .header .header-mobile-button{
     display: none;
@@ -69,6 +77,12 @@ h1{
 .header .header-home a{
     font-weight: 700;
 }
+.header .header-tools{
+    display: flex;
+}
+.header .moon-icon{
+    margin-right: 0px;
+}
 .contend{
     background-image: url(../img/Portifolio-background.png);
     background-repeat: no-repeat;
@@ -86,6 +100,7 @@ h1{
     text-align: center;
 }
 .contend .picture img{  
+    padding-left: 25px;
     height: 288px;
     width: 288px;
 }
@@ -105,69 +120,59 @@ h1{
 }
 .contatos img{
     margin-right: 5px;
+    margin-left: 5px;
     width: 25px;
     height: 25px;
 }
 .contatos{
+    width: 100%;
     margin-top: 20px;
-    display: none;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .contatos a{
     text-decoration: none;
     font-size: 18px;
-    margin-right: 15px;
-}
-.projects{
-    margin-top: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.projects .title{
+    color: var(--font-color);
     font-weight: bold;
-    font-size: 25px;
 }
-.projects .works{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    margin-top: 30px;
-    width: 90%;
-    height: 29pc;
-    border-radius: 8px;
-    background-color: var(--hover-white);
+.contatos .apps{
+    width: 15%;
+    border-radius: 10px;
     border: 2px solid var(--mobile-menu-border);
-}
-.projects .works .work-images{
-    margin: 10px;
-    background-color: var(--font-color);
-    width: 250px;
-    height: 430px;
-    border-radius: 10px;
-}
-.projects .works .work-images img{
-    width: 250px;
-    height: 430px;
-    border-radius: 10px;
-}
-.projects .works .work-images:hover{
-    width: 280px;
-    height: 460px;
-    transition: all 200ms;
-}
-.projects .works .work-images img:hover{
-    width: 280px;
-    height: 460px;
-    transition: all 200ms;
-}
-.projects .works .work-last{
+    padding: 10px;
+    background-color: var(--hover-white);
+    display: flex;
     align-items: center;
-    margin-right: 0;
-    display: block;
+    justify-content: center;
+}
+.contatos .apps/*:hover*/{
+    border: 2px solid black;
+}
+.contatos .apps/*:hover*/ a{
+    color: white;
+}
+.contatos .instagram/*:hover*/{
+    background-image: linear-gradient(to right, #f07421, #ed342b, #d1217f);
+}
+.contatos .fone/*:hover*/{
+    background-image: linear-gradient(to right, #29a71a 30%, #2196f3);
+}
+.contatos .linkedin/*:hover*/{
+    /*background-image: linear-gradient(to right, #0277b5, #2196f3);*/
+    background-color: #0277b5;
+}
+.contatos .linkedin/*:hover*/ a{
+    color: #000;
+}
+.contatos .github/*:hover*/{
+    /*background-image: linear-gradient(to right, #0277b5, #2196f3);*/
+    background-color: #fff;
+}
+.contatos .github/*:hover*/ a{
+    /*background-image: linear-gradient(to right, #0277b5, #2196f3);*/
+    color: #000;
 }
 @media screen and (max-width: 1400px){
     hr{
@@ -180,9 +185,6 @@ h1{
         display: flex;
         flex-direction: column;
     }
-    .projects .works{
-        overflow: hidden;
-    }
 }
 @media screen and (max-width: 1000px){
     .contend{
@@ -191,9 +193,11 @@ h1{
 }
 @media screen and (max-width: 650px){
     .contend{
+        width: 100%;
         background-position: 10% 90%;
         background-image: none;
         background-color: #171923;
+        padding: 0;
     }
     .header .header-bar{
         display: none;
@@ -209,16 +213,21 @@ h1{
     }
     .header .header-mobile-button{ 
         display: block;
-        padding-right: 4%;
-    }
-    .mobile-menu .header-home{
-        font-weight: 700;
+        padding-right: 3%;
     }
     .header{
         margin: 0;
+        padding: 0;
+        width: 100%;
         background-color: var(--background-white);
         display: flex;
-        justify-content: right;
+        justify-content: space-between;
+    }
+    .header .code-img{
+        padding-left: 3%;
+    }
+    .mobile-menu .header-home{
+        font-weight: 700;
     }
     .mobile-menu{
         width: 100%;
@@ -230,7 +239,7 @@ h1{
     }
     .mobile-menu .header-bar{
         width: 100%;
-        padding-left: 55px;
+        padding-left: 57px;
         font-size: 20px;
         border-bottom: 2px solid var(--mobile-menu-border);
         display: flex;
@@ -241,39 +250,8 @@ h1{
     .mobile-menu .header-bar:hover{
         background-color: var(--hover-white);
     }
-    .mobile-menu .moon-icon-mobile{
-        padding-left: 8px;
-    }
-    .projects .works{
-        display: flex;
-        width: 60%;
-        height: 99%;
-    }
-    .projects .works .work-images{
-        background-color: var(--font-color);
-        width: 250px;
-        height: 430px;
-        border-radius: 10px;
-    }
-    .projects .works .work-images img{
-        width: 250px;
-        height: 430px;
-        border-radius: 10px;
-    }
-    .projects .works .work-images:hover{
-        width: 280px;
-        height: 460px;
-        transition: all 200ms;
-    }
-    .projects .works .work-images img:hover{
-        width: 280px;
-        height: 460px;
-        transition: all 200ms;
-    }
-    .projects .works .work-last{
-        align-items: center;
-        margin-right: 0;
-        display: block;
+    .contatos{
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 300px){
@@ -284,5 +262,13 @@ h1{
     .header{
         display: flex;
         justify-content: left;
+    }
+    .header .code-img{
+        display: none;
+    }
+    .contatos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
