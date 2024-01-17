@@ -10,8 +10,8 @@
     --contatos-hover-borda: #afafaf;
     --contatos-hover-background: #232535;
     --background-white:  #e0e0e0;
-    --hover-white: #d7dee0;
-    --font-color: #2d5783;
+    --hover-white: #b9c9db;
+    --font-color: #234d7a;
     --mobile-menu-color: #cecccc;
     --mobile-menu-border: #7b94a3;
 }
@@ -84,7 +84,7 @@ h1{
     margin-right: 0px;
 }
 .contend{
-    background-image: url(img/Portifolio-background.png);
+    background-image: url(../img/portifolio-background-preto.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 100%;
