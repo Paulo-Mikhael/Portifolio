@@ -60,7 +60,7 @@ function modeSwitch(){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#171923"
     }else{
-      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background.png)"
+      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background-preto.png)"
     }
   }
   else
