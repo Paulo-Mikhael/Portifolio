@@ -7,7 +7,10 @@
     display: none !important;
 }
 :root{
-    --contatos-hover-borda: #afafaf;
+    --contatos-gradiente-1:#363d61;
+    --contatos-gradiente-2: #304552;
+    --contatos-gradiente-3: #532e45;
+    --contatos-hover-borda: #afafaf;    
     --contatos-hover-background: #232535;
     --background-white:  #e0e0e0;
     --hover-white: #b9c9db;
@@ -15,7 +18,10 @@
     --mobile-menu-color: #cecccc;
     --mobile-menu-border: #7b94a3;
 }
-.darkMode{
+.darkMode{  
+    --contatos-gradiente-1:#1e295e;
+    --contatos-gradiente-2: #123f58;
+    --contatos-gradiente-3: #50183b;
     --contatos-hover-borda: #7b94a3;
     --contatos-hover-background: #151830;
     --background-white:#171923;
@@ -29,6 +35,7 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-white);
+    height: 10000px;
 }
 .blur-effect {
     width: 100%;
@@ -36,11 +43,13 @@ body{
     backdrop-filter: blur(10px);
     position: absolute;
 }
-p{
+p, h1, h2{
     color: var(--font-color);
+    font-size: 35px;
 }
-h1{
-    color: var(--font-color);
+h2{
+    font-weight: normal;
+    font-size: 20px;
 }
 .header{
     background-color: var(--background-white);
@@ -84,7 +93,7 @@ h1{
     margin-right: 0px;
 }
 .contend{
-    background-image: url(img/portifolio-background-preto.png);
+    background-image: url(../img/portifolio-background-preto.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 100%;
@@ -93,7 +102,6 @@ h1{
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 2%;
     border-bottom: 2px solid var(--mobile-menu-border);
 }
 .contend .picture{
@@ -115,6 +123,7 @@ h1{
     font-size: 20px;
 }
 .contend .perfil{
+    padding-left: 2%;
     margin-top: 15px;
     text-align: center;
 }
@@ -125,11 +134,23 @@ h1{
     height: 25px;
 }
 .contatos{
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    background-image: linear-gradient(to left, var(--contatos-gradiente-1), var(--contatos-gradiente-2),
+     var(--contatos-gradiente-3));
     width: 100%;
-    margin-top: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 2px solid var(--mobile-menu-border);
+    animation: degradeAnimado 5s infinite alternate;
+}
+@keyframes degradeAnimado{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
 }
 .contatos a{
     text-decoration: none;
@@ -138,7 +159,8 @@ h1{
     font-weight: bold;
 }
 .contatos .apps{
-    width: 15%;
+    margin: 15px;
+    width: 230px;
     border-radius: 10px;
     border: 2px solid var(--mobile-menu-border);
     padding: 10px;
@@ -174,12 +196,37 @@ h1{
     /*background-image: linear-gradient(to right, #0277b5, #2196f3);*/
     color: #000;
 }
+.title-landing-pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+}
+.title-landing-pages h2{
+    font-weight: bold;
+    font-size: 40px;
+}
+.landing-pages{
+    width: 100%;
+    height: 39pc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.landing-pages .landing-img img{
+    border-radius: 60%;
+}
+.landing-pages .projects .pages{
+    width: 300px;
+    height: 500px;
+    background-color: yellowgreen;
+}
 @media screen and (max-width: 1400px){
-    hr{
-        display: none;
-    }
     .contend{
         width: 98%;
+        padding-left: 2%;
     }
     .contend .perfil{
         display: flex;
@@ -189,6 +236,30 @@ h1{
 @media screen and (max-width: 1000px){
     .contend{
         background-position: 40% 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .contatos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .contatos .instagram{
+        margin-bottom: 0;
+    }
+    .contatos .fone{
+        margin-bottom: 0;
+        margin-left: 24%;
+    }
+    .contatos .linkedin{
+        margin-left: 24%;
+    }
+    .contatos .apps{
+        width: 250px;
+    }
+    .landing-pages .landing-img img{
+        width: 300px;
+        height: 300px;
     }
 }
 @media screen and (max-width: 650px){
@@ -198,6 +269,9 @@ h1{
         background-image: none;
         background-color: #171923;
         padding: 0;
+    }
+    .contend .perfil{
+        margin-bottom: 20px;
     }
     .header .header-bar{
         display: none;
@@ -251,7 +325,21 @@ h1{
         background-color: var(--hover-white);
     }
     .contatos{
+        display: flex;
         flex-direction: column;
+    }
+    .contatos .apps{
+        margin: 0;
+        width: 80%;
+    }
+    .contatos .fone{
+        margin-top: 20px;
+    }
+    .contatos .github{
+        margin-bottom: 20px;
+    }
+    .landing-pages .landing-img{
+        display: none;
     }
 }
 @media screen and (max-width: 300px){
