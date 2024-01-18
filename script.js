@@ -32,6 +32,7 @@ const toggle = document.querySelector("#toggle")
 const toggleMobile = document.querySelector(".moon-icon-mobile")
 const mobileMenu = document.querySelector('.mobile-menu')
 const codeIcon = document.querySelector("#code-icon")
+const landingImage = document.querySelector('#landing-img')
 
 toggle.addEventListener("click", modeSwitch)
 toggleMobile.addEventListener("click", modeSwitch)
@@ -44,6 +45,7 @@ function modeSwitch(){
     toggleMobile.innerHTML="☀️";
     toggle.innerHTML="☀️";
     codeIcon.src = "img/code-img-branco.png"
+    landingImage.src = "img/boneco-landing-page-branco.gif"
     
     if (mobileMenu.classList.contains('open'))
     {
@@ -60,7 +62,7 @@ function modeSwitch(){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#171923"
     }else{
-      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-preto.png)"
+      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background-preto.png)"
     }
   }
   else
@@ -68,6 +70,7 @@ function modeSwitch(){
     toggleMobile.innerHTML="🌑";
     toggle.innerHTML="🌑";
     codeIcon.src = "img/code-img-preto.png"
+    landingImage.src = "img/boneco-landing-page-preto.gif"
 
     if (mobileMenu.classList.contains('open'))
     {
@@ -84,7 +87,7 @@ function modeSwitch(){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#cecccc"
     }else{
-      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-branco.png)"
+      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background-branco.png)"
     }
   }
   toggleMobile.style.paddingLeft = "4px"
