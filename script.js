@@ -45,7 +45,7 @@ function modeSwitch(){
     toggleMobile.innerHTML="☀️";
     toggle.innerHTML="☀️";
     codeIcon.src = "img/code-img-branco.png"
-    landingImage.src = "img/boneco-landing-page-branco.gif"
+    landingImage.src = "img/boneco-landing-page-preto.gif"
     
     if (mobileMenu.classList.contains('open'))
     {
@@ -62,7 +62,7 @@ function modeSwitch(){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#171923"
     }else{
-      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background-preto.png)"
+      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-preto2.png)"
     }
   }
   else
@@ -70,7 +70,7 @@ function modeSwitch(){
     toggleMobile.innerHTML="🌑";
     toggle.innerHTML="🌑";
     codeIcon.src = "img/code-img-preto.png"
-    landingImage.src = "img/boneco-landing-page-preto.gif"
+    landingImage.src = "img/boneco-landing-page-branco.gif"
 
     if (mobileMenu.classList.contains('open'))
     {
@@ -87,7 +87,7 @@ function modeSwitch(){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#cecccc"
     }else{
-      document.getElementById("contend-text").style.backgroundImage = "url(img/Portifolio-background-branco.png)"
+      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-branco2.png)"
     }
   }
   toggleMobile.style.paddingLeft = "4px"
@@ -108,6 +108,36 @@ function ajustarConfiguracao() {
 
     document.getElementById('mobile-bar').style.marginTop = '0px'
   }
+}
+
+function changePageToLeft() {
+  const mainPage = document.querySelector('.main-page');
+  const pageLeft = document.querySelector('.pageLeft');
+  const pageRight = document.querySelector('.pageRight');
+
+  mainPage.classList.remove('main-page');
+  mainPage.classList.add('pageLeft');
+
+  pageRight.classList.remove('pageRight');
+  pageRight.classList.add('main-page');
+
+  pageLeft.classList.remove('pageLeft');
+  pageLeft.classList.add('pageRight');
+}
+
+function changePageToRight() {
+  const mainPage = document.querySelector('.main-page');
+  const pageLeft = document.querySelector('.pageLeft');
+  const pageRight = document.querySelector('.pageRight');
+
+  mainPage.classList.remove('main-page');
+  mainPage.classList.add('pageRight');
+
+  pageRight.classList.remove('pageRight');
+  pageRight.classList.add('pageLeft');
+
+  pageLeft.classList.remove('pageLeft');
+  pageLeft.classList.add('main-page');
 }
 
 window.addEventListener("scroll", ajustarConfiguracao)
