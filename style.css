@@ -37,6 +37,7 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-white);
+    height: 10000px;
 }
 .blur-effect {
     width: 100%;
@@ -60,6 +61,7 @@ h2{
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid var(--mobile-menu-border);
+    z-index: 2;
 }
 .header .code-img img{
     width: 25px;
@@ -225,53 +227,58 @@ h2{
 }
 .landing-pages .projects{
     height: 90%;
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.landing-pages .projects > div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .landing-pages .projects .main-page{
-    width: 270px;
-    height: 470px;
     position: absolute;
     z-index: 1;
 }
 .landing-pages .projects .pageRight{
-    width: 230px;
-    height: 400px;
     position: absolute;
-    left: 30vw;
+    margin-left: 11vw;
 }
 .landing-pages .projects .pageLeft{
-    width: 230px;
-    height: 400px;
     position: absolute;
-    left: 20vw;
+    margin-right: 10.7vw;
 }
 .landing-pages .projects .main-page img{
-    width: 270px;
+    width: 250;
     height: 470px;
+    transition: all 0.5s;
+    border-radius: 10px;
 }
 .landing-pages .projects .pageRight img{
-    width: 230px;
+    width: 200px;
     height: 400px;
+    border-radius: 10px;
 }
 .landing-pages .projects .pageLeft img{
-    width: 230px;
+    width: 200px;
     height: 400px;
+    border-radius: 10px;
 }
 .landing-pages .projects .arrowLeft img, .landing-pages .projects .arrowRight img{
     width: 50px;
     height: 50px;
 }
+.landing-pages .projects button:hover img{
+    width: 55px;
+    height: 55px;
+}
 .landing-pages .projects .arrowLeft button, .landing-pages .projects .arrowRight button{
+    width: 55px;
+    height: 55px;
     background-color: transparent;
     border: none;
+}
+.landing-pages .projects .arrowLeft button{
+    margin-right: 11vw;
+}
+.landing-pages .projects .arrowRight button{
+    margin-left: 11vw;
 }
 @media screen and (max-width: 1400px){
     .contend{
