@@ -33,6 +33,8 @@ const toggleMobile = document.querySelector(".moon-icon-mobile")
 const mobileMenu = document.querySelector('.mobile-menu')
 const codeIcon = document.querySelector("#code-icon")
 const landingImage = document.querySelector('#landing-img')
+const btnEsquerda = document.querySelector('#btn-esquerda');
+const btnDireita = document.querySelector('#btn-direita');
 
 toggle.addEventListener("click", modeSwitch)
 toggleMobile.addEventListener("click", modeSwitch)
@@ -46,6 +48,8 @@ function modeSwitch(){
     toggle.innerHTML="☀️";
     codeIcon.src = "img/code-img-branco.png"
     landingImage.src = "img/boneco-landing-page-preto.gif"
+    btnDireita.src = "img/btn-direita-preto.png"
+    btnEsquerda.src = "img/btn-esquerda-preto.png"
     
     if (mobileMenu.classList.contains('open'))
     {
@@ -71,6 +75,8 @@ function modeSwitch(){
     toggle.innerHTML="🌑";
     codeIcon.src = "img/code-img-preto.png"
     landingImage.src = "img/boneco-landing-page-branco.gif"
+    btnDireita.src = "img/btn-direita-branco.png"
+    btnEsquerda.src = "img/btn-esquerda-branco.png"
 
     if (mobileMenu.classList.contains('open'))
     {
