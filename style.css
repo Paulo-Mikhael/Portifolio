@@ -96,9 +96,9 @@ h2{
     margin-right: 0px;
 }
 .contend{
-    background-image: url(../img/portifolio-background-preto2.png);
+    /*background-image: url(../img/portifolio-background-preto2.png);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 50%;*/
     width: 100%;
     height: 87vh;
     font-size: 20px;
@@ -204,7 +204,7 @@ h2{
     background-color: var(--fundo-landing-page);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
     height: 50px;
     padding-top: 50px;
@@ -212,12 +212,13 @@ h2{
 .title-landing-pages h2{
     font-weight: bold;
     font-size: 40px;
+    padding-left: 30px;
 }
 .landing-pages{
     /*#171923*/
     background-color: var(--fundo-landing-page);
     width: 100%;
-    height: 39pc;
+    height: 33pc;
     display: flex;
     justify-content: space-around;
     align-items: center;
