@@ -62,12 +62,12 @@ function modeSwitch(){
     
     document.querySelector(".perfil-image").src="img/moldura_perfil_branco.png";
 
-    if (screen.width <= 650){
+    /*if (screen.width <= 650){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#171923"
     }else{
       document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-preto2.png)"
-    }
+    }*/
   }
   else
   {
@@ -89,12 +89,12 @@ function modeSwitch(){
 
     document.querySelector(".perfil-image").src="img/moldura_perfil_preto.png"
     
-    if (screen.width <= 650){
+    /*if (screen.width <= 650){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#cecccc"
     }else{
       document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-branco2.png)"
-    }
+    }*/
   }
   toggleMobile.style.paddingLeft = "4px"
   root.classList.toggle("darkMode")
