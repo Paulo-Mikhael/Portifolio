@@ -62,12 +62,12 @@ function modeSwitch(){
     
     document.querySelector(".perfil-image").src="img/moldura_perfil_branco.png";
 
-    /*if (screen.width <= 650){
+    if (screen.width <= 650){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#171923"
     }else{
-      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-preto2.png)"
-    }*/
+      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-preto.png)"
+    }
   }
   else
   {
@@ -89,12 +89,12 @@ function modeSwitch(){
 
     document.querySelector(".perfil-image").src="img/moldura_perfil_preto.png"
     
-    /*if (screen.width <= 650){
+    if (screen.width <= 650){
       document.getElementById("contend-text").style.backgroundImage = "none"
       document.getElementById("contend-text").style.backgroundColor = "#cecccc"
     }else{
-      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-branco2.png)"
-    }*/
+      document.getElementById("contend-text").style.backgroundImage = "url(img/portifolio-background-branco.png)"
+    }
   }
   toggleMobile.style.paddingLeft = "4px"
   root.classList.toggle("darkMode")
@@ -104,14 +104,9 @@ function ajustarConfiguracao() {
   var scrollTop = window.scrollY;
 
   if (scrollTop > 10) {
-    document.getElementById('bar').style.position = 'fixed'
-    document.getElementById('bar').style.marginTop = '0px'
-
     document.getElementById('mobile-bar').style.marginTop = '52px'
 
   } else {
-    document.getElementById('bar').style.position = ''
-
     document.getElementById('mobile-bar').style.marginTop = '0px'
   }
 }
@@ -147,3 +142,24 @@ function changePageToRight() {
 }
 
 window.addEventListener("scroll", ajustarConfiguracao)
+
+function copyToClipboard(text) {
+  var textarea = document.createElement("textarea");
+  textarea.value = text;
+  
+  textarea.style.position = "absolute";
+  textarea.style.left = "-9999px";
+
+  document.body.appendChild(textarea);
+
+  textarea.select();
+  document.execCommand('copy');
+
+  document.body.removeChild(textarea);
+  if (text == '92 99281-3253'){
+    var confirmacao = confirm('Copiado para a área de transferência, Deseja abrir o whatsapp?')
+    if (confirmacao == true){
+      window.open('https://web.whatsapp.com/, _blank');
+    }
+  }
+}
