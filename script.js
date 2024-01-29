@@ -47,7 +47,7 @@ function modeSwitch(){
     toggleMobile.innerHTML="☀️";
     toggle.innerHTML="☀️";
     codeIcon.src = "img/code-img-branco.png"
-    landingImage.src = "img/boneco-landing-page-preto.gif"
+    /*landingImage.src = "img/boneco-landing-page-preto.gif"*/
     btnDireita.src = "img/btn-direita-preto.png"
     btnEsquerda.src = "img/btn-esquerda-preto.png"
     
@@ -74,7 +74,7 @@ function modeSwitch(){
     toggleMobile.innerHTML="🌑";
     toggle.innerHTML="🌑";
     codeIcon.src = "img/code-img-preto.png"
-    landingImage.src = "img/boneco-landing-page-branco.gif"
+    /*landingImage.src = "img/boneco-landing-page-branco.gif"*/
     btnDireita.src = "img/btn-direita-branco.png"
     btnEsquerda.src = "img/btn-esquerda-branco.png"
 
