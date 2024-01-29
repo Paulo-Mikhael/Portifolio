@@ -214,8 +214,26 @@ h2{
     justify-content: space-around;
     align-items: center;
 }
-.landing-pages .landing-img img{
-    border-radius: 30%;
+.landing-text{
+    border: 2px solid var(--celestial-chic);
+    border-radius: 20px;
+    background-color: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+    width: 60%;
+    height: 65%;
+}
+.landing-text h3,.landing-text h4{
+    padding: 20px;
+}
+.landing-text h3{
+    font-size: 17px;
+    color: var(--font-color);
+}
+.celestial-chic{
+    color: var(--celestial-chic);
 }
 .landing-pages .projects{
     height: 90%;
@@ -239,7 +257,7 @@ h2{
 .landing-pages .projects .main-page img{
     width: 250px;
     height: 470px;
-    border: 3px solid var(--mobile-menu-border);
+    border: 3px solid var(--celestial-chic);
     transition: all 0.5s;
     border-radius: 10px;
 }
