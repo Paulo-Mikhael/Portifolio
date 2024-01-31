@@ -6,13 +6,14 @@
     --contatos-gradiente-3: #532e45;
     --contatos-hover-borda: #afafaf;    
     --contatos-hover-background: #232535;
-    --background-white:  #e0e0e0;
     --hover-white: #b9c9db;
     --font-color: #234d7a;
+    --background-white:  #e0e0e0;
     --mobile-menu-color: #cecccc;
     --mobile-menu-border: #7b94a3;
 }
 .darkMode{
+    --fundo-clone-sites: #3c3357;
     --fundo-about-me: #171329;
     --fundo-landing-page: #312a53;
     --contatos-gradiente-1:#1e295e;
@@ -28,4 +29,5 @@
 }
 .projects-pallets{
     --celestial-chic: #e23d01;
+    --em-progresso: #afafaf;
 }
