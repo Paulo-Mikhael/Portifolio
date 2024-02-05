@@ -187,6 +187,12 @@ h2{
     /*background-image: linear-gradient(to right, #0277b5, #2196f3);*/
     color: #000;
 }
+.contatos .email{
+    background: #9b2626;
+}
+.contatos .email a{
+    color: #000;
+}
 .about-me{
     background-color: var(--fundo-about-me);
     width: 99.3vw;
