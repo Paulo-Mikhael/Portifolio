@@ -33,8 +33,13 @@ const toggleMobile = document.querySelector(".moon-icon-mobile")
 const mobileMenu = document.querySelector('.mobile-menu')
 const codeIcon = document.querySelector("#code-icon")
 const landingImage = document.querySelector('#landing-img')
-const btnEsquerda = document.querySelector('#btn-esquerda');
-const btnDireita = document.querySelector('#btn-direita');
+const btnEsquerda = document.querySelectorAll('.btn-esquerda');
+const btnDireita = document.querySelectorAll('.btn-direita');
+
+function mudaCorBotao(urlDireita, urlEsquerda){
+  btnDireita.forEach(btn => btn.src=urlDireita)
+  btnEsquerda.forEach(btn => btn.src=urlEsquerda)
+}
 
 toggle.addEventListener("click", modeSwitch)
 toggleMobile.addEventListener("click", modeSwitch)
@@ -48,8 +53,7 @@ function modeSwitch(){
     toggle.innerHTML="☀️";
     codeIcon.src = "img/code-img-branco.png"
     /*landingImage.src = "img/boneco-landing-page-preto.gif"*/
-    btnDireita.src = "img/btn-direita-preto.png"
-    btnEsquerda.src = "img/btn-esquerda-preto.png"
+    mudaCorBotao("img/btn-direita-preto.png", "img/btn-esquerda-preto.png")
     
     if (mobileMenu.classList.contains('open'))
     {
@@ -75,8 +79,7 @@ function modeSwitch(){
     toggle.innerHTML="🌑";
     codeIcon.src = "img/code-img-preto.png"
     /*landingImage.src = "img/boneco-landing-page-branco.gif"*/
-    btnDireita.src = "img/btn-direita-branco.png"
-    btnEsquerda.src = "img/btn-esquerda-branco.png"
+    mudaCorBotao("img/btn-direita-branco.png", "img/btn-esquerda-branco.png")
 
     if (mobileMenu.classList.contains('open'))
     {
@@ -182,9 +185,11 @@ function copyToClipboard(text) {
 
   document.body.removeChild(textarea);
   if (text == '92 99281-3253'){
-    var confirmacao = confirm('Copiado para a área de transferência, Deseja abrir o whatsapp?')
+    alert('Copiado para a área de transferência')
+  }else if (text == 'paulomiguel11111971@gmail.com'){
+    var confirmacao = confirm('Email: paulomiguel11111971@gmail.com; \r\nCopiado para a área de transferência. \r\n \r\nDeseja abrir o formulário de contato?')
     if (confirmacao == true){
-      window.open('https://web.whatsapp.com/, _blank');
+      window.open('https://paulo-mikhael.github.io/formulario-contato/')
     }
   }
 }
