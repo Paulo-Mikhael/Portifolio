@@ -21,13 +21,17 @@
     height: 65%;
 }
 .clone-title h3, .clone-subtitle h4{
-    color: rgb(0, 0, 0);
+    color: rgb(59, 59, 59);
     padding: 20px;
 }
 .clone-subtitle h4 a{
-    color: rgb(218, 215, 215);
+    color: var(--pagina-unity);
 }
 .clone-title h3{
     font-size: 17px;
     color: var(--font-color);
+}
+#unity-poster img{
+    border: 3px solid var(--pagina-unity);
+    border-radius: 10px;
 }
