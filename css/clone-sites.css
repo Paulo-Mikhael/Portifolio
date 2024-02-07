@@ -35,3 +35,7 @@
     border: 3px solid var(--pagina-unity);
     border-radius: 10px;
 }
+#spotify-poster img{
+    border: 3px solid var(--spotify);
+    border-radius: 10px;
+}
