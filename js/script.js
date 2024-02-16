@@ -105,12 +105,12 @@ function modeSwitch(){
 
 function ajustarConfiguracao() {
   var scrollTop = window.scrollY;
+  if (scrollTop > 1100){
+    const landingLeftButton = document.querySelector('#landing-left-button')
+    const landingRightButton = document.querySelector('#landing-right-button')
 
-  if (scrollTop > 10) {
-    document.getElementById('mobile-bar').style.marginTop = '52px'
-
-  } else {
-    document.getElementById('mobile-bar').style.marginTop = '0px'
+    landingLeftButton.classList.add('arrowLeft');
+    landingRightButton.classList.add('arrowRight');
   }
 }
 
