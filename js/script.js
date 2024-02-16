@@ -103,17 +103,6 @@ function modeSwitch(){
   root.classList.toggle("darkMode")
 }
 
-function ajustarConfiguracao() {
-  var scrollTop = window.scrollY;
-  if (scrollTop > 1100){
-    const landingLeftButton = document.querySelector('#landing-left-button')
-    const landingRightButton = document.querySelector('#landing-right-button')
-
-    landingLeftButton.classList.add('arrowLeft');
-    landingRightButton.classList.add('arrowRight');
-  }
-}
-
 const celestialChicText = document.querySelector('#celestial-chic');
 const celestialChicPoster = document.querySelector('#celestial-chic-poster');
 const emProgressoText = document.querySelector('#em-progresso')
@@ -135,41 +124,69 @@ function changeText()
   }
 }
 
-function changePageToLeft() {
-  const mainPage = document.querySelector('.main-page');
-  const pageLeft = document.querySelector('.pageLeft');
-  const pageRight = document.querySelector('.pageRight');
+function changePagesClone() {
+  const mainPage = document.querySelector('.clone-sites > .projects > .main-page');
+  const pageLeft = document.querySelector('.clone-sites > .projects > .pageLeft');
+  const pageRight = document.querySelector('.clone-sites > .projects > .pageRight');
 
-  mainPage.classList.remove('main-page');
-  mainPage.classList.add('pageLeft');
-
-  pageRight.classList.remove('pageRight');
-  pageRight.classList.add('main-page');
-
-  pageLeft.classList.remove('pageLeft');
-  pageLeft.classList.add('pageRight');
-
+  document.body.addEventListener('click', evt => {
+    var click = evt.target;
+    var id = click.id;
+    
+    if (id == "clone-button-right"){
+      mainPage.removeAttribute('class')
+      mainPage.classList.add('pageRight');
+    
+      pageRight.removeAttribute('class');
+      pageRight.classList.add('pageLeft');
+    
+      pageLeft.removeAttribute('class')
+      pageLeft.classList.add('main-page');
+    }else if (id == "clone-button-left"){
+      mainPage.removeAttribute('class')
+      mainPage.classList.add('pageLeft');
+    
+      pageRight.removeAttribute('class');
+      pageRight.classList.add('main-page');
+    
+      pageLeft.removeAttribute('class')
+      pageLeft.classList.add('pageRight');
+    }
+  })
   changeText();
 }
 
-function changePageToRight() {
-  const mainPage = document.querySelector('.main-page');
-  const pageLeft = document.querySelector('.pageLeft');
-  const pageRight = document.querySelector('.pageRight');
+function changePagesLanding() {
+  const mainPage = document.querySelector('.landing-pages > .projects > .main-page');
+  const pageLeft = document.querySelector('.landing-pages > .projects > .pageLeft');
+  const pageRight = document.querySelector('.landing-pages > .projects > .pageRight');
 
-  mainPage.classList.remove('main-page');
-  mainPage.classList.add('pageRight');
-
-  pageRight.classList.remove('pageRight');
-  pageRight.classList.add('pageLeft');
-
-  pageLeft.classList.remove('pageLeft');
-  pageLeft.classList.add('main-page');
-
+  document.body.addEventListener('click', evt => {
+    var click = evt.target;
+    var id = click.id;
+    
+    if (id == "landing-button-right"){
+      mainPage.removeAttribute('class')
+      mainPage.classList.add('pageRight');
+    
+      pageRight.removeAttribute('class');
+      pageRight.classList.add('pageLeft');
+    
+      pageLeft.removeAttribute('class')
+      pageLeft.classList.add('main-page');
+    }else if (id == "landing-button-left"){
+      mainPage.removeAttribute('class')
+      mainPage.classList.add('pageLeft');
+    
+      pageRight.removeAttribute('class');
+      pageRight.classList.add('main-page');
+    
+      pageLeft.removeAttribute('class')
+      pageLeft.classList.add('pageRight');
+    }
+  })
   changeText();
 }
-
-window.addEventListener("scroll", ajustarConfiguracao)
 
 function copyToClipboard(text) {
   var textarea = document.createElement("textarea");
