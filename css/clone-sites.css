@@ -39,3 +39,7 @@
     border: 3px solid var(--spotify);
     border-radius: 10px;
 }
+#gartic-poster img{
+    border: 3px solid var(--gartic);
+    border-radius: 10px;
+}
