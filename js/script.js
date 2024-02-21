@@ -153,7 +153,6 @@ function changePagesClone() {
       pageLeft.classList.add('pageRight');
     }
   })
-  changeText();
 }
 
 function changePagesLanding() {
@@ -210,3 +209,19 @@ function copyToClipboard(text) {
     }
   }
 }
+
+const headerBar = document.querySelectorAll('.header-bar');
+
+headerBar.forEach(element => {
+  element.addEventListener('click', (evt) => {
+    const click = evt.target;
+    var alturaJanela = window.innerHeight;
+    var posicao = alturaJanela + 550
+    if (click.classList.contains('header-projects')){
+      window.scrollTo({
+          top: posicao,
+          behavior: 'smooth'
+      });   
+    }
+  });
+});
