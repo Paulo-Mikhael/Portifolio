@@ -33,8 +33,8 @@ const toggleMobile = document.querySelector(".moon-icon-mobile")
 const mobileMenu = document.querySelector('.mobile-menu')
 const codeIcon = document.querySelector("#code-icon")
 const landingImage = document.querySelector('#landing-img')
-const btnEsquerda = document.querySelectorAll('.btn-esquerda');
-const btnDireita = document.querySelectorAll('.btn-direita');
+const btnEsquerda = document.querySelectorAll('.button-left');
+const btnDireita = document.querySelectorAll('.button-right');
 
 function mudaCorBotao(urlDireita, urlEsquerda){
   btnDireita.forEach(btn => btn.src=urlDireita)
@@ -103,26 +103,25 @@ function modeSwitch(){
   root.classList.toggle("darkMode")
 }
 
-const celestialChicText = document.querySelector('#celestial-chic');
-const celestialChicPoster = document.querySelector('#celestial-chic-poster');
-const emProgressoText = document.querySelector('#em-progresso')
-const emProgressoPoster = document.querySelector('.em-progresso');
+function changeText() {
+  const emProgressoText = document.querySelector('#em-progresso')
+  const emProgressoPoster = document.querySelector('.em-progresso');
+  const celestialChicText = document.querySelector('#celestial-chic');
+  const celestialChicPoster = document.querySelector('#celestial-chic-poster');
 
-function changeText()
-{
-  if (celestialChicPoster.classList.contains('main-page'))
-  {
-    celestialChicText.classList.remove('open');
-
-    emProgressoText.classList.add('open');
-  }
-  else
-  {
-    emProgressoText.classList.remove('open');
-    
-    celestialChicText.classList.add('open');
+  if (celestialChicPoster.classList.contains('main-page')) {
+      celestialChicText.classList.remove('open');
+      emProgressoText.classList.add('open');
+  } else {
+      celestialChicText.classList.add('open');
+      emProgressoText.classList.remove('open');
   }
 }
+
+function changeTextClone(){
+  
+}
+
 
 function changePagesClone() {
   const mainPage = document.querySelector('.clone-sites > .projects > .main-page');
@@ -167,24 +166,25 @@ function changePagesLanding() {
     if (id == "landing-button-right"){
       mainPage.removeAttribute('class')
       mainPage.classList.add('pageRight');
-    
+      
       pageRight.removeAttribute('class');
       pageRight.classList.add('pageLeft');
-    
+      
       pageLeft.removeAttribute('class')
       pageLeft.classList.add('main-page');
+      changeText();
     }else if (id == "landing-button-left"){
       mainPage.removeAttribute('class')
       mainPage.classList.add('pageLeft');
-    
+      
       pageRight.removeAttribute('class');
       pageRight.classList.add('main-page');
-    
+      
       pageLeft.removeAttribute('class')
       pageLeft.classList.add('pageRight');
+      changeText();
     }
   })
-  changeText();
 }
 
 function copyToClipboard(text) {
