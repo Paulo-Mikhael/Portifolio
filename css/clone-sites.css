@@ -43,3 +43,12 @@
     border: 3px solid var(--gartic);
     border-radius: 10px;
 }
+#pagina-unity{
+    color: var(--pagina-unity);
+}
+#pagina-spotify{
+    color: var(--spotify);
+}
+#pagina-gartic{
+    color: var(--gartic);
+}
