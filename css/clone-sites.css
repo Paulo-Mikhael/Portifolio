@@ -10,9 +10,9 @@
     background-color: var(--fundo-clone-sites);
 }
 .clone-description{
-    border: 2px solid var(--celestial-chic);
+    border: 2px solid var(--pagina-unity);
     border-radius: 20px;
-    background-color: var(--background-white);
+    background-color: var(--pagina-unity-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,6 @@
     height: 65%;
 }
 .clone-title h3, .clone-subtitle h4{
-    color: rgb(59, 59, 59);
     padding: 20px;
 }
 .clone-subtitle h4 a{
@@ -34,14 +33,26 @@
 #unity-poster img{
     border: 3px solid var(--pagina-unity);
     border-radius: 10px;
+
+    &:hover{
+        border-color: var(--background-white);
+    }
 }
 #spotify-poster img{
     border: 3px solid var(--spotify);
     border-radius: 10px;
+
+    &:hover{
+        border-color: var(--background-white);
+    }
 }
 #gartic-poster img{
     border: 3px solid var(--gartic);
     border-radius: 10px;
+
+    &:hover{
+        border-color: var(--background-white);
+    }
 }
 #pagina-unity{
     color: var(--pagina-unity);
