@@ -108,18 +108,51 @@ function changeText() {
   const emProgressoPoster = document.querySelector('.em-progresso');
   const celestialChicText = document.querySelector('#celestial-chic');
   const celestialChicPoster = document.querySelector('#celestial-chic-poster');
+  const landingTextContainer = document.querySelector('#landing-text-container');
 
   if (celestialChicPoster.classList.contains('main-page')) {
       celestialChicText.classList.remove('open');
       emProgressoText.classList.add('open');
+      landingTextContainer.style.border = '2px solid var(--celestial-chic)';
+      landingTextContainer.style.backgroundColor = 'var(--celestial-chic-background)';
   } else {
       celestialChicText.classList.add('open');
       emProgressoText.classList.remove('open');
+      landingTextContainer.style.border = '2px solid var(--em-progresso)';
+      landingTextContainer.style.backgroundColor = 'var(--em-progresso-background)';
   }
 }
 
 function changeTextClone(){
-  
+  const paginaUnity = document.querySelector('#pagina-unity');
+  const posterUnity = document.querySelector('#unity-poster');
+  const paginaGartic = document.querySelector('#pagina-gartic');
+  const posterGartic = document.querySelector('#gartic-poster');
+  const paginaSpotify = document.querySelector('#pagina-spotify');
+  const posterSpotify = document.querySelector('#spotify-poster');
+  const cloneTextContainer = document.querySelector('#clone-text-container');
+
+  if (posterUnity.classList.contains('main-page')){
+    paginaGartic.classList.add('open');
+    paginaSpotify.classList.add('open');
+    paginaUnity.classList.remove('open');
+    cloneTextContainer.style.border = '2px solid var(--pagina-unity)';
+    cloneTextContainer.style.backgroundColor = 'var(--pagina-unity-background)';
+  }
+  else if (posterGartic.classList.contains('main-page')){
+    paginaGartic.classList.remove('open');
+    paginaUnity.classList.add('open');
+    paginaSpotify.classList.add('open');
+    cloneTextContainer.style.border = '2px solid var(--gartic)';
+    cloneTextContainer.style.backgroundColor = 'var(--gartic-background)';
+  }else if (posterSpotify.classList.contains('main-page')){
+    paginaSpotify.classList.remove('open');
+    paginaGartic.classList.add('open');
+    paginaUnity.classList.add('open');
+    cloneTextContainer.style.border = '2px solid var(--spotify)';
+    cloneTextContainer.style.backgroundColor = 'var(--spotify-background)';
+  }
+  console.log(paginaUnity.classList.value)
 }
 
 
@@ -151,6 +184,7 @@ function changePagesClone() {
       pageLeft.removeAttribute('class')
       pageLeft.classList.add('pageRight');
     }
+    changeTextClone();
   })
 }
 
@@ -209,19 +243,3 @@ function copyToClipboard(text) {
     }
   }
 }
-
-const headerBar = document.querySelectorAll('.header-bar');
-
-headerBar.forEach(element => {
-  element.addEventListener('click', (evt) => {
-    const click = evt.target;
-    var alturaJanela = window.innerHeight;
-    var posicao = alturaJanela + 550
-    if (click.classList.contains('header-projects')){
-      window.scrollTo({
-          top: posicao,
-          behavior: 'smooth'
-      });   
-    }
-  });
-});
