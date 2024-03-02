@@ -25,7 +25,7 @@
 .landing-text{
     border: 2px solid var(--celestial-chic);
     border-radius: 20px;
-    background-color: var(--background-white);
+    background-color: var(--celestial-chic-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
