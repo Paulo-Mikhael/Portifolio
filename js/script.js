@@ -104,22 +104,41 @@ function modeSwitch(){
 }
 
 function changeText() {
+  const avfPoster = document.querySelector('#avf-poster');
+  const avfText = document.querySelector('#vitalidade-fitness');
   const emProgressoText = document.querySelector('#em-progresso')
-  const emProgressoPoster = document.querySelector('.em-progresso');
+  const emProgressoPoster = document.querySelector('#em-progresso-poster');
   const celestialChicText = document.querySelector('#celestial-chic');
   const celestialChicPoster = document.querySelector('#celestial-chic-poster');
   const landingTextContainer = document.querySelector('#landing-text-container');
+  const landingPage = document.querySelector('.landing-pages');
+  const titleProjects = document.querySelector('#projects');
 
   if (celestialChicPoster.classList.contains('main-page')) {
-      celestialChicText.classList.remove('open');
-      emProgressoText.classList.add('open');
-      landingTextContainer.style.border = '2px solid var(--celestial-chic)';
-      landingTextContainer.style.backgroundColor = 'var(--celestial-chic-background)';
-  } else {
-      celestialChicText.classList.add('open');
-      emProgressoText.classList.remove('open');
-      landingTextContainer.style.border = '2px solid var(--em-progresso)';
-      landingTextContainer.style.backgroundColor = 'var(--em-progresso-background)';
+    celestialChicText.classList.remove('open');
+    emProgressoText.classList.add('open');
+    avfText.classList.add('open');
+    landingTextContainer.style.border = '2px solid var(--celestial-chic)';
+    landingTextContainer.style.backgroundColor = 'var(--celestial-chic-background)';
+    landingPage.style.backgroundColor = 'var(--celestial-chic-background)';
+    titleProjects.style.backgroundColor = 'var(--celestial-chic-background)';
+  } else if (emProgressoPoster.classList.contains('main-page')){
+    emProgressoText.classList.remove('open');
+    celestialChicText.classList.add('open');
+    avfText.classList.add('open');
+    landingTextContainer.style.border = '2px solid var(--em-progresso)';
+    landingTextContainer.style.backgroundColor = 'var(--em-progresso-background)';
+    landingPage.style.backgroundColor = 'var(--em-progresso-background)';
+    titleProjects.style.backgroundColor = 'var(--em-progresso-background)';
+  }
+  else if (avfPoster.classList.contains('main-page')){
+    avfText.classList.remove('open');
+    emProgressoText.classList.add('open');
+    celestialChicText.classList.add('open');
+    landingTextContainer.style.border = '2px solid var(--avf-poster)';
+    landingTextContainer.style.backgroundColor = '#000';
+    landingPage.style.backgroundColor = '#000';
+    titleProjects.style.backgroundColor = '#000';
   }
 }
 
@@ -131,6 +150,8 @@ function changeTextClone(){
   const paginaSpotify = document.querySelector('#pagina-spotify');
   const posterSpotify = document.querySelector('#spotify-poster');
   const cloneTextContainer = document.querySelector('#clone-text-container');
+  const cloneSites = document.querySelector('.clone-sites');
+  const cloneTitle = document.querySelector('.clone');
 
   if (posterUnity.classList.contains('main-page')){
     paginaGartic.classList.add('open');
@@ -138,6 +159,8 @@ function changeTextClone(){
     paginaUnity.classList.remove('open');
     cloneTextContainer.style.border = '2px solid var(--pagina-unity)';
     cloneTextContainer.style.backgroundColor = 'var(--pagina-unity-background)';
+    cloneSites.style.backgroundColor = 'var(--pagina-unity-background)';
+    cloneTitle.style.backgroundColor = 'var(--pagina-unity-background)';
   }
   else if (posterGartic.classList.contains('main-page')){
     paginaGartic.classList.remove('open');
@@ -145,12 +168,16 @@ function changeTextClone(){
     paginaSpotify.classList.add('open');
     cloneTextContainer.style.border = '2px solid var(--gartic)';
     cloneTextContainer.style.backgroundColor = 'var(--gartic-background)';
+    cloneSites.style.backgroundColor = 'var(--gartic-background)';
+    cloneTitle.style.backgroundColor = 'var(--gartic-background)';
   }else if (posterSpotify.classList.contains('main-page')){
     paginaSpotify.classList.remove('open');
     paginaGartic.classList.add('open');
     paginaUnity.classList.add('open');
     cloneTextContainer.style.border = '2px solid var(--spotify)';
     cloneTextContainer.style.backgroundColor = 'var(--spotify-background)';
+    cloneSites.style.backgroundColor = 'var(--spotify-background)';
+    cloneTitle.style.backgroundColor = 'var(--spotify-background)';
   }
   console.log(paginaUnity.classList.value)
 }
@@ -234,9 +261,7 @@ function copyToClipboard(text) {
   document.execCommand('copy');
 
   document.body.removeChild(textarea);
-  if (text == '92 99281-3253'){
-    alert('Copiado para a área de transferência')
-  }else if (text == 'paulomiguel11111971@gmail.com'){
+  if (text == 'paulomiguel11111971@gmail.com'){
     var confirmacao = confirm('Email: paulomiguel11111971@gmail.com; \r\nCopiado para a área de transferência. \r\n \r\nDeseja abrir o formulário de contato?')
     if (confirmacao == true){
       window.open('https://paulo-mikhael.github.io/formulario-contato/')
