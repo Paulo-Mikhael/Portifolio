@@ -1,5 +1,5 @@
 .clone{
-    background-color: var(--fundo-clone-sites);
+    background-color: #000;
 }
 .clone-sites{
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
     height: 88vh;
     width: 100%;
-    background-color: var(--fundo-clone-sites);
+    background-color: #000;
 }
 .clone-description{
     border: 2px solid var(--pagina-unity);
