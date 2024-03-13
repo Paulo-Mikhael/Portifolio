@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/clone-sites.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/code-img-branco.png">
-    <title>Paulo Miguel Portifólio</title>
+    <title>Paulo Miguel - Portifólio</title>
 </head>
 <body class="darkMode projects-pallets">
     <div class="header" id="bar">
@@ -19,14 +19,14 @@
             <div class="header-bar header-home">
                 <a>Home</a>
             </div>
-            <div class="header-bar">
-                <a class="header-projects" href="#projects">Projetos</a>
-            </div>
             <div class="header-bar header-contato">
                 <a>Contatos</a>
             </div>
             <div class="header-bar header-about">
                 <a>Sobre mim</a>
+            </div>
+            <div class="header-bar">
+                <a class="header-projects" href="#projects">Projetos</a>
             </div>
             <div class="header-bar">
                 <a class="moon-icon" id="toggle">☀️</a>
@@ -42,14 +42,14 @@
         <div id="mobile-home" class="header-bar header-home">
             <a>Home</a>
         </div>
-        <div class="header-bar header-projects">
-            <a>Projetos</a>
-        </div>
         <div class="header-bar header-contato">
             <a>Contatos</a>
         </div>
         <div class="header-bar header-about">
             <a>Sobre mim</a>
+        </div>
+        <div class="header-bar header-projects">
+            <a>Projetos</a>
         </div>
         <div class="header-bar moon-icon-mobile">
             <a id="toggle-mobile" onclick="menuShow()">🌑</a>
@@ -74,7 +74,7 @@
     <div class="contatos">
         <div class="apps fone">
             <img src="img/whatsapp.png" alt="whatsapp.png">
-            <a onclick="copyToClipboard('92 99281-3253')"  target="_blank">92 99281-3253</a>
+            <a onclick="copyToClipboard('92 99281-3253')"  href="https://bit.ly/3VzmcVl" target="_blank">92 99281-3253</a>
             <img src="img/telefone.png" alt="telefone.png">
         </div>
         <div class="apps instagram">
@@ -105,8 +105,8 @@
                    vídeos de outros desenvolvedores para me inspirar, e também gosto de dar uma jogadinha rápida nos meus games favoritos.</h2>
         </div>
     </div>
-    <div class="title-projects">
-        <h2 id="projects">Websites</h2>
+    <div class="title-projects" id="projects">
+        <h2>Websites</h2>
     </div>
     <div class="landing-pages">
         <div class="projects">
@@ -115,15 +115,17 @@
                     <img id="landing-button-left" src="img/btn-esquerda-preto.png" alt="btn-esquerda-preto.png" class="button-left">
                 </button>
             </div>
-            <div class="em-progresso pageRight">
-                <img src="img/em-progresso-branco2.png" alt="em-progresso-branco2.png" class="img-1">
+            <div id="avf-poster" class="main-page">
+                <a href="https://paulo-mikhael.github.io/academia-landing-page" target="_blank">
+                    <img src="img/avf-poster.png" alt="avf-poster.png" class="img-1">
+                </a>
             </div>
-            <div id="celestial-chic-poster" class="main-page">
+            <div id="celestial-chic-poster" class="pageRight">
                 <a href="https://paulo-mikhael.github.io/moda-landing-page/" target="_blank">
                     <img src="img/celestial-chic-poster.png" alt="em-progresso-branco2.png" class="img-2">
                 </a>
             </div>
-            <div class="em-progresso pageLeft">
+            <div id="em-progresso-poster" class="pageLeft">
                 <img src="img/em-progresso-branco2.png" alt="em-progresso-branco2.png" class="img-3">
             </div>
             <div class="arrowRight">
@@ -141,7 +143,7 @@
                 </h3>
             </div>
             <div class="websites-subtitle">
-                <h4 id="celestial-chic">
+                <h4 id="celestial-chic" class="open">
                     A Celestial Chic é uma loja de moda fictícia, nesse site é feita uma breve apresentação, destacando alguns dos
                     produtos e as redes sociais da loja. Essa é apenas uma demonstração, o funcionamento dela utiliza muito mais 
                     recursos do que foi usado, mas um dos funcionamentos dessa página seria levar para o site comercial da loja,
@@ -149,6 +151,11 @@
                 </h4>
                 <h4 id="em-progresso" class="open">
                     Mais projetos em breve, confira meus outros trabalhos.
+                </h4>
+                <h4 id="vitalidade-fitness">
+                    Uma landing page para apresentar uma academia, a 'Vitalidade Fitness', nesta página é mostrada os serviços e
+                    cursos oferecidos enquanto o usuário navega por um site com design vivo e agradável, assim como a imagem da Academia, na 
+                    qual é oferecido um ambiente vivo e agradável enquanto treina.
                 </h4>
             </div>
         </div>
