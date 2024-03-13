@@ -1,11 +1,11 @@
 .title-projects{
-    background-color: var(--fundo-landing-page);
-    padding-top: 20px;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: left;
+    padding-top: 20px;
     width: 100%;
-    height: 50px;
+    height: 120px;
 }
 .title-projects h2{
     font-weight: bold;
@@ -14,7 +14,7 @@
 }
 .landing-pages{
     /*#171923*/
-    background-color: var(--fundo-landing-page);
+    background-color: #000;
     width: 100%;
     height: 60vw;
     display: flex;
@@ -45,6 +45,9 @@
 }
 #em-progresso{
     color: var(--em-progresso);
+}
+#vitalidade-fitness{
+    color: var(--avf-poster);
 }
 .projects{
     height: 90%;
@@ -103,4 +106,7 @@
 }
 #celestial-chic-poster img{
     border: 3px solid var(--celestial-chic);
+}
+#avf-poster img{
+    border: 3px solid var(--avf-poster);
 }
