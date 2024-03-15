@@ -28,7 +28,10 @@
 }
 .clone-title h3{
     font-size: 17px;
-    color: var(--font-color);
+    color: #c5cddb;
+}
+#clone-text-container{
+    height: 350px;
 }
 #unity-poster img{
     border: 3px solid var(--pagina-unity);
