@@ -11,6 +11,7 @@
     font-weight: bold;
     font-size: 40px;
     padding-left: 30px;
+    color: #c5cddb;
 }
 .landing-pages{
     /*#171923*/
@@ -21,6 +22,9 @@
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid var(--mobile-menu-border);
+}
+#landing-text-container{
+    height: 350px;
 }
 .landing-text{
     border: 2px solid var(--celestial-chic);
@@ -38,7 +42,7 @@
 }
 .landing-text h3{
     font-size: 17px;
-    color: var(--font-color);
+    color: #c5cddb;
 }
 #celestial-chic{
     color: var(--celestial-chic);
