@@ -53,7 +53,6 @@ function modeSwitch(){
     toggle.innerHTML="☀️";
     codeIcon.src = "img/code-img-branco.png"
     /*landingImage.src = "img/boneco-landing-page-preto.gif"*/
-    mudaCorBotao("img/btn-direita-preto.png", "img/btn-esquerda-preto.png")
     
     if (mobileMenu.classList.contains('open'))
     {
@@ -79,7 +78,6 @@ function modeSwitch(){
     toggle.innerHTML="🌑";
     codeIcon.src = "img/code-img-preto.png"
     /*landingImage.src = "img/boneco-landing-page-branco.gif"*/
-    mudaCorBotao("img/btn-direita-branco.png", "img/btn-esquerda-branco.png")
 
     if (mobileMenu.classList.contains('open'))
     {
