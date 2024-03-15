@@ -106,20 +106,23 @@ h2{
 .contend .picture{
     text-align: center;
 }
-.contend .picture img{  
+.contend .picture img{
     border-radius: 50%;
     padding-left: 25px;
     height: 288px;
     width: 288px;
 }
 .contend .name{
+    filter: drop-shadow(1px 1px 5px black);
     font-size: 35px;
 }
 .contend .profile{
+    filter: drop-shadow(1px 1px 5px black);
     font-weight: bold;
     font-size: 35px;
 }
 .contend .my-description{
+    filter: drop-shadow(1px 1px 5px black);
     font-size: 20px;
 }
 .contend .perfil{
@@ -241,6 +244,16 @@ h2{
         height: 83vh;
     }
 }
+@media screen and (max-width: 1350px){
+    .contatos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        & .apps{
+            width: 90%;
+        }
+    }
+}
 @media screen and (max-width: 1000px){
     .contend{
         background-position: 40% 50%;
@@ -250,27 +263,25 @@ h2{
     .contatos{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-    .contatos .instagram{
-        margin-bottom: 0;
-    }
-    .contatos .fone{
-        margin-bottom: 0;
-        margin-left: 24%;
-    }
-    .contatos .linkedin{
-        margin-left: 24%;
     }
     .contatos .apps{
-        width: 250px;
+        width: 90%;
     }
     .landing-pages .landing-img img{
         width: 300px;
         height: 300px;
     }
+    .pageRight, .pageLeft{
+        display: none;
+    }
+    #landing-text-container{
+        height: 500px;
+    }
+    #clone-text-container{
+        height: 500px;
+    }
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 700px){
     .contend{
         width: 100%;
         background-position: 10% 90%;
@@ -337,14 +348,7 @@ h2{
         flex-direction: column;
     }
     .contatos .apps{
-        margin: 0;
         width: 80%;
-    }
-    .contatos .fone{
-        margin-top: 20px;
-    }
-    .contatos .github{
-        margin-bottom: 20px;
     }
     .landing-pages .landing-img{
         display: none;
