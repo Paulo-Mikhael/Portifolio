@@ -91,7 +91,7 @@ h2{
     height: 87vh;
     font-size: 20px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 2px dashed var(--mobile-menu-border);
 }
@@ -135,6 +135,29 @@ h2{
     margin-left: 5px;
     width: 25px;
     height: 25px;
+}
+.download-button{
+    margin-top: 3%;
+    height: 40%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & button{
+        cursor: pointer;
+        background-color: #99C341;
+        border-radius: 5px;
+        padding: 12px;
+        border: 2px solid #D9D9D9;
+
+        & a{
+            color: #383838;
+            font-weight: bold;
+            font-size: 17px;
+            text-decoration: none;
+        }
+    }
 }
 .contatos{
     /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
