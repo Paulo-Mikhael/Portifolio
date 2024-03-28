@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/vars.css">
-    <link rel="stylesheet" href="css/websites.css">
-    <link rel="stylesheet" href="css/clone-sites.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
     <link rel="icon" href="img/code-img-branco.png">
     <title>Paulo Miguel - Portifólio</title>
 </head>
@@ -23,7 +23,7 @@
                 <a>Contatos</a>
             </div>
             <div class="header-bar header-about">
-                <a>Sobre mim</a>
+                <a href="#about-me">Sobre mim</a>
             </div>
             <div class="header-bar">
                 <a class="header-projects" href="#projects">Projetos</a>
@@ -98,131 +98,88 @@
         </div>
         <div class="apps email">
             <img src="img/gmail.png" alt="gmail.png">
-            <a onclick="copyToClipboard('paulomiguel11111971@gmail.com')">Paulo Miguel</a>
+            <a target="_blank" href="https://paulo-mikhael.github.io/formulario-contato/" onclick="copyToClipboard('paulomiguel11111971@gmail.com')">Paulo Miguel</a>
         </div>
     </div>
-    <div class="about-me-title">
+    <div class="about-me-title" id="about-me">
         <h1>Sobre mim</h1>
     </div>
     <div class="about-me">
         <div class="about-me-text">
             <h2>Me chamo Paulo Miguel Bentes do Nascimento, tenho 17 anos, e estou na minha jornada para me tornar um desenvolvedor Back-end,
-                 estou me profissionalizando na linguagem C# para construir sistemas integrados 
-                 com banco de dados e API's Web junto com as linguagens essenciais, HTML,CSS e JavaScript, quando não estou no computador estudando, no meu celular, eu fico assistindo alguns
-                   vídeos de outros desenvolvedores para me inspirar, e também gosto de dar uma jogadinha rápida nos meus games favoritos.</h2>
+                 estou me profissionalizando na linguagem C# para construir sistemas integrados com banco de dados e API's, e em HTML, 
+                 CSS, JavaScript e PHP para construir aplicações web, gosto de assistir vídeos de outros desenvolvedores para me inspirar, 
+                 e também gosto de dar uma jogadinha rápida nos meus games favoritos.</h2>
         </div>
     </div>
-    <div class="title-projects" id="projects">
-        <h2>Websites</h2>
-    </div>
-    <div class="landing-pages">
-        <div class="projects">
-            <div class="arrowLeft">
-                <button onclick="changePagesLanding()">
-                    <img id="landing-button-left" src="img/btn-esquerda-preto.png" alt="btn-esquerda-preto.png" class="button-left">
+    <div id="projects">
+        <div class="projects-content">
+            <div class="choose-column">
+                <button id="front-end-button">
+                    <h2>Front-end</h2>
+                </button>
+                <button id="back-end-button">
+                    <h2>Back-end</h2>
+                </button>
+                <button id="softwares-button">
+                    <h2>Softwares</h2>
                 </button>
             </div>
-            <div id="avf-poster" class="main-page">
-                <a href="https://paulo-mikhael.github.io/academia-landing-page" target="_blank">
-                    <img src="img/avf-poster.png" alt="avf-poster.png" class="img-1">
-                </a>
+            <div class="preview-card" id="front-end-preview">
+
             </div>
-            <div id="celestial-chic-poster" class="pageRight">
-                <a href="https://paulo-mikhael.github.io/moda-landing-page/" target="_blank">
-                    <img src="img/celestial-chic-poster.png" alt="em-progresso-branco2.png" class="img-2">
-                </a>
+            <div class="preview-card" id="back-end-preview">
+                <h3>Projetos Back-end</h3>
+                <h4>Nesta seção se encontram aplicações para envio e recebimento de dados, como por exemplo: API's e aplicações web que 
+                    envolvem cadastro de usuário. <br><br>As tecnologias que eu utilizo para isso são: JavaScript, PHP e C#. 
+                    Frameworks: .NET e Entity Framework. Sistema Gerenciador de Banco de Dados (SGBD): Sql Server e MySql</h4>
             </div>
-            <div id="em-progresso-poster" class="pageLeft">
-                <img src="img/em-progresso-branco2.png" alt="em-progresso-branco2.png" class="img-3">
+            <div class="preview-card" id="softwares-preview">
+                <h3>Softwares para desktop</h3>
+                <h4>Nesta seção se encontram softwares de gestão, normalmente ligadas a banco de dados ou API's, para facilitar processos 
+                    voltados a envio e recebimento de dados, softwares como: Controle de estoque, Administração de usuários, Relatórios e afins. 
+                    <br><br>As tecnologias que eu utilizo para isso são: C# (Windows Forms) e o Sistema Gerenciador de Banco de Dados (SGBD) 
+                    Sql Server Management Studio</h4>
             </div>
-            <div class="arrowRight">
-                <button onclick="changePagesLanding()">
-                    <img id="landing-button-right" src="img/btn-direita-preto.png" alt="btn-direita-preto.png" class="button-right">
-                </button>
-            </div>
-        </div>
-        <div class="landing-text" id="landing-text-container">
-            <!--<img id="landing-img" src="img/boneco-landing-page-preto.gif" alt="imagem-landing-page-preto">-->
-            <div class="websites-title">
-                <h3>Websites são páginas de internet com a função de envolver o usuário e proporcionar uma experiência agradável enquanto 
-                    utiliza o site, como é o caso de landing pages e dashboards. Geralmente, esses projetos não exigem o uso de muitas 
-                    ferramentas, tornando-os mais acessíveis em termos de custo. O tempo de desenvolvimento normalmente é inferior a uma semana.
-                </h3>
-            </div>
-            <div class="websites-subtitle">
-                <h4 id="celestial-chic" class="open">
-                    A Celestial Chic é uma loja de moda fictícia, nesse site é feita uma breve apresentação, destacando alguns dos
-                    produtos e as redes sociais da loja. Essa é apenas uma demonstração, o funcionamento dela utiliza muito mais 
-                    recursos do que foi usado, mas um dos funcionamentos dessa página seria levar para o site comercial da loja,
-                    o qual tem uma categoria abaixo destinada a esse tipo de projeto.
-                </h4>
-                <h4 id="em-progresso" class="open">
-                    Mais projetos em breve, confira meus outros trabalhos.
-                </h4>
-                <h4 id="vitalidade-fitness">
-                    Uma landing page para apresentar uma academia, a 'Vitalidade Fitness', nesta página é mostrada os serviços e
-                    cursos oferecidos enquanto o usuário navega por um site com design vivo e agradável, assim como a imagem da Academia, na 
-                    qual é oferecido um ambiente vivo e agradável enquanto treina.
-                </h4>
-            </div>
-        </div>
-    </div>
-    <div class="title-projects clone">
-        <h2>Sites clones</h2>
-    </div>
-    <div class="clone-sites">
-        <div class="clone-description" id="clone-text-container">
-            <div class="clone-title">
-                <h3>
-                    Sites clones evidenciam a habilidade de um desenvolvedor em recriar fielmente um modelo preexistente. Essas reproduções
-                    ilustram tanto a destreza técnica quanto a capacidade de compreensão do desenvolvedor em relação ao design e à arquitetura de um 
-                    determinado site original.
-                </h3>
-            </div>
-            <div class="clone-subtitle">
-                <h4 id="pagina-unity" class="">
-                    A <a target="_blank" href="https://unity.com/pages/unity-pro-buy-now">
-                        página da Unity</a> adota um estilo bastante convencional, caracterizado por uma mensagem principal impactante, uma área 
-                    dedicada à apresentação de seus serviços, e outras características comuns em diversos sites populares. Foi por isso que 
-                    escolhi recriá-la para aprender essa habilidade tão desejada pelo mercado.
-                </h4>
-                <h4 id="pagina-spotify" class="open">
-                    A página do Spotify é um exemplo de dashboard cuja a função é atrair o usuário para ultilizar o site, com um layout 
-                    minimalista e intuitivo, essas são características essenciais para se ter em qualquer projeto, portanto, aprender esse design e
-                    seus conceitos é de suma importância para criar algo chamativo.
-                </h4>
-                <h4 id="pagina-gartic" class="open">
-                    O Gartic, por ser uma plataforma online de jogos, tem um design com cores vivas e artes que ilustram o que ele
-                    irá encontrar navegando na página, isso passa uma mensagem alegre para o usuário, mesmo que inconscientemente, e faz com que ele aproveite o 
-                    conteúdo do site, saber chamar um possível cliente é de extrema ultilidade para qualquer negócio.
-                </h4>
-            </div>
-        </div>
-        <div class="projects">
-            <div class="arrowLeft">
-                <button onclick="changePagesClone()">
-                    <img id="clone-button-left" src="img/btn-esquerda-preto.png" alt="btn-esquerda-preto.png" class="button-left">
-                </button>
-            </div>
-            <div id="gartic-poster" class="pageRight">
-                <a href="https://paulo-mikhael.github.io/pagina-gartic-2024/" target="_blank">
-                    <img src="img/gartic-poster.gif" alt="em-progresso-branco2.png" class="img-1">
-                </a>
-            </div>
-            <div id="unity-poster" class="main-page">
-                <a href="https://paulo-mikhael.github.io/pagina-unity-2024/" target="_blank">
-                    <img src="img/pagina-unity-poster-v1.png" alt="pagina-unity-poster-v1.png" class="img-2">
-                </a>
-            </div>
-            <div id="spotify-poster" class="pageLeft">
-                <a href="https://paulo-mikhael.github.io/spotify-imersao/spotify-imersao/" target="_blank">
-                    <img src="img/spotify-poster.png" alt="em-progresso-branco2.png" class="img-3">
-                </a>
-            </div>
-            <div class="arrowRight">
-                <button onclick="changePagesClone()">
-                    <img id="clone-button-right" src="img/btn-direita-preto.png" alt="btn-direita-preto.png" class="button-right">
-                </button>
+            <div id="projects-card">
+                <div id="front-end-projects">
+                <div class="title">
+                    <h3>Projetos Front-end</h3>
+                    <h4>Nesta seção se encontram páginas web com a função de vender algum serviço ou imagem, geralmente landing pages e as 
+                        interfaces de e-commerces e páginas administrativas. <br><br>As tecnologias que eu utilizo para isso são: HTML, CSS e 
+                        JavaScript</h4>
+                    </div>
+                    <div class="main-card">
+                        <div class="image">
+                            <a href="https://paulo-mikhael.github.io/academia-landing-page/" target="_blank">
+                                <img src="img/avf-poster.png" alt="avf-poster.png">
+                            </a>
+                        </div>
+                        <div class="tab-pages-container">
+                            <div class="tab-bar">
+                                <button>Sobre</button>
+                                <button class="tab-selected">Tecnologias</button>
+                                <button>Detalhes Técnicos</button>
+                                <button>Design</button>
+                            </div>
+                            <div class="text-button">
+                                <h5>
+                                    Essa é uma landing page para apresentar uma academia, a 'Vitalidade Fitness', nesta página é mostrada os serviços e 
+                                    cursos oferecidos enquanto o usuário navega por um site com design vivo e agradável, assim como a imagem da 
+                                    Academia, na qual é oferecido um ambiente vivo e agradável enquanto treina.
+                                </h5>
+                                <div class="tab-buttons">
+                                    <div id="next">
+                                        <button>Próximo</button>
+                                    </div>
+                                    <div id="previous">
+                                        <button>Anterior</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,176 @@
+#projects{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    & .projects-content{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & .choose-column{
+            height: 100%;
+            width: 15%;
+
+            & button{
+                background-color: var(--background-white);
+                border: none;
+                height: 33.3%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border-top: 3px solid var(--mobile-menu-border);
+                border-right: 3px solid var(--mobile-menu-border);
+
+                &#front-end-button{
+                    border-right: 3px solid var(--front-end-background);
+                }
+            }
+        }
+        .preview-card{
+            display: none;
+        }
+        #projects-card{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            & #front-end-projects{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: var(--front-end-background);
+                border: 3px solid var(--mobile-menu-border);
+                border-left: none;
+
+                & .title{
+                    width: 100%;
+                    height: 25%;
+                    margin-bottom: 20px;
+                    
+                    & h3, h4{
+                        margin: 10px;
+                        color: var(--front-end-font);
+                    }
+                    & h3{
+                        font-size: 25px;
+                    }
+                }
+                & .main-card{
+                    height: 70%;
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    & .image{
+                        width: 22%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        & a{
+                            width: 90%;
+                            height: 90%;
+
+                            & img{
+                                width: 100%;
+                                height: 100%;
+                                cursor: pointer;
+                                border: 3px solid var(--mobile-menu-border);
+                                border-radius: 7px;
+                                transition: all 0.2s linear;
+
+                                &:hover{
+                                    border: 3px solid var(--avf-poster);
+                                }
+                            }
+                        }
+                    }
+                    & .tab-pages-container{
+                        width: 75%;
+                        height: 90%;
+                        
+                        & .text-button{
+                            width: 99.2%;
+                            height: 90%;
+                            background-color: black;
+                            border: 3px solid var(--avf-poster);
+                            border-top: none;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+    
+                            & h5{
+                                padding: 40px 20px 0px 20px;
+                                color: var(--avf-poster);
+                                display: flex;
+                                align-items: center;
+                                font-size: 18px;
+                            }
+                            & .tab-buttons{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                width: 100%;
+                                height: 20%;
+
+                                & button{
+                                    padding: 10px 40px 10px 40px;
+                                    font-size: 17px;
+                                    color: var(--avf-poster);
+                                    background-color: black;
+                                    border: 3px solid var(--avf-poster);
+                                    font-weight: bolder;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        & .tab-bar{
+                            width: 100%;
+                            height: 40px;
+                            display: flex;
+                            justify-content: space-between;
+
+                            & button{
+                                background-color: black;
+                                cursor: pointer;
+                                height: 100%;
+                                width: 25%;
+                                border: none;
+                                border-bottom: 3px solid var(--avf-poster);
+                                color: var(--avf-poster);
+
+                                &:nth-child(1){
+                                    border-radius: 4px 0px 0px 0px;
+                                }
+                                &:nth-last-child(1){
+                                    border-radius: 0px 4px 0px 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.tab-selected{
+    border-radius: 7px 7px 0px 0px !important;
+    border-left: 3px solid var(--avf-poster) !important;
+    border-right: 3px solid var(--avf-poster) !important;
+    border-top: 3px solid var(--avf-poster) !important;
+    border-bottom: none !important;
+}

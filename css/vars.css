@@ -1,5 +1,5 @@
 :root{
-    --fundo-about-me: #74a1c7;
+    --fundo-about-me: #bed1e0;
     --contatos-gradiente-1:#363d61;
     --contatos-gradiente-2: #304552;
     --contatos-gradiente-3: #532e45;
@@ -31,10 +31,16 @@
     --celestial-chic: #e23d01;
     --em-progresso: #afafaf;
     --avf-poster: #F45929;
+    --fastask-poster: #228BE6;
 
     --pagina-unity-background: #000;
     --gartic-background: #0b284e;
     --spotify-background: #121212;
     --celestial-chic-background: #0e0d0d;
     --em-progresso-background: #484a4d;
+    --fastask-background: #484848;
+
+    --front-end-border: #5A6169;
+    --front-end-background: #18191B;
+    --front-end-font: #7B7B7B;
 }
