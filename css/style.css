@@ -9,6 +9,10 @@
 html{
     scroll-behavior: smooth;
 }
+abbr{
+    cursor: pointer;
+    text-decoration: none;
+}
 body{
     margin: 0;
     padding: 0;
