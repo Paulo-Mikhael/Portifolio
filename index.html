@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-queries.css">
     <link rel="icon" href="img/code-img-branco.png">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Paulo Miguel - Portifólio</title>
 </head>
 <body class="darkMode projects-pallets">
@@ -125,9 +128,6 @@
                     <h2>Softwares</h2>
                 </button>
             </div>
-            <div class="preview-card" id="front-end-preview">
-
-            </div>
             <div class="preview-card" id="back-end-preview">
                 <h3>Projetos Back-end</h3>
                 <h4>Nesta seção se encontram aplicações para envio e recebimento de dados, como por exemplo: API's e aplicações web que 
@@ -156,24 +156,65 @@
                             </a>
                         </div>
                         <div class="tab-pages-container">
-                            <div class="tab-bar">
-                                <button>Sobre</button>
-                                <button class="tab-selected">Tecnologias</button>
-                                <button>Detalhes Técnicos</button>
-                                <button>Design</button>
-                            </div>
                             <div class="text-button">
-                                <h5>
-                                    Essa é uma landing page para apresentar uma academia, a 'Vitalidade Fitness', nesta página é mostrada os serviços e 
-                                    cursos oferecidos enquanto o usuário navega por um site com design vivo e agradável, assim como a imagem da 
-                                    Academia, na qual é oferecido um ambiente vivo e agradável enquanto treina.
-                                </h5>
-                                <div class="tab-buttons">
-                                    <div id="next">
-                                        <button>Próximo</button>
+                                <div class="tab-pages-text">
+                                    <h5 id="avf-text">
+                                        <b>Descrição:</b><br><br>
+                                        Essa é uma landing page para apresentar uma academia, a 'Vitalidade Fitness', nesta página é mostrada os serviços e 
+                                        cursos oferecidos enquanto o usuário navega por um site com design vivo e agradável, assim como a imagem da 
+                                        Academia, na qual é oferecido um ambiente vivo e agradável enquanto treina.<br>
+                                    </h5>
+                                    <h5 class="open" id="fastask-text">
+                                        <b>Descrição:</b><br><br>
+                                        A Fastask é uma aplicação web que busca facilitar a gestão de tarefas, a página possui um design limpo 
+                                        e intuitivo, seu funcionamento consiste principalmente em criar, excluir e editar tarefas.
+                                    </h5>
+                                    <h5 class="open" id="guia-text">
+                                        <b>Descrição:</b><br><br>
+                                        Este é um projeto com o objetivo de promover os serviços de uma empresa de turismo, para isso, é 
+                                        necessário também promover a cidade com uma página atrativa. A página possui um design simples e 
+                                        objetivo, ao mesmo tempo que apresenta as atrações, também está apresentando os serviços da empresa.
+                                    </h5>
+                                    <h5 class="open" id="unity-text">
+                                        <b>Descrição:</b><br><br>
+                                        
+                                    </h5>
+                                </div>
+                                <div class="tecnologies">
+                                    <h6>Tecnologias: 
+                                        <abbr title="HTML 5"><i class="devicon-html5-plain"></i></abbr>
+                                        <abbr title="CSS 3"><i class="devicon-css3-plain"></i></abbr>
+                                        <abbr title="JavaScript"><i class="devicon-javascript-plain open"></i></abbr>
+                                    </h6>
+                                </div>
+                                <div class="text-buttons">
+                                    <div class="buttons">
+                                        <a href="https://paulo-mikhael.github.io/academia-landing-page/" target="_blank">
+                                            <button id="site">
+                                                <i class="fa-solid fa-globe"></i>
+                                                Site
+                                            </button>
+                                        </a>
+                                        <a href="https://github.com/Paulo-Mikhael/academia-landing-page" target="_blank">
+                                            <button id="github">
+                                                <i class="fa-brands fa-github"></i>
+                                                Repositório Github
+                                            </button>
+                                        </a>
+                                        <a href="https://drive.google.com/drive/folders/1zgeYl-gR0xMGEpaVz2N994JK4wLCXq8L?hl=pt_BR" target="_blank">
+                                            <button id="design">
+                                                <i class="fa-solid fa-pen-nib"></i>
+                                                Design da Página
+                                            </button>
+                                        </a>
                                     </div>
-                                    <div id="previous">
-                                        <button>Anterior</button>
+                                </div>
+                                <div class="tab-buttons">
+                                    <div>
+                                        <button id="next">Próximo</button>
+                                    </div>
+                                    <div>
+                                        <button id="previous">Anterior</button>
                                     </div>
                                 </div>
                             </div>
