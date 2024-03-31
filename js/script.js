@@ -8,6 +8,8 @@ const textContainer = document.querySelector(".text-button");
 const avfText = document.querySelector("#avf-text");
 const fastaskText = document.querySelector("#fastask-text");
 const guiaText = document.querySelector("#guia-text");
+const unityText = document.querySelector("#unity-text");
+const garticText = document.querySelector("#gartic-text");
 const imageA = document.querySelector(".image > a");
 const imageContainer = document.querySelector(".image > a > img");
 const buttonGithub = document.querySelector(".buttons > a > #github");
@@ -153,6 +155,8 @@ function fastaskTheme()
   avfText.classList.add("open");
   fastaskText.classList.remove("open");
   guiaText.classList.add("open");
+  unityText.classList.add("open");
+  garticText.classList.add("open");
 }
 
 function avfTheme()
@@ -178,6 +182,8 @@ function avfTheme()
   avfText.classList.remove("open");
   fastaskText.classList.add("open");
   guiaText.classList.add("open");
+  unityText.classList.add("open");
+  garticText.classList.add("open");
 }
 
 function guiaTheme()
@@ -193,6 +199,7 @@ function guiaTheme()
   textContainer.style.border = "3px solid var(--guia-poster)";
   imageA.setAttribute("href", "https://paulo-mikhael.github.io/guia-turistico");
   imageContainer.setAttribute("src", "img/Guia-poster.png");
+  imageContainer.setAttribute("alt", "Guia-poster.png");
   imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--guia-poster)"});
   imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
   buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/guia-turistico");
@@ -202,33 +209,65 @@ function guiaTheme()
   avfText.classList.add("open");
   fastaskText.classList.add("open");
   guiaText.classList.remove("open");
+  unityText.classList.add("open");
+  garticText.classList.add("open");
 }
 
 function unityTheme()
 {
-  nextButton.style.backgroundColor = "var(--guia-background)";
+  nextButton.style.backgroundColor = "var(--pagina-unity-background)";
   nextButton.style.border = "3px solid var(--pagina-unity)";
   nextButton.style.color = "var(--pagina-unity)";
-  previousButton.style.backgroundColor = "var(--guia-background)";
+  previousButton.style.backgroundColor = "var(--pagina-unity-background)";
   previousButton.style.border = "3px solid var(--pagina-unity)";
   previousButton.style.color = "var(--pagina-unity)";
   tecnologiesText.style.color = "var(--pagina-unity)";
-  textContainer.style.backgroundColor = "var(--guia-background)";
+  textContainer.style.backgroundColor = "var(--pagina-unity-background)";
   textContainer.style.border = "3px solid var(--pagina-unity)";
   imageA.setAttribute("href", "https://paulo-mikhael.github.io/pagina-unity-2024");
-  imageContainer.setAttribute("src", "img/Guia-poster.png");
+  imageContainer.setAttribute("src", "img/pagina-unity-poster-v1.png");
+  imageContainer.setAttribute("alt", "pagina-unity-poster.png");
   imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--pagina-unity)"});
   imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
   buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/pagina-unity-2024");
   buttonGithub.parentElement.setAttribute("href", "https://github.com/Paulo-Mikhael/pagina-unity-2024");
   buttonDesign.parentElement.setAttribute("href","https://unity.com/pages/unity-pro-buy-now?utm_source=google&utm_medium=cpc&utm_campaign=cc_dd_upr_amer_amer-t2_en_pu_sem-gg_acq_br-pr_2023-01_brand-at2_cc3022_ev-br_id:71700000105927803&utm_content=cc_dd_upr_amer_pu_sem_gg_ev-br_pros_x_npd_cpc_kw_sd_all_x_x_brand_id:58700008262791741&utm_term=unity&&&&&gad_source=1&gclid=Cj0KCQiA84CvBhCaARIsAMkAvkI2ixzlSyPBXVK_AWEly_Qv7z5Ha8boUhvPG9qHkCdl7v2hBftG1ZIaAszYEALw_wcB&gclsrc=aw.ds");
-  javascriptIcon.classList.remove("open");
+  javascriptIcon.classList.add("open");
   avfText.classList.add("open");
   fastaskText.classList.add("open");
-  guiaText.classList.remove("open");
+  guiaText.classList.add("open");
+  unityText.classList.remove("open");
+  garticText.classList.add("open");
 }
 
-// avf - 1; fastask - 2; guia - 3; unity - 4;
+function garticTheme()
+{
+  nextButton.style.backgroundColor = "var(--gartic-background)";
+  nextButton.style.border = "3px solid var(--gartic)";
+  nextButton.style.color = "var(--gartic)";
+  previousButton.style.backgroundColor = "var(--gartic-background)";
+  previousButton.style.border = "3px solid var(--gartic)";
+  previousButton.style.color = "var(--gartic)";
+  tecnologiesText.style.color = "var(--gartic)";
+  textContainer.style.backgroundColor = "var(--gartic-background)";
+  textContainer.style.border = "3px solid var(--gartic)";
+  imageA.setAttribute("href", "https://paulo-mikhael.github.io/pagina-gartic-2024");
+  imageContainer.setAttribute("src", "img/gartic-poster.gif");
+  imageContainer.setAttribute("alt", "gartic-poster.gif");
+  imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--gartic)"});
+  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
+  buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/pagina-gartic-2024");
+  buttonGithub.parentElement.setAttribute("href", "https://github.com/Paulo-Mikhael/pagina-gartic-2024");
+  buttonDesign.parentElement.setAttribute("href","https://gartic.com.br/");
+  javascriptIcon.classList.add("open");
+  avfText.classList.add("open");
+  fastaskText.classList.add("open");
+  guiaText.classList.add("open");
+  unityText.classList.add("open");
+  garticText.classList.remove("open");
+}
+
+// avf - 1; fastask - 2; guia - 3; unity - 4; gartic - 5;
 let posterNumber = 1;
 
 nextButton.addEventListener("click", () => {
@@ -249,13 +288,23 @@ nextButton.addEventListener("click", () => {
   }
   else if (posterNumber == 4)
   {
+    garticTheme();
+    posterNumber = 5;
+  }
+  else if (posterNumber == 5)
+  {
     avfTheme();
     posterNumber = 1;
   }
 });
 
 previousButton.addEventListener("click", () => {
-  if (posterNumber == 4)
+  if (posterNumber == 5)
+  {
+    unityTheme();
+    posterNumber = 4;
+  }
+  else if (posterNumber == 4)
   {
     guiaTheme();
     posterNumber = 3;
@@ -272,7 +321,7 @@ previousButton.addEventListener("click", () => {
   }
   else if (posterNumber == 1)
   {
-    unityTheme();
-    posterNumber = 4;
+    garticTheme();
+    posterNumber = 5;
   }
 });

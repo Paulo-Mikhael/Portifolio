@@ -7,6 +7,12 @@
 #guia-text{
     color: var(--guia-poster);
 }
+#unity-text{
+    color: var(--pagina-unity);
+}
+#gartic-text{
+    color: var(--gartic);
+}
 #projects{
     width: 100vw;
     height: 100vh;
