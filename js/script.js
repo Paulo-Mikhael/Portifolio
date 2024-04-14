@@ -147,7 +147,7 @@ function fastaskTheme()
   imageContainer.setAttribute("src", "img/Fastask-poster.png");
   imageContainer.setAttribute("alt", "Fastask-poster.png");
   imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--fastask-poster)"});
-  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
+  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--mobile-menu-border)"});
   buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/fastask/");
   buttonGithub.parentElement.setAttribute("href", "https://github.com/Paulo-Mikhael/fastask/");
   buttonDesign.parentElement.setAttribute("href", "https://drive.google.com/drive/folders/1f4Wq0-4xKMTeNsDwOT7qy-XSfVP_8LgA?usp=drive_link");
@@ -174,7 +174,7 @@ function avfTheme()
   imageContainer.setAttribute("src", "img/avf-poster.png");
   imageContainer.setAttribute("alt", "avf-poster.png");
   imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--avf-poster)"});
-  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
+  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--mobile-menu-border)"});
   buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/academia-landing-page/");
   buttonGithub.parentElement.setAttribute("href", "https://github.com/Paulo-Mikhael/academia-landing-page/");
   buttonDesign.parentElement.setAttribute("href","https://drive.google.com/drive/folders/1zgeYl-gR0xMGEpaVz2N994JK4wLCXq8L?usp=drive_link");
@@ -201,7 +201,7 @@ function guiaTheme()
   imageContainer.setAttribute("src", "img/Guia-poster.png");
   imageContainer.setAttribute("alt", "Guia-poster.png");
   imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--guia-poster)"});
-  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
+  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--mobile-menu-border)"});
   buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/guia-turistico");
   buttonGithub.parentElement.setAttribute("href", "https://github.com/Paulo-Mikhael/guia-turistico");
   buttonDesign.parentElement.setAttribute("href","https://drive.google.com/drive/folders/1zgeYl-gR0xMGEpaVz2N994JK4wLCXq8L?usp=drive_link");
@@ -228,7 +228,7 @@ function unityTheme()
   imageContainer.setAttribute("src", "img/pagina-unity-poster-v1.png");
   imageContainer.setAttribute("alt", "pagina-unity-poster.png");
   imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--pagina-unity)"});
-  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
+  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--mobile-menu-border)"});
   buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/pagina-unity-2024");
   buttonGithub.parentElement.setAttribute("href", "https://github.com/Paulo-Mikhael/pagina-unity-2024");
   buttonDesign.parentElement.setAttribute("href","https://unity.com/pages/unity-pro-buy-now?utm_source=google&utm_medium=cpc&utm_campaign=cc_dd_upr_amer_amer-t2_en_pu_sem-gg_acq_br-pr_2023-01_brand-at2_cc3022_ev-br_id:71700000105927803&utm_content=cc_dd_upr_amer_pu_sem_gg_ev-br_pros_x_npd_cpc_kw_sd_all_x_x_brand_id:58700008262791741&utm_term=unity&&&&&gad_source=1&gclid=Cj0KCQiA84CvBhCaARIsAMkAvkI2ixzlSyPBXVK_AWEly_Qv7z5Ha8boUhvPG9qHkCdl7v2hBftG1ZIaAszYEALw_wcB&gclsrc=aw.ds");
@@ -255,7 +255,7 @@ function garticTheme()
   imageContainer.setAttribute("src", "img/gartic-poster.gif");
   imageContainer.setAttribute("alt", "gartic-poster.gif");
   imageContainer.addEventListener("mouseenter", () => {imageContainer.style.border = "3px solid var(--gartic)"});
-  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--front-end-border)"});
+  imageContainer.addEventListener("mouseleave", () => {imageContainer.style.border = "3px solid var(--mobile-menu-border)"});
   buttonSite.parentElement.setAttribute("href", "https://paulo-mikhael.github.io/pagina-gartic-2024");
   buttonGithub.parentElement.setAttribute("href", "https://github.com/Paulo-Mikhael/pagina-gartic-2024");
   buttonDesign.parentElement.setAttribute("href","https://gartic.com.br/");
