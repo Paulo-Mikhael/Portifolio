@@ -1,237 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/vars.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="icon" href="img/code-img-branco.png">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <title>Paulo Miguel - Portifólio</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Paulo's Portifolio</title>
+    <link rel="stylesheet" href="src/css/vars.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/media-screen.css">
+    <link rel="icon" href="src/images/code-icon-white.png">
 </head>
-<body class="darkMode projects-pallets">
-    <div class="header" id="bar">
-        <div class="code-img">
-            <img id="code-icon" src="img/code-img-branco.png" alt="code-img-branco.png">
-        </div>
-        <div class="header-tools">
-            <div class="header-bar header-home">
-                <a>Home</a>
-            </div>
-            <div class="header-bar header-contato">
-                <a>Contatos</a>
-            </div>
-            <div class="header-bar header-about">
-                <a href="#about-me">Sobre mim</a>
-            </div>
-            <div class="header-bar">
-                <a class="header-projects" href="#projects">Projetos</a>
-            </div>
-            <div class="header-bar">
-                <a class="moon-icon" id="toggle">☀️</a>
-            </div>
-        </div>
-        <div class="header-mobile-button" onclick="menuShow()">
-            <button>
-                <img class="mobile-icon" src="img/tres-barras-branco.png" alt="">
-            </button>
-        </div>
-    </div>
-    <div class="mobile-menu open" id="mobile-bar">
-        <div id="mobile-home" class="header-bar header-home">
-            <a>Home</a>
-        </div>
-        <div class="header-bar header-contato">
-            <a>Contatos</a>
-        </div>
-        <div class="header-bar header-about">
-            <a>Sobre mim</a>
-        </div>
-        <div class="header-bar header-projects">
-            <a href="#projects">Projetos</a>
-        </div>
-        <div class="header-bar moon-icon-mobile">
-            <a id="toggle-mobile" onclick="menuShow()">🌑</a>
-        </div>
-    </div>
-    <div class="contend" id="contend-text">
-        <div class="perfil">
-            <div class="picture">
-                <img class="perfil-image" src="img/moldura_perfil_branco.png" alt="moldura_perfil_preto.png">
-            </div>
-            <div class="name">
-                <h1>Paulo Miguel</h1>
-            </div>
-            <div class="profile">
-                <h1>Programador Web</h1>
-            </div>
-            <div class="my-description">
-                <h2>Criação de websites, sites comerciais e softwares para desktop</h2>
-            </div>
-        </div>
-        <div class="download-button">
-            <button>
-                <a target="_blank" href="https://drive.google.com/file/d/1RdEJJfPUTNw7emeixRwO7DjUA2jMvoN5/view?usp=drive_link">
-                    BAIXAR CURRICULO
-                </a>
-            </button>
-        </div>
-    </div>
-    <div class="contatos">
-        <div class="apps fone">
-            <img src="img/whatsapp.png" alt="whatsapp.png">
-            <a onclick="copyToClipboard('92 99281-3253')"  href="https://bit.ly/3VzmcVl" target="_blank">92 99281-3253</a>
-            <img src="img/telefone.png" alt="telefone.png">
-        </div>
-        <div class="apps instagram">
-            <img src="img/instagram.png" alt="instagram.png">
-            <a target="_blank" href="https://www.instagram.com/pa__miguel?igsh=MWxoYzdqNGluZWcyaA==">@pa__miguel</a>
-        </div>
-        <div class="apps linkedin">
-            <img src="img/linkedin.png" alt="linkedin.png"> 
-            <a target="_blank" href="https://www.linkedin.com/in/paulo-miguel-4b706022b/">Paulo Miguel</a>
-        </div>
-        <div class="apps github">
-            <img src="img/placa-do-github.png" alt="placa-do-github.png">
-            <a target="_blank" href="https://github.com/Paulo-Mikhael">paulo-mikhael</a>
-        </div>
-        <div class="apps email">
-            <img src="img/gmail.png" alt="gmail.png">
-            <a target="_blank" href="https://paulo-mikhael.github.io/formulario-contato/" onclick="copyToClipboard('paulomiguel11111971@gmail.com')">Paulo Miguel</a>
-        </div>
-    </div>
-    <div class="about-me-title" id="about-me">
-        <h1>Sobre mim</h1>
-    </div>
-    <div class="about-me">
-        <div class="about-me-text">
-            <h2>Me chamo Paulo Miguel Bentes do Nascimento, tenho 17 anos, e estou na minha jornada para me tornar um desenvolvedor Back-end,
-                 estou me profissionalizando na linguagem C# para construir sistemas integrados com banco de dados e API's, e em HTML, 
-                 CSS, JavaScript e PHP para construir aplicações web, gosto de assistir vídeos de outros desenvolvedores para me inspirar, 
-                 e também gosto de dar uma jogadinha rápida nos meus games favoritos.</h2>
-        </div>
-    </div>
-    <div id="projects">
-        <div class="projects-content">
-            <div class="choose-column">
-                <button id="front-end-button">
-                    <h2>Front-end</h2>
-                </button>
-                <button id="back-end-button">
-                    <h2>Back-end</h2>
-                </button>
-                <button id="softwares-button">
-                    <h2>Softwares</h2>
-                </button>
-            </div>
-            <div class="preview-card" id="back-end-preview">
-                <h3>Projetos Back-end</h3>
-                <h4>Nesta seção se encontram aplicações para envio e recebimento de dados, como por exemplo: API's e aplicações web que 
-                    envolvem cadastro de usuário. <br><br>As tecnologias que eu utilizo para isso são: JavaScript, PHP e C#. 
-                    Frameworks: .NET e Entity Framework. Sistema Gerenciador de Banco de Dados (SGBD): Sql Server e MySql</h4>
-            </div>
-            <div class="preview-card" id="softwares-preview">
-                <h3>Softwares para desktop</h3>
-                <h4>Nesta seção se encontram softwares de gestão, normalmente ligadas a banco de dados ou API's, para facilitar processos 
-                    voltados a envio e recebimento de dados, softwares como: Controle de estoque, Administração de usuários, Relatórios e afins. 
-                    <br><br>As tecnologias que eu utilizo para isso são: C# (Windows Forms) e o Sistema Gerenciador de Banco de Dados (SGBD) 
-                    Sql Server Management Studio</h4>
-            </div>
-            <div id="projects-card">
-                <div id="front-end-projects">
-                <div class="title">
-                    <h3>Projetos Front-end</h3>
-                    <h4>Nesta seção se encontram páginas web com a função de vender algum serviço ou imagem, geralmente landing pages e as 
-                        interfaces de e-commerces e páginas administrativas. <br><br>As tecnologias que eu utilizo para isso são: HTML, CSS e 
-                        JavaScript</h4>
-                    </div>
-                    <div class="main-card">
-                        <div class="image">
-                            <a href="https://paulo-mikhael.github.io/academia-landing-page/" target="_blank">
-                                <img src="img/avf-poster.png" alt="avf-poster.png">
-                            </a>
+<body id="portifolio-vars">
+    <main id="home" class="main-screen">
+        <section>
+            <div class="main-screen-content">
+                <header>
+                    <div class="perfil-message">
+                        <div class="line-one">
+                            <img src="src/images/code-icon-white.png" alt="code icon">
+                            <h2>
+                                Paulo Miguel
+                            </h2>
                         </div>
-                        <div class="tab-pages-container">
-                            <div class="text-button">
-                                <div class="tab-pages-text">
-                                    <h5 id="avf-text">
-                                        <b>Descrição:</b><br><br>
-                                        Essa é uma landing page para apresentar uma academia, a 'Vitalidade Fitness', nesta página é mostrada os serviços e 
-                                        cursos oferecidos enquanto o usuário navega por um site com design vivo e agradável, assim como a imagem da 
-                                        Academia, na qual é oferecido um ambiente vivo e agradável enquanto treina.<br>
-                                    </h5>
-                                    <h5 class="open" id="fastask-text">
-                                        <b>Descrição:</b><br><br>
-                                        A Fastask é uma aplicação web que busca facilitar a gestão de tarefas, a página possui um design limpo 
-                                        e intuitivo, seu funcionamento consiste principalmente em criar, excluir e editar tarefas.
-                                    </h5>
-                                    <h5 class="open" id="guia-text">
-                                        <b>Descrição:</b><br><br>
-                                        Este é um projeto com o objetivo de promover os serviços de uma empresa de turismo, para isso, é 
-                                        necessário também promover a cidade com uma página atrativa. A página possui um design simples e 
-                                        objetivo, ao mesmo tempo que apresenta as atrações, também está apresentando os serviços da empresa.
-                                    </h5>
-                                    <h5 class="open" id="unity-text">
-                                        <b>Descrição: [Clone]</b><br><br>
-                                        A página da Unity</a> adota um estilo bastante convencional, caracterizado por uma mensagem principal 
-                                        impactante, uma área dedicada à apresentação de seus serviços, e outras características comuns em 
-                                        diversos sites populares. Foi por isso que escolhi recriá-la, para aprender esse design tão desejado 
-                                        pelo mercado.
-                                    </h5>
-                                    <h5 class="open" id="gartic-text">
-                                        <b>Descrição: [Clone]</b><br><br>
-                                        O Gartic, por ser uma plataforma online de jogos, tem um design com cores vivas e artes que ilustram o 
-                                        que ele irá encontrar navegando na página, isso faz com que o usuário aproveite o conteúdo do site, 
-                                        saber chamar um possível cliente é de extrema ultilidade para qualquer negócio.
-                                    </h5>
-                                </div>
-                                <div class="tecnologies">
-                                    <h6>Tecnologias: 
-                                        <abbr title="HTML 5"><i class="devicon-html5-plain"></i></abbr>
-                                        <abbr title="CSS 3"><i class="devicon-css3-plain"></i></abbr>
-                                        <abbr title="JavaScript"><i class="devicon-javascript-plain open"></i></abbr>
-                                    </h6>
-                                </div>
-                                <div class="text-buttons">
-                                    <div class="buttons">
-                                        <a href="https://paulo-mikhael.github.io/academia-landing-page/" target="_blank">
-                                            <button id="site">
-                                                <i class="fa-solid fa-globe"></i>
-                                                Site
-                                            </button>
-                                        </a>
-                                        <a href="https://github.com/Paulo-Mikhael/academia-landing-page" target="_blank">
-                                            <button id="github">
-                                                <i class="fa-brands fa-github"></i>
-                                                Repositório Github
-                                            </button>
-                                        </a>
-                                        <a href="https://drive.google.com/drive/folders/1zgeYl-gR0xMGEpaVz2N994JK4wLCXq8L?hl=pt_BR" target="_blank">
-                                            <button id="design">
-                                                <i class="fa-solid fa-pen-nib"></i>
-                                                Design da Página
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="tab-buttons">
-                                    <div>
-                                        <button id="next">Próximo</button>
-                                    </div>
-                                    <div>
-                                        <button id="previous">Anterior</button>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="line-two">
+                            <p class="text-weight letter-spacing">
+                                Web Developer
+                            </p>
                         </div>
                     </div>
+                    <div class="header-bar">
+                        <h2 class="text-weight" id="header-home">
+                            <a href="">Home</a>
+                        </h2>
+                        <h2 class="text-weight" id="header-about">
+                            <a href="#about-me">About me</a>
+                        </h2>
+                        <h2 class="text-weight" id="header-services">
+                            <a href="#services">Services</a>
+                        </h2>
+                        <h2 class="text-weight" id="header-projects">
+                            <a href="#projects">Projects</a>
+                        </h2>
+                        <h2 class="text-weight" id="header-contacts">
+                            <a href="#contacts">Contacts</a>
+                        </h2>
+                        <abbr title="Change language to portuguese">
+                            <img src="src/images/brazil.png" alt="brazil flag button to change language" id="header-image">
+                        </abbr>
+                    </div>
+                </header>
+                <div class="main-message">
+                    <h1 class="main-weight">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </h1>
+                    <p class="text-weight">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                        risus sapien, scelerisque sit amet nibh eget, lacinia sagittis augue.
+                    </p>
+                </div>
+                <button class="contact-button">
+                    Contact me
+                </button>
+            </div>
+        </section>
+        <section id="about-me">
+            <div class="about-me-content">
+                <div class="perfil-photo">
+                    <img src="src/images/perfil-photo.svg" alt="foto de perfil">
+                </div>
+                <div class="about-me-message">
+                    <p class="text-weight letter-spacing">
+                        About me
+                    </p>
+                    <h3 class="section-weight">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. 
+                    </h3>
+                    <div class="line"></div>
+                    <h4 class="text-weight">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus 
+                        sapien, scelerisque sit amet nibh eget, lacinia sagittis augue. Curabitur 
+                        sagittis quam vel lectus ultricies, interdum pharetra elit finibus. Proin odio
+                        orci, tincidunt vitae volutpat laoreet, pulvinar ut justo. Integer viverra.
+                    </h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="services">
+        <div class="services-content">
+            <div class="services-title">
+                <h3 class="section-weight">
+                    Services
+                </h3>
+                <div class="line"></div>
+                <p class="text-weight">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus<br>
+                    scelerisque sit amet nibh eget, lacinia sagittis augue. Curabitur.
+                </p>
+            </div>
+            <div class="services-cards">
+                <div class="card" id="card-front-end">
+                    <img src="src/images/front-end-logo.png" alt="imagem representando os serviços front end">
+                    <h4 class="text-weight">
+                        <span class="section-weight">Front-end</span><br>
+                        Lorem ipsum dolor sit amet, consect adipiscing elit. Donec volutpat uru nec sollicitudin viverra. Duis pretium dui id 
+                        dictum mollis donec id.   
+                    </h4>
+                </div>
+                <div class="card" id="card-software">
+                    <img src="src/images/software-logo.png" alt="imagem representando os serviços front end">
+                    <h4 class="text-weight">
+                        <span class="section-weight">Software</span><br>
+                        Lorem ipsum dolor sit amet, consect adipiscing elit. Donec volutpat uru nec sollicitudin viverra. Duis pretium dui id 
+                        dictum mollis donec id.   
+                    </h4>
+                </div>
+                <div class="card" id="card-back-end">
+                    <img src="src/images/back-end-logo.png" alt="imagem representando os serviços front end">
+                    <h4 class="text-weight">
+                        <span class="section-weight">Back-end</span><br>
+                        Lorem ipsum dolor sit amet, consect adipiscing elit. Donec volutpat uru nec sollicitudin viverra. Duis pretium dui id 
+                        dictum mollis donec id.
+                    </h4>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/script.js"></script>
+    </section>
+    <section id="projects">
+        <div class="projects-content">
+            <div class="projects-title">
+                <div class="message">
+                    <h3 class="section-weight">
+                        Projects
+                    </h3>
+                    <div class="line"></div>
+                    <p class="text-weight">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Donec volutpat purus nec sollicitudin viverra. Duis 
+                        pretium dui id dictum mollis.
+                    </p>
+                </div>
+                <button class="contact-button">
+                    Contact me
+                </button>
+            </div>
+            <div class="projects-cards">
+                <a target="_blank" href="https://paulo-mikhael.github.io/academia-landing-page/">
+                    <img src="src/images/academia-landing-page.png" alt="projeto de uma landing page para uma academia">
+                </a>
+                <a target="_blank" href="https://paulo-mikhael.github.io/fastask/">
+                    <img src="src/images/fastask-gerenciador-de-tarefas.png" alt="projeto 'Fastask', uma aplicação web para gerenciamento de tarefas">
+                </a>
+                <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024/">
+                    <img src="src/images/pagina-unity.png" alt="projeto de um clone da página da Unity">
+                </a>
+                <a target="_blank" href="">
+                    <img src="src/images/academia-landing-page.png" alt="projeto de uma landing page para uma academia">
+                </a>
+                <a target="_blank" href="">
+                    <img src="src/images/academia-landing-page.png" alt="projeto de uma landing page para uma academia">
+                </a>
+                <a target="_blank" href="">
+                    <img src="src/images/academia-landing-page.png" alt="projeto de uma landing page para uma academia">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-one">
+            <p class="text-weight letter-spacing">
+                So What's Next ?
+            </p>
+            <h3 class="section-weight">
+                No more talk! <span>Let's Work!</span>
+            </h3>
+            <button class="contact-button">
+                Contact me
+            </button>
+        </div>
+        <div class="footer-two">
+            <div class="footer-content">
+                <a id="logo" href="#home">
+                    <img src="src/images/perfil-message.svg" alt="logo">
+                </a>
+                <div id="contacts">
+                    <a target="_blank" href="https://paulo-mikhael.github.io/formulario-contato/">
+                        <img src="src/images/e-mail.svg" alt="e-mail">
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/paulo-miguel-4b706022b/">
+                        <img src="src/images/linkedin.svg" alt="linkedin">
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/pa__miguel?igsh=MWxoYzdqNGluZWcyaA==">
+                        <img src="src/images/instagram.svg" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://bit.ly/3VzmcVl">
+                        <img src="src/images/whatsapp.svg" alt="whatsapp">
+                    </a>
+                    <a target="_blank" href="https://bit.ly/3VzmcVl">
+                        <img src="src/images/telefone.svg" alt="fone">
+                    </a>
+                    <a target="_blank" href="https://github.com/Paulo-Mikhael">
+                        <img src="src/images/github.svg" alt="github">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="src/javascript/script.js"></script>
 </body>
 </html>

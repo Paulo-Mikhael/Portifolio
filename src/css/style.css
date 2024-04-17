@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+.text-weight{
+    font-size: 20px;
+    font-weight: 300;
+}
+.main-weight{
+    font-size: 49px;
+}
+.section-weight{
+    font-size: 40px;
+    font-weight: bold;
+}
+span.section-weight{
+    font-size: 30px;
+}
+.letter-spacing{
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.line{
+    width: 100px;
+    height: 5px;
+    background-color: var(--red);
+    border-radius: 10px;
+}
+.contact-button{
+    background-color: var(--red);
+    padding: 10px;
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.contact-button:hover{
+    background-color: var(--dark-red);
+}
+body{
+    background-color: var(--background);
+}
+@keyframes anima{
+    0%{
+        background-position-x: left;
+    }
+    100%{
+        background-position-x: center;
+    }
+}
+
+/*#region*/
+
+#card-front-end, #card-software, #card-back-end{
+    visibility: hidden;
+}
+
+/*#endregion*/
+
+/*#region*/
+
+main{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../images/portifolio-background.png);
+    background-repeat: no-repeat;
+    background-position: left end;
+    scroll-snap-type: y mandatory;
+    animation: anima 7s alternate infinite;
+    background-attachment: fixed;
+}
+section{
+    position: sticky;
+    top: 0;
+    left: 0;
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-screen-content{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .perfil-message{
+    width: 13.2pc;
+    cursor: pointer;
+}
+header .perfil-message .line-one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .perfil-message .line-one img{
+    width: 50px;
+}
+header .perfil-message .line-two{
+    width: 300px;
+}
+header .header-bar{
+    width: 630px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-bar a{
+    text-decoration: none;
+}
+header .header-bar #header-home{
+    border-bottom: 2px solid white;
+}
+header .header-bar h2, header .header-bar #header-image{
+    cursor: pointer;
+    font-size: 25px;
+}
+.main-message{
+    width: 60%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section#about-me{
+    background-color: var(--background);
+}
+section .about-me-content{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .about-me-content .perfil-photo{
+    width: 30%;
+    height: 60%;
+}
+section .about-me-content .perfil-photo img{
+    width: 100%;
+    height: 100%;
+}
+section .about-me-content .about-me-message{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+/*#endregion*/
+
+/*#region*/
+
+section#services{
+    background-color: var(--background);
+}
+section#services .services-content{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+section#services .services-content .services-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+section#services .services-content p{
+    text-align: center;
+}
+section#services .services-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55%;
+}
+section#services .services-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+}
+section#services .services-cards .card h4{
+    text-align: center;
+}
+section#services .services-cards .card img{
+    width: 100px;
+}
+
+/*#endregion*/
+
+/*#region*/
+
+section#projects{
+    background-color: var(--projects-background);
+}
+section#projects .projects-content{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section#projects .projects-content .projects-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+}
+section#projects .projects-content .projects-title .message{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section#projects .projects-content .projects-cards{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+section#projects .projects-content .projects-cards img{
+    width: 100%;
+    height: 95%;
+    border: 3px solid var(--red);
+}
+section#projects .projects-content .projects-cards img:hover{
+    border: 3px solid var(--dark-red);
+}
+
+/*#endregion*/
+
+/*#region*/
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+}
+footer .footer-one{
+    width: 100%;
+    height: 70%;
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+footer .footer-one h3 span{
+    color: var(--background);
+    border-bottom: 3px solid var(--background);
+}
+footer .footer-one button{
+    background-color: var(--gray-one);
+}
+footer .footer-one button:hover{
+    background-color: var(--gray-two);
+}
+footer .footer-two{
+    width: 100%;
+    height: 30%;
+    background-color: var(--footer);
+    display: flex;
+    justify-content: center;
+}
+footer .footer-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-content #logo{
+    width: 17%;
+    cursor: pointer;
+}
+footer .footer-content #logo img{
+    width: 100%;
+}
+footer .footer-content #contacts{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .footer-content #contacts img{
+    cursor: pointer;
+}
+
+/*#endregion*/

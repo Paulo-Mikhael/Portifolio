@@ -1,0 +1,36 @@
+@media screen and (max-width: 1440px){
+    main{
+        width: 98.7vw;
+    }
+}
+@media screen and (min-height: 800px){
+    .contact-button{
+        background-color: var(--red);
+        padding: 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 30px;
+        width: 400px;
+        height: 90px;
+    }
+    .letter-spacing{
+        letter-spacing: 5px;
+    }
+    .text-weight{
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .main-weight{
+        font-size: 70px;
+    }
+    .section-weight{
+        font-size: 60px;
+    }
+    span.section-weight{
+        font-size: 40px;
+    }
+    section#services .services-cards .card img{
+        width: 150px;
+    }
+}
