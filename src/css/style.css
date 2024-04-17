@@ -39,9 +39,32 @@ span.section-weight{
     border-radius: 3px;
     cursor: pointer;
     font-size: 18px;
+    position: relative;
+    overflow: hidden;
 }
 .contact-button:hover{
     background-color: var(--dark-red);
+}
+.contact-button:after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--footer);
+    top: 0px;
+    bottom: auto;
+    left: -10px;
+    transform: skewX(-15deg);
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-button:hover:after{
+    width: 110%;
+    content: 'Contact me';
+    color: var(--gray-two);
+    font-weight: bolder;
 }
 body{
     background-color: var(--background);
@@ -105,7 +128,6 @@ header{
 }
 header .perfil-message{
     width: 13.2pc;
-    cursor: pointer;
 }
 header .perfil-message .line-one{
     display: flex;
@@ -114,6 +136,7 @@ header .perfil-message .line-one{
 }
 header .perfil-message .line-one img{
     width: 50px;
+    cursor: pointer;
 }
 header .perfil-message .line-two{
     width: 300px;
@@ -126,9 +149,34 @@ header .header-bar{
 }
 header .header-bar a{
     text-decoration: none;
+    transition: all 0.2s;
+    overflow: hidden;
+    position: relative;
 }
-header .header-bar #header-home{
-    border-bottom: 2px solid white;
+header .header-bar a:hover{
+    color: var(--red);
+}
+header .header-bar a:active{
+    color: white;
+}
+header .header-bar a:after{
+    position: absolute;
+    transition: 0.3s;
+    content: '';
+    left: 0;
+    bottom: auto;
+    top: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--red);
+    border-radius: 5px;
+}
+header .header-bar a:hover:after{
+    width: 100%;
+}
+header .header-bar a:active:after {
+    top: calc(100% - 3px);
+    background-color: white;
 }
 header .header-bar h2, header .header-bar #header-image{
     cursor: pointer;
@@ -140,6 +188,9 @@ header .header-bar h2, header .header-bar #header-image{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.main-message b{
+    color: var(--red);
 }
 section#about-me{
     background-color: var(--background);
@@ -211,6 +262,7 @@ section#services .services-cards .card h4{
 }
 section#services .services-cards .card img{
     width: 100px;
+    cursor: pointer;
 }
 
 /*#endregion*/
