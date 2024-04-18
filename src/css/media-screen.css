@@ -5,11 +5,6 @@
 }
 @media screen and (min-height: 800px){
     .contact-button{
-        background-color: var(--red);
-        padding: 20px;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
         font-size: 30px;
         width: 400px;
         height: 90px;
@@ -32,5 +27,8 @@
     }
     section#services .services-cards .card img{
         width: 150px;
+    }
+    .main-message{
+        width: 70%;
     }
 }

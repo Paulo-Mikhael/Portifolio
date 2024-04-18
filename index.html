@@ -12,6 +12,7 @@
 </head>
 <body id="portifolio-vars">
     <main id="home" class="main-screen">
+        <div id="main-filter"></div>
         <section>
             <div class="main-screen-content">
                 <header>
@@ -29,33 +30,33 @@
                         </div>
                     </div>
                     <div class="header-bar">
-                        <h2 class="text-weight" id="header-home">
-                            <a href="">Home</a>
+                        <h2 class="text-weight">
+                            <a id="header-home" href="">Home</a>
                         </h2>
-                        <h2 class="text-weight" id="header-about">
-                            <a href="#about-me">About me</a>
+                        <h2 class="text-weight">
+                            <a id="header-about" href="#about-me">About me</a>
                         </h2>
-                        <h2 class="text-weight" id="header-services">
-                            <a href="#services">Services</a>
+                        <h2 class="text-weight">
+                            <a id="header-services" href="#services">Services</a>
                         </h2>
-                        <h2 class="text-weight" id="header-projects">
-                            <a href="#projects">Projects</a>
+                        <h2 class="text-weight">
+                            <a id="header-projects" href="#projects">Projects</a>
                         </h2>
-                        <h2 class="text-weight" id="header-contacts">
-                            <a href="#contacts">Contacts</a>
+                        <h2 class="text-weight">
+                            <a id="header-contacts" href="#contacts">Contacts</a>
                         </h2>
-                        <abbr title="Change language to portuguese">
+                        <abbr title="Mudar o idioma para português">
                             <img src="src/images/brazil.png" alt="brazil flag button to change language" id="header-image">
                         </abbr>
                     </div>
                 </header>
                 <div class="main-message">
-                    <h1 class="main-weight">
-                        Welcome! Join With Me To
-                        Turn <b>Your Project a Reality</b>
+                    <h1 class="main-weight" id="main-title">
+                        Welcome! Join Me And
+                        Make <b>Your Project a Reality</b>
                     </h1>
-                    <p class="text-weight">
-                        Make your websites better with my UX and API's knowlegde and<br>
+                    <p class="text-weight" id="main-subtitle">
+                        Make your websites better with my UX and API's knowlegde, and<br>
                         do beautiful and functional softwares with my UI and .NET knowledge!
                     </p>
                 </div>
@@ -70,21 +71,21 @@
                     <img src="src/images/perfil-photo.svg" alt="foto de perfil">
                 </div>
                 <div class="about-me-message">
-                    <p class="text-weight letter-spacing">
+                    <p class="text-weight letter-spacing" id="about-me-letter-spacing">
                         About me
                     </p>
-                    <h3 class="section-weight">
-                        Hi! I'm Paulo Miguel!
+                    <h3 class="section-weight" id="about-me-title">
+                        Hello! I'm Paulo Miguel!
                     </h3>
                     <div class="line"><br></div>
-                    <h4 class="text-weight">
+                    <h4 class="text-weight" id="about-me-text">
                         My name is Paulo Miguel Bentes do Nascimento, 17 years old, from Brazil. I
                         chose work in programmation because it a area that require logic and communication 
                         to resolve problems, and i love and i'm very competent in this.
                         <br><br>
                         I work making web sites with HTML, CSS and Javascript to Front-end, and C#/.NET to 
-                        do API's to Back-end. I make softwares using Visual Studio as my IDE and using Windows
-                        Form projetcs to do softwares to management for desktop.
+                        do API's to Back-end. I use Visual Studio as my IDE and using Windows
+                        Form projetcs, i make softwares to management for desktop.
                     </h4>
                 </div>
             </div>
@@ -93,19 +94,19 @@
     <section id="services">
         <div class="services-content">
             <div class="services-title">
-                <h3 class="section-weight">
+                <h3 class="section-weight" id="services-title">
                     Services
                 </h3>
                 <div class="line"></div>
-                <p class="text-weight">
+                <p class="text-weight" id="services-subtitle">
                     See some services that can help you with your bussiness<br>
-                    and see why we must to work together!
+                    and see why we should work together!
                 </p>
             </div>
             <div class="services-cards">
                 <div class="card" id="card-front-end">
                     <img src="src/images/front-end-logo.png" alt="imagem representando os serviços front end">
-                    <h4 class="text-weight">
+                    <h4 class="text-weight" id="services-front-end">
                         <span class="section-weight">Front-end</span><br>
                         My HTML, CSS and Javascript + UX Design knowledge, allow me give a great experience in a website.<br>
                         For blog's, Wordpress is a great option, and i have experience with many templates and the Elementor.
@@ -113,18 +114,18 @@
                 </div>
                 <div class="card" id="card-software">
                     <img src="src/images/software-logo.png" alt="imagem representando os serviços de desenvolvimento de software">
-                    <h4 class="text-weight">
+                    <h4 class="text-weight" id="services-software">
                         <span class="section-weight">Software</span><br>
-                        I use Visual Studio as my IDE and using Windows Forms projects, i can make softwares to management, integraded with
-                        databases, like SQL Server and MySql, and providing intuitives interfaces.
+                        I use Visual Studio as my IDE and using Windows Forms projects, i make softwares to management, integraded with
+                        databases, like SQL Server and MySql, and providing simple and intuitive interfaces.
                     </h4>
                 </div>
                 <div class="card" id="card-back-end">
                     <img src="src/images/back-end-logo.png" alt="imagem representando os serviços back end">
-                    <h4 class="text-weight">
+                    <h4 class="text-weight" id="services-back-end">
                         <span class="section-weight">Back-end</span><br>
-                        Using Entity Framework, ADO.NET, ASP.NET and others library of C#/.NET, i can make API's for data collection and 
-                        transfer, using databases like Sql Server and MySql.
+                        I make API's for data collection and transfer using databases like Sql Server and MySql. And I have experience with 
+                        deploy in Azure, both databases and API's.
                     </h4>
                 </div>
             </div>
@@ -134,13 +135,13 @@
         <div class="projects-content">
             <div class="projects-title">
                 <div class="message">
-                    <h3 class="section-weight">
+                    <h3 class="section-weight" id="projects-title">
                         Projects
                     </h3>
                     <div class="line"></div>
-                    <p class="text-weight">
+                    <p class="text-weight" id="projects-subtitle">
                         Some websites, API's and softwares that i made. See them and decide if one these projetcs is useful for your bussiness 
-                        gave you new ideias.
+                        or gave you ideias.
                     </p>
                 </div>
                 <button class="contact-button">
@@ -171,10 +172,10 @@
     </section>
     <footer>
         <div class="footer-one">
-            <p class="text-weight letter-spacing">
-                So What's Next ?
+            <p class="text-weight letter-spacing" id="footer-letter-spacing">
+                So, What's Next ?
             </p>
-            <h3 class="section-weight">
+            <h3 class="section-weight" id="footer-message">
                 No more talk! <span>Let's Work!</span>
             </h3>
             <button class="contact-button">
@@ -209,6 +210,7 @@
             </div>
         </div>
     </footer>
+    <script src="src/javascript/translate.js"></script>
     <script src="src/javascript/script.js"></script>
 </body>
 </html>
