@@ -32,7 +32,7 @@ function translateTexts() {
         'header-projects': 'Projects',
         'header-contacts': 'Contacts',
         'header-image': '../src/images/brazil.png',
-        'main-title': 'Welcome! Join Me and Make <b>Your Project Reality</b>',
+        'main-title': 'Welcome! Join Me and Turn <b>Your Project a Reality</b>',
         'main-subtitle': 'Make your websites better with my UX and API\'s knowlegde, and<br>do beautiful and functional softwares with my UI and .NET knowledge!',
         'about-me-letter-spacing': 'About Me',
         'about-me-title': 'Hello! My name is Paulo Miguel!',
