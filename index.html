@@ -44,7 +44,7 @@
                             <a id="header-projects" href="#projects">Projects</a>
                         </h2>
                         <h2 class="text-weight">
-                            <a id="header-contacts" href="#contacts">Contacts</a>
+                            <a id="header-contacts">Contacts</a>
                         </h2>
                         <abbr title="Mudar o idioma para português">
                             <img src="src/images/brazil.png" alt="brazil flag button to change language" id="header-image">
@@ -57,7 +57,7 @@
                         Turn <b>Your Project a Reality</b>
                     </h1>
                     <p class="text-weight" id="main-subtitle">
-                        Make your websites better with my UX and API's knowlegde, and<br>
+                        Make your websites better with my UX and APIs knowlegde, and<br>
                         do beautiful and functional softwares with my UI and .NET knowledge!
                     </p>
                 </div>
@@ -84,9 +84,10 @@
                         chose work in programmation because it a area that require logic and communication 
                         to resolve problems, and i love and i'm very competent in this.
                         <br><br>
-                        I work making web sites with HTML, CSS and Javascript to Front-end, and C#/.NET to 
-                        do API's to Back-end. I use Visual Studio as my IDE and using Windows
-                        Form projetcs, i make softwares to management for desktop.
+                        As a web developer passionate about UI Design, I am focused on making landing pages, that is, the front-end. And I'm 
+                        currently studying creation of software and APIs. Therefore, in my projects, I say that creating an intuitive 
+                        interface is mandatory, both to attract the user's attention to what matters, and to simplify the use of a service 
+                        backend.
                     </h4>
                 </div>
             </div>
@@ -110,7 +111,7 @@
                     <h4 class="text-weight" id="services-front-end">
                         <span class="section-weight">Front-end</span><br>
                         My HTML, CSS and Javascript + UX Design knowledge, allow me give a great experience in a website.<br>
-                        For blog's, Wordpress is a great option, and i have experience with many templates and the Elementor.
+                        For blogs, Wordpress is a great option, and i have experience with many templates and the Elementor.
                     </h4>
                 </div>
                 <div class="card" id="card-software">
@@ -125,8 +126,8 @@
                     <img src="src/images/back-end-logo.png" alt="imagem representando os serviços back end">
                     <h4 class="text-weight" id="services-back-end">
                         <span class="section-weight">Back-end</span><br>
-                        I make API's for data collection and transfer using databases like Sql Server and MySql. And I have experience with 
-                        deploy in Azure, both databases and API's.
+                        I make APIs for data collection and transfer using databases like Sql Server and MySql. And I have experience with 
+                        deploy in Azure, both databases and APIs.
                     </h4>
                 </div>
             </div>
@@ -141,7 +142,7 @@
                     </h3>
                     <div class="line"></div>
                     <p class="text-weight" id="projects-subtitle">
-                        Some websites, API's and softwares that i made. See them and decide if one these projetcs is useful for your bussiness 
+                        Some websites, APIs and softwares that i made. See them and decide if one these projetcs is useful for your bussiness 
                         or gave you ideias.
                     </p>
                 </div>
@@ -160,7 +161,7 @@
                     <img src="src/images/pagina-unity.png" alt="projeto de um clone da página da Unity">
                 </a>
                 <a target="_blank" href="https://github.com/Paulo-Mikhael/ModernDesignSoftware?tab=readme-ov-file#readme">
-                    <img src="src/images/modern-ui-software.png" alt="imagem de em breve">
+                    <img src="src/images/modern-ui-software.png" alt="projeto de um design moderno para softwares">
                 </a>
                 <a href="#home">
                     <img src="src/images/soon.svg" alt="imagem de em breve">
@@ -223,14 +224,15 @@
                     </h1>
                     <div class="line"></div>
                     <div class="contact-options">
+                        <i id="email-icon" class="fa-solid fa-envelope contact-selected"></i>
                         <i id="linkedin-icon" class="fa-brands fa-linkedin"></i>
                         <i id="instagram-icon" class="fa-brands fa-instagram"></i>
-                        <i id="whatsapp-icon" class="fa-brands fa-whatsapp contact-selected"></i>
+                        <i id="whatsapp-icon" class="fa-brands fa-whatsapp"></i>
                         <i id="github-icon" class="fa-brands fa-github"></i>
                     </div>
                     <div class="line line-contact"></div>
                     <div class="contact-options-content">
-                        <div class="options" id="whatsapp-content">
+                        <div class="options hidden" id="whatsapp-content">
                             <img src="src/images/foto-perfil.jpeg" alt="foto de perfil">
                             <a target="_blank" href="https://wa.me/5592992813253?text=Olá! Gostaria de fazer uma oferta...">
                                 <button>+55 (92) 99281-3253</button>
@@ -253,6 +255,27 @@
                             <a target="_blank" href="https://github.com/Paulo-Mikhael">
                                 <button>Paulo-Mikhael</button>
                             </a>
+                        </div>
+                        <div class="options" id="email-content">
+                            <form method="POST" action="https://formsubmit.co/paulomiguel11111971@gmail.com" enctype="multipart/form-data">
+                                <div id="email-from-container">
+                                    <p id="from-p">From:</p>
+                                    <input required type="email" name="email" id="email-from">
+                                </div>
+                                <div id="message-container">
+                                    <p id="message-p">Message:</p>
+                                    <textarea required name="message" maxlength="220" id="email-message"></textarea>
+                                </div>
+                                <div id="email-to-container">
+                                    <p id="to-p">To:</p>
+                                    <input type="text" name="email-to" id="email-to" value="paulomiguel11111971@gmail.com" readonly>
+                                </div>
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://paulo-mikhael.github.io/Portifolio/">
+                                <button type="submit">
+                                    Send
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

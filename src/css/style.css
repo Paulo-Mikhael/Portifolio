@@ -494,6 +494,9 @@ footer .footer-content #contacts img{
     flex-direction: column;
     gap: 20px;
 }
+.options#email-content{
+    height: 100%;
+}
 #contact-screen .contact-content #contact-card .contact-options-content #instagram-content button{
     background: linear-gradient(to right, #f07421, #ed342b, #d1217f);
 }
@@ -508,6 +511,64 @@ footer .footer-content #contacts img{
 }
 #contact-screen .contact-content #contact-card .contact-options-content #github-content button{
     background-color: black;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content button{
+    width: 102%;
+    color: black;
+    background-color: var(--dark-red);
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content p{
+    font-size: 15px;
+    position: absolute;
+    color: var(--red);
+    margin: 29px 0px 0px 10px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content p#to-p{
+    margin: 0px;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content div{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content #message-container{
+    height: 130px;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content textarea{
+    width: 99%;
+    height: 100%;
+    resize: none;
+    background-color: var(--gray-two);
+    margin-top: 20px;
+    padding: 10px 0px 10px 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content input{
+    background-color: var(--gray-two);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 95%;
+    margin-top: 20px;
+}
+#contact-screen .contact-content #contact-card .contact-options-content #email-content input:focus, textarea:focus{
+    outline: 1px solid var(--dark-red);
 }
 
 /*#endregion*/
