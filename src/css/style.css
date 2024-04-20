@@ -80,6 +80,35 @@ body{
         background-position-x: center;
     }
 }
+@keyframes changeColor {
+    0% {color: #3F51B5; }
+    4% {color: #009688; }
+    8% {color: #FF5722; }
+    12% {color: #607D8B; }
+    16% {color: #FF9800; }
+    20% {color: #9C27B0; }
+    24% {color: #2196F3; }
+    28% {color: #EA676C; }
+    32% {color: #E41A4A; }
+    36% {color: #5978BB; }
+    40% {color: #018790; }
+    44% {color: #0E3441; }
+    48% {color: #00B0AD; }
+    52% {color: #721D47; }
+    56% {color: #EA4833; }
+    60% {color: #EF937E; }
+    64% {color: #F37521; }
+    68% {color: #A12059; }
+    72% {color: #126881; }
+    76% {color: #8BC240; }
+    80% {color: #364D5B; }
+    84% {color: #C7DC5B; }
+    88% {color: #0094BC; }
+    92% {color: #E4126B; }
+    96% {color: #43B76E; }
+    100% {color: #7BCFE9; }
+}
+
 
 /*#region*/
 
@@ -107,7 +136,7 @@ main{
 #main-filter{
     position: absolute;
     width: 100%;
-    height: 200%;
+    height: 210%;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -315,10 +344,54 @@ section#projects .projects-content .projects-cards{
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+section#projects .projects-content .projects-cards a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 section#projects .projects-content .projects-cards img{
     width: 390px;
     height: 180px;
     border: 3px solid var(--red);
+}
+section#projects .projects-content .projects-cards .project-filter{
+    position: absolute;
+    width: 390px;
+    height: 180px;
+    backdrop-filter: blur(0px);
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#projects .projects-content .projects-cards .project-filter p{
+    transition: all .5s;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+    opacity: 0%;
+}
+section#projects .projects-content .projects-cards a:hover .project-filter p{
+    opacity: 100%;
+    font-size: 20px;
+}
+section#projects .projects-content .projects-cards .project-filter #academia{
+    color: #f07421;
+}
+section#projects .projects-content .projects-cards .project-filter #fastask{
+    color: #228BE6;
+}
+section#projects .projects-content .projects-cards .project-filter #unity{
+    color: white;
+}
+section#projects .projects-content .projects-cards .project-filter #modern-software{
+    animation: changeColor 26s infinite;
+}
+section#projects .projects-content .projects-cards a:hover .project-filter{
+    position: absolute;
+    width: 390px;
+    height: 180px;
+    backdrop-filter: blur(10px);
 }
 section#projects .projects-content .projects-cards img:hover{
     border: 3px solid var(--dark-red);
