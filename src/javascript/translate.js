@@ -23,6 +23,10 @@ function translateTexts() {
         'services-front-end': '<span class="section-weight">Front-end</span><br>Meus conhecimentos em HTML, CSS e Javascript + UX Design, me permitem dar uma ótima experiência em um site<br>Para blogs, Wordpress é uma ótima opção, e eu tenho experiência em diversos templates e com Elementor.',
         'services-software': '<span class="section-weight">Softwares</span><br>Eu uso o Visual Studio como a minha IDE e usando Windows Forms, eu faço softwares de gestão para desktop, integrados com banco de dados, tais como o Sql Server e MySql, e ofereço uma interface simples e intuitiva.',
         'services-back-end': '<span class="section-weight">Back-end</span><br>Eu faço APIs para coleta e transferência de dados usando informações de um banco de dados como o SqlServer e MySql. E tenho experiência com deploy no Azure, tanto para banco quanto APIs.',
+        'academia-p': 'Landing Page<br>Academia Vitalidade Fitness',
+        'fastask-p': 'Aplicação Web<br>Fastask - Gerenciador de Tarefas',
+        'unity-p': 'Landing Page<br>[Clone] Página da Unity',
+        'modern-software-p': 'Software<br>Design Moderno para Software',
     };
 
     const textsToTranslateEnglish = {
@@ -39,13 +43,17 @@ function translateTexts() {
         'services-title': 'Services',
         'services-subtitle': 'See some services that can help you with your business<br>and find out why we should work together!',
         'projects-title': 'Projects',
-        'projects-subtitle': 'Some websites, APIs, and software that I have created. Check them out and decide if any of these projects will be useful for your business or give you ideas.',
+        'projects-subtitle': 'Some websites, APIs, and software that I have created. Check them out and decide if any of these projects will be useful for your business.',
         'footer-letter-spacing': 'So, what\'s next?',
         'footer-message': 'No more talk! <span>Let\'s Work!</span>',
         'about-me-text': 'My name is Paulo Miguel Bentes do Nascimento, 17 years old, from Brazil. I chose work in programmation because it a area that require logic and communication to resolve problems, and i love and i\'m very competent in this.<br><br>As a web developer passionate about UI Design, I am focused on making landing pages, that is, the front-end. And I\'m currently studying creation of software and APIs. Therefore, in my projects, I say that creating an intuitive interface is mandatory, both to attract the user\'s attention to what matters, and to simplify the use of a service backend.',
         'services-front-end': '<span class="section-weight">Front-end</span><br>My HTML, CSS and Javascript + UX Design knowledge, allow me give a great experience in a website.<br>For blogs, Wordpress is a great option, and i have experience with many templates and the Elementor.',
         'services-software': '<span class="section-weight">Software</span><br>I use Visual Studio as my IDE and using Windows Forms projects, i can make softwares to management, integraded with databases, like SQL Server and MySql, and providing simple and intuitive interfaces.',
         'services-back-end': '<span class="section-weight">Back-end</span><br>I make APIs for data collection and transfer using databases like Sql Server and MySql. And I have experience with deploy in Azure, both databases and APIs.',
+        'academia-p': 'Landing Page<br>Vitality Fitness Gym',
+        'fastask-p': 'Web Application<br>Fastask - Task Manager',
+        'unity-p': 'Landing Page<br>[Clone] Unity Page',
+        'modern-software-p': 'Software<br>Modern Design for Software',
     };
 
     ChangeContactButton();
