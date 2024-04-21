@@ -13,7 +13,7 @@
 <h2>Outros Links 🔗</h2>
     <a target="_blank" href="https://github.com/Paulo-Mikhael">Sobre mim</a><br>
     <a target="_blank" href="https://drive.google.com/drive/folders/1ER7n3GHZmokEsQJkf6yFAG3E0dC1oLfq?usp=drive_link">Currículo (png, jpg ou pdf)</a><br>
-    <a target="_blank" href="https://drive.google.com/drive/folders/1iK5EJFMF0tOjTNEK88JdfiFZI1oFZmBf?usp=drive_link">Design da página (png, jpg ou pdf)</a>
+    <a target="_blank" href="https://drive.google.com/drive/folders/14VY6uzpmqqoizhAuClWIwQD0SY_56rAd?usp=sharing">Design da página (png, jpg ou pdf)</a>
 <h2>Outros projetos 🛠️</h2>
     <a target="_blank" href="https://github.com/Paulo-Mikhael/Leitor-de-CSV?tab=readme-ov-file#readme">Software para ler CSV</a><br>
     <a target="_blank" href="https://github.com/Paulo-Mikhael/academia-landing-page?tab=readme-ov-file#readme">Landing Page para Academia</a><br>

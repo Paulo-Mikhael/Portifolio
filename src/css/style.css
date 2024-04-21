@@ -363,6 +363,33 @@ section#projects .projects-content .projects-cards .project-filter{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+section#projects .projects-content .projects-cards .project-filter .filter-content{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+section#projects .projects-content .projects-cards .project-filter .filter-content .github-project-button{
+    background-color: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0%;
+    cursor: help;
+
+    & i{
+        font-size: 10px;
+    }
+}
+section#projects .projects-content .projects-cards .project-filter .filter-content i{
+    opacity: 0%;
+    font-size: 20px;
+    transition: all 0.5s;
 }
 section#projects .projects-content .projects-cards .project-filter p{
     transition: all .5s;
@@ -371,20 +398,32 @@ section#projects .projects-content .projects-cards .project-filter p{
     font-size: 10px;
     opacity: 0%;
 }
-section#projects .projects-content .projects-cards a:hover .project-filter p{
-    opacity: 100%;
-    font-size: 20px;
+section#projects .projects-content .projects-cards a:hover .project-filter{
+    & p{
+        opacity: 100%;
+        font-size: 20px;
+    }
+    & i{
+        opacity: 100%;
+        font-size: 40px;
+    }
+    & .github-project-button i{
+        font-size: 30px;
+    }
+    & .github-project-button{
+        opacity: 100%;
+    }
 }
-section#projects .projects-content .projects-cards .project-filter #academia{
+section#projects .projects-content .projects-cards .project-filter .academia{
     color: #f07421;
 }
-section#projects .projects-content .projects-cards .project-filter #fastask{
+section#projects .projects-content .projects-cards .project-filter .fastask{
     color: #228BE6;
 }
-section#projects .projects-content .projects-cards .project-filter #unity{
+section#projects .projects-content .projects-cards .project-filter .unity{
     color: white;
 }
-section#projects .projects-content .projects-cards .project-filter #modern-software{
+section#projects .projects-content .projects-cards .project-filter .modern-software{
     animation: changeColor 26s infinite;
 }
 section#projects .projects-content .projects-cards a:hover .project-filter{

@@ -26,6 +26,11 @@ const emailMessageInput = document.querySelector('#email-message');
 const fromP = document.querySelector('#from-p');
 const messageP = document.querySelector('#message-p');
 
+const academiaButton = document.querySelector('.github-project-button#academia-button');
+const fastaskButton = document.querySelector('.github-project-button#fastask-button');
+const unityButton = document.querySelector('.github-project-button#unity-button');
+const modernSoftwareButton = document.querySelector('.github-project-button#modern-software-button');
+
 //#endregion
 
 //#region 
@@ -132,6 +137,23 @@ function contactScreenRemove(){
     footer.classList.remove('hidden');
     contactScreen.classList.add('hidden');
 }
+
+//#endregion
+
+//#region 
+
+academiaButton.addEventListener('click', () => {
+    window.open("https://github.com/Paulo-Mikhael/academia-landing-page?tab=readme-ov-file#readme", "_blank");
+});
+fastaskButton.addEventListener('click', () => {
+    window.open("https://github.com/Paulo-Mikhael/fastask?tab=readme-ov-file#readme", "_blank");
+});
+unityButton.addEventListener('click', () => {
+    window.open("https://github.com/Paulo-Mikhael/pagina-unity-2024?tab=readme-ov-file#readme", "_blank");
+});
+academiaButton.addEventListener('click', () => {
+    window.open("https://github.com/Paulo-Mikhael/ModernDesignSoftware?tab=readme-ov-file#readme", "_blank");
+});
 
 //#endregion
 
