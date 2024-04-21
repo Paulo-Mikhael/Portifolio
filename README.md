@@ -40,7 +40,7 @@
         <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
     </div>
 <h2>Other Links 🔗</h2>
-    <a target="_blank" href="https://drive.google.com/drive/folders/1ER7n3GHZmokEsQJkf6yFAG3E0dC1oLfq?usp=drive_link">Resume (png, jpg, or pdf)</a><br>
+    <a target="_blank" href="https://drive.google.com/drive/folders/1ER7n3GHZmokEsQJkf6yFAG3E0dC1oLfq?usp=drive_link">Curriculum (png, jpg, or pdf)</a><br>
     <a target="_blank" href="https://drive.google.com/drive/folders/14VY6uzpmqqoizhAuClWIwQD0SY_56rAd?usp=sharing">Page Design (png, jpg, or pdf)</a>
 <h2>Other projects 🛠️</h2>
     <a target="_blank" href="https://github.com/Paulo-Mikhael/Leitor-de-CSV?tab=readme-ov-file#readme">CSV Reader Software</a><br>

@@ -3,6 +3,50 @@
         width: 98.5vw;
     }
 }
+@media screen and (max-width: 1300px){
+    /*#region*/
+    section#services .services-cards{
+        flex-direction: column;
+        gap: 30px;
+        height: 70%;
+    }
+    section#services .services-cards .card{
+        flex-direction: row;
+        width: 95%;
+        height: 200px;
+        gap: 30px;
+    }
+    section#services .services-cards .card h4{
+        text-align: start;
+        font-size: 15px;
+    }
+    section#services .services-cards .card img{
+        height: 110px;
+    }
+
+    /*#region*/
+    section#projects .projects-content .projects-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section#projects .projects-content .projects-cards .soon-card{
+        display: none;
+    }
+    
+    /*#region*/
+    @media screen and (min-height: 800px){
+        section#services .services-cards .card h4{
+            text-align: start;
+            font-size: 25px;
+        }
+        section#services .services-cards .card img{
+            height: 110px;
+        }
+
+        section#projects .projects-content .projects-cards .soon-card{
+            display: grid;
+        }
+    }
+}
 @media screen and (min-height: 800px){
     .contact-button{
         font-size: 30px;
