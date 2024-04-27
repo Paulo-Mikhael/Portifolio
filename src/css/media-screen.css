@@ -2,6 +2,18 @@
     main{
         width: 98.5vw;
     }
+    section#projects .projects-content .projects-cards img{
+        width: 390px;
+        height: 180px;
+    }
+    section#projects .projects-content .projects-cards .project-filter{
+        width: 390px;
+        height: 180px;
+    }
+    section#projects .projects-content .projects-cards a:hover .project-filter{
+        width: 390px;
+        height: 180px;
+    }
 }
 @media screen and (max-width: 1300px){
     /*#region*/
@@ -21,6 +33,7 @@
         font-size: 15px;
     }
     section#services .services-cards .card img{
+        width: 390px;
         height: 110px;
     }
 
@@ -45,6 +58,21 @@
         section#projects .projects-content .projects-cards .soon-card{
             display: grid;
         }
+    }
+}
+@media screen and (max-width: 1050px){
+    header .perfil-message{
+        display: none;
+    }
+    section .about-me-content .perfil-photo{
+        display: none;
+    }
+    section .about-me-content .about-me-message{
+        width: 100%;
+        height: 100%;
+    }
+    header .header-bar{
+        width: 100%;
     }
 }
 @media screen and (min-height: 800px){

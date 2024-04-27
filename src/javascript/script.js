@@ -151,7 +151,7 @@ fastaskButton.addEventListener('click', () => {
 unityButton.addEventListener('click', () => {
     window.open("https://github.com/Paulo-Mikhael/pagina-unity-2024?tab=readme-ov-file#readme", "_blank");
 });
-academiaButton.addEventListener('click', () => {
+modernSoftwareButton.addEventListener('click', () => {
     window.open("https://github.com/Paulo-Mikhael/ModernDesignSoftware?tab=readme-ov-file#readme", "_blank");
 });
 

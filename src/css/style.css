@@ -350,14 +350,14 @@ section#projects .projects-content .projects-cards a{
     justify-content: center;
 }
 section#projects .projects-content .projects-cards img{
-    width: 390px;
-    height: 180px;
+    width: 90%;
+    height: 70%;
     border: 3px solid var(--red);
 }
 section#projects .projects-content .projects-cards .project-filter{
     position: absolute;
-    width: 390px;
-    height: 180px;
+    width: 26.5%;
+    height: 20.7%;
     backdrop-filter: blur(0px);
     transition: all .3s;
     display: flex;
@@ -428,8 +428,6 @@ section#projects .projects-content .projects-cards .project-filter .modern-softw
 }
 section#projects .projects-content .projects-cards a:hover .project-filter{
     position: absolute;
-    width: 390px;
-    height: 180px;
     backdrop-filter: blur(10px);
 }
 section#projects .projects-content .projects-cards img:hover{
