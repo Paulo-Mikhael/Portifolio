@@ -430,7 +430,7 @@ section#projects .projects-content .projects-cards a:hover .project-filter{
     position: absolute;
     backdrop-filter: blur(10px);
 }
-section#projects .projects-content .projects-cards img:hover{
+section#projects .projects-content .projects-cards a:hover img{
     border: 3px solid var(--dark-red);
 }
 
