@@ -138,8 +138,143 @@
     footer .footer-one h3{
         font-size: 30px;
     }
+    .main-screen-content{
+        height: 100%;
+    }
+    main #main-first-section{
+        flex-direction: column;
+    }
+    .main-header-mobile{
+        top: 0;
+        display: block;
+        background-color: var(--gray-one);
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+    }
+    .main-header-mobile #hamburguer-menu-icon{
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main-header-mobile #hamburguer-menu-icon .line{
+        background-color: white;
+        width: 40px;
+        margin-top: 5px;
+        animation-duration: .1s;
+        animation-timing-function: linear;
+        animation-name: '';
+    }
+    .main-header-mobile #hamburguer-menu-icon .line:nth-child(1){
+        margin-top: 0px;
+    }
+    #hamburguer-menu-sidebar{
+        right: 0;
+        height: 0vh;
+        width: 100%;
+        background-color: transparent;
+        z-index: 1;
+        display: none;
+        align-items: end;
+        justify-content: start;
+        flex-direction: column;
+        animation-duration: .2s;
+        animation-timing-function: linear;
+    }
+    #hamburguer-menu-sidebar a{
+        width: 100%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dark-red);
+        border-top: 2px solid var(--footer);
+        border-left: 0px;
+        border-right: 0px;
+        text-decoration: none;
+    }
+    #hamburguer-menu-sidebar a:hover{
+        background-color: var(--dark-red);
+    }
+    #hamburguer-menu-sidebar span{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #hamburguer-menu-sidebar a:nth-child(1){
+        animation-delay: .1s;
+    }
+    #hamburguer-menu-sidebar a:nth-child(2){
+        animation-delay: .2s;
+    }
+    #hamburguer-menu-sidebar a:nth-child(3){
+        animation-delay: .3s;
+    }
+    #hamburguer-menu-sidebar a:nth-child(4){
+        animation-delay: .4s;
+    }
+    #hamburguer-menu-sidebar a:nth-child(5){
+        animation-delay: .5s;
+        border-bottom: 2px solid var(--footer);
+    }
+    #mobile-menu-projects{
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+    }
+    #mobile-menu-projects .mobile-card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #mobile-menu-projects .mobile-card a{
+        width: 95%;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--red);
+    }
+    #mobile-menu-projects .mobile-card a img{
+        width: 100%;
+        height: 100%;
+    }
+    #mobile-menu-projects .mobile-card button{
+        width: 100%;
+        font-size: 20px;
+        color: var(--dark-red);
+        background-color: var(--footer);
+        border: none;
+        padding: 10px 0px;
+        font-weight: bold;
+        margin: 20px 0px;
+        border-radius: 3px;
+    }
+    #mobile-menu-projects .mobile-card button b.unity{
+        color: black;
+    }
+    section#projects .projects-content .projects-title{
+        flex-direction: column;
+        height: 230px;
+    }
+    section#projects .projects-content .projects-title button{
+        width: 100%;
+    }
+    section#projects .projects-content .projects-title .message{
+        width: 100%;
+    }
 }
-@media screen and (min-height: 800px){
+@media screen and (min-height: 800px) and (min-width:900px){
     .contact-button{
         font-size: 30px;
         width: 400px;
@@ -164,5 +299,4 @@
     section#services .services-cards .card img{
         width: 150px;
     }
-
 }

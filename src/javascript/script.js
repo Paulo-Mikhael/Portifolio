@@ -31,6 +31,11 @@ const fastaskButton = document.querySelector('.github-project-button#fastask-but
 const unityButton = document.querySelector('.github-project-button#unity-button');
 const modernSoftwareButton = document.querySelector('.github-project-button#modern-software-button');
 
+const hamburguerMenu = document.querySelector('#hamburguer-menu-icon');
+const menuSideBar = document.querySelector('#hamburguer-menu-sidebar');
+const menuSideBarItems = document.querySelector('#hamburguer-menu-sidebar a');
+const mobileLines = document.querySelectorAll('#hamburguer-menu-icon .line');
+
 //#endregion
 
 //#region 
@@ -157,20 +162,43 @@ modernSoftwareButton.addEventListener('click', () => {
 
 //#endregion
 
-window.sr = ScrollReveal( { reset: true } );
+//#region 
 
-sr.reveal('#card-front-end', { 
-    duration: 2000,
-    scale: 0.2,
+hamburguerMenu.addEventListener('click', () => {
+    if (hamburguerMenu.children[0].style.animationName == '')
+    {
+        Array.from(hamburguerMenu.children).forEach(el => {
+            el.style.position = 'absolute';
+            el.style.marginTop = '0';
+        });
+
+        hamburguerMenu.children[0].style.animationName = 'translateRight';
+        hamburguerMenu.children[0].style.transform = 'rotate(50deg)';
+        hamburguerMenu.children[1].style.animationName = 'translateLeft';
+        hamburguerMenu.children[1].style.transform = 'rotate(-50deg)';
+        hamburguerMenu.children[2].style.display = 'none';
+
+        menuSideBar.style.display = 'flex';
+        menuSideBar.style.animationName = 'grow';
+        menuSideBar.style.height = '35vh';
+    }
+    else{
+        Array.from(hamburguerMenu.children).forEach(el => {
+            el.style.position = 'initial';
+            el.style.marginTop = '5px';
+        });
+
+        hamburguerMenu.children[0].style.marginTop = '0';
+
+        hamburguerMenu.children[0].style.animationName = '';
+        hamburguerMenu.children[0].style.transform = '';
+        hamburguerMenu.children[1].style.animationName = '';
+        hamburguerMenu.children[1].style.transform = '';
+
+        hamburguerMenu.children[2].style.display = 'block';
+
+        menuSideBar.style.display = 'none';
+    }
 });
-sr.reveal('#card-software', { 
-    duration: 2000,
-    scale: 0.2,
-});
-sr.reveal('#card-back-end', { 
-    duration: 2000,
-    scale: 0.2,
-});
-sr.reveal('.services-title', { 
-    duration: 3000,
-});
+
+//#endregion
