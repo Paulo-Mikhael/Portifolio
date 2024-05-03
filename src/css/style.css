@@ -447,6 +447,9 @@ section#projects .projects-content .projects-cards a:hover .project-filter{
 .unity{
     color: white;
 }
+.consul{
+    color: #408CFF;
+}
 .modern-software{
     animation: changeColor 26s infinite;
 }
