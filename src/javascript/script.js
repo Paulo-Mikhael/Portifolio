@@ -8,6 +8,8 @@ const contactScreen = document.querySelector('#contact-screen');
 const exitButton = document.querySelector('#exit-button');
 const contacts = document.querySelectorAll('#contact-card .contact-options i');
 const headerContact = document.querySelector('#header-contacts');
+const contactButton = document.querySelectorAll('.contact-button');
+const flag = document.getElementById('header-image');
 
 const contactButtons = document.querySelectorAll('.options');
 const linkedin = document.querySelector('#linkedin-content');

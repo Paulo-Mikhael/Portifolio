@@ -1,6 +1,3 @@
-const contactButton = document.querySelectorAll('.contact-button');
-const flag = document.getElementById('header-image');
-
 function translateTexts() {
     const textsToTranslatePortuguese = {
         'header-home': 'Início',
