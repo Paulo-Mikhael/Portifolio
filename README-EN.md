@@ -1,7 +1,7 @@
 <h1>
     <a href="https://paulo-mikhael.github.io/Portifolio/">Full-Stack Developer Portifolio</a>
 </h1>
-<a href="#portuguese-descrition">
+<a href="README.md">
     <abbr title="Descrição em Português">
         <img width="50px" style="cursor:pointer;" src="src/images/brazil.png" alt="brazil flag button to change language">
     </abbr>
