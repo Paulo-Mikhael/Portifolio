@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Paulo's Portifolio</title>
     <link rel="stylesheet" href="src/css/vars.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/media-screen.css">
     <link rel="icon" href="src/images/code-icon-white.png">
 </head>
-<body id="portifolio-vars">
+<body>
     <main id="home" class="main-screen">
         <div id="main-filter"></div>
         <section id="main-first-section">
@@ -26,7 +27,7 @@
                     <a href="" class="text-weight">
                         <span>Home</span>
                     </a>
-                    <a href="#about-me" class="text-weight">
+                    <a href="src/about-me" class="text-weight">
                         <span>About me</span>
                     </a>
                     <a href="#services" class="text-weight">
@@ -60,13 +61,13 @@
                             <a id="header-home" href="">Home</a>
                         </h2>
                         <h2 class="text-weight">
-                            <a id="header-about" href="#about-me">About me</a>
+                            <a id="header-about" href="Pages/about-me/">About me</a>
                         </h2>
                         <h2 class="text-weight">
-                            <a id="header-services" href="#services">Services</a>
+                            <a id="header-services" href="Pages/services/">Services</a>
                         </h2>
                         <h2 class="text-weight">
-                            <a id="header-projects" href="#projects">Projects</a>
+                            <a id="header-projects" href="Pages/projetcs/">Projects</a>
                         </h2>
                         <h2 class="text-weight">
                             <a id="header-contacts">Contacts</a>
@@ -91,219 +92,7 @@
                 </button>
             </div>
         </section>
-        <section id="about-me">
-            <div class="about-me-content">
-                <div class="perfil-photo">
-                    <img src="src/images/perfil-photo.svg" alt="foto de perfil">
-                </div>
-                <div class="about-me-message">
-                    <p class="text-weight letter-spacing" id="about-me-letter-spacing">
-                        About me
-                    </p>
-                    <h3 class="section-weight" id="about-me-title">
-                        Hello! I'm Paulo Miguel!
-                    </h3>
-                    <div class="line"><br></div>
-                    <h4 class="text-weight" id="about-me-text">
-                        My name is Paulo Miguel Bentes do Nascimento, 17 years old, from Brazil. I
-                        chose work in programmation because it a area that require logic and communication 
-                        to resolve problems, and i love and i'm very competent in this.
-                        <br><br>
-                        As a web developer passionate about UI Design, I am focused on making landing pages, that is, the front-end. And I'm 
-                        currently studying creation of software and APIs. Therefore, in my projects, I say that creating an intuitive 
-                        interface is mandatory, both to attract the user's attention to what matters, and to simplify the use of a service 
-                        backend.
-                    </h4>
-                </div>
-            </div>
-        </section>
     </main>
-    <section id="services">
-        <div class="services-content">
-            <div class="services-title">
-                <h3 class="section-weight" id="services-title">
-                    Services
-                </h3>
-                <div class="line"></div>
-                <p class="text-weight" id="services-subtitle">
-                    See some services that can help you with your bussiness<br>
-                    and see why we should work together!
-                </p>
-            </div>
-            <div class="services-cards">
-                <div class="card" id="card-front-end">
-                    <img src="src/images/front-end-logo.png" alt="imagem representando os serviços front end">
-                    <h4 class="text-weight" id="services-front-end">
-                        <span class="section-weight">Front-end</span><br>
-                        My HTML, CSS and Javascript + UX Design knowledge, allow me give a great experience in a website.<br>
-                        For blogs, Wordpress is a great option, and i have experience with many templates and the Elementor.
-                    </h4>
-                </div>
-                <div class="card" id="card-software">
-                    <img src="src/images/software-logo.png" alt="imagem representando os serviços de desenvolvimento de software">
-                    <h4 class="text-weight" id="services-software">
-                        <span class="section-weight">Software</span><br>
-                        I use Visual Studio as my IDE and using Windows Forms projects, i make softwares to management, integraded with
-                        databases, like SQL Server and MySql, and providing simple and intuitive interfaces.
-                    </h4>
-                </div>
-                <div class="card" id="card-back-end">
-                    <img src="src/images/back-end-logo.png" alt="imagem representando os serviços back end">
-                    <h4 class="text-weight" id="services-back-end">
-                        <span class="section-weight">Back-end</span><br>
-                        I make APIs for data collection and transfer using databases like Sql Server and MySql. And I have experience with 
-                        deploy in Azure, both databases and APIs.
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <div class="projects-content">
-            <div class="projects-title">
-                <div class="message">
-                    <h3 class="section-weight" id="projects-title">
-                        Projects
-                    </h3>
-                    <div class="line"></div>
-                    <p class="text-weight" id="projects-subtitle">
-                        Some websites, APIs, and software that I have created. Check them out and decide if any of these projects will be 
-                        useful for your business.
-                    </p>
-                </div>
-                <button class="contact-button">
-                    Contact me
-                </button>
-            </div>
-            <div id="mobile-menu-projects">
-                <div class="mobile-card">
-                    <a target="_blank" href="https://paulo-mikhael.github.io/academia-landing-page/">
-                        <img src="src/images/academia-landing-page.png" alt="landing page para uma academia">
-                    </a>
-                    <button>
-                        About <b class="academia">Vitality Fitness Gym</b>
-                    </button>
-                </div>
-                <div class="mobile-card">
-                    <a target="_blank" href="https://paulo-mikhael.github.io/fastask">
-                        <img src="src/images/fastask-gerenciador-de-tarefas.png" alt="Fastask, uma aplicação web para gerenciar tarefas">
-                    </a>
-                    <button>
-                        About <b class="fastask">Fastask - Task Manager</b>
-                    </button>
-                </div>
-                <div class="mobile-card">
-                    <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024">
-                        <img src="src/images/pagina-unity.png" alt="Clone da página da Unity">
-                    </a>
-                    <button>
-                        About <b class="unity">[Clone] Unity Page</b>
-                    </button>
-                </div>
-                <div class="mobile-card">
-                    <a target="_blank" href="https://github.com/Paulo-Mikhael/ModernDesignSoftware?tab=readme-ov-file#readme">
-                        <img src="src/images/modern-ui-software.png" alt="Design Moderno para software">
-                    </a>
-                    <button>
-                        About <b class="modern-software">Modern Desing Software</b>
-                    </button>
-                </div>
-                <div class="mobile-card">
-                    <a target="_blank" href="https://paulo-mikhael.github.io/consul-plus">
-                        <img src="src/images/consul-plus-main-page.png" alt="Landing page para um consutório ortodôntico">
-                    </a>
-                    <button>
-                        About <b class="consul">Consul+ Orthodontic office</b>
-                    </button>
-                </div>
-            </div>
-            <div class="projects-cards">
-                <a target="_blank" href="https://paulo-mikhael.github.io/academia-landing-page/">
-                    <div class="project-filter">
-                        <p class="academia" id="academia-p">Landing Page<br>Vitality Fitness Gym</p>
-                        <div class="filter-content">
-                            <div class="tecnologies">
-                                <i class="fa-brands fa-html5 academia"></i>
-                                <i class="fa-brands fa-css3-alt academia"></i>    
-                            </div>
-                            <button class="github-project-button" id="academia-button">
-                                <i class="fa-brands fa-github"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <img src="src/images/academia-landing-page.png" alt="projeto de uma landing page para uma academia">
-                </a>
-                <a target="_blank" href="https://paulo-mikhael.github.io/consul-plus/">
-                    <div class="project-filter">
-                        <p class="consul" id="consul-p">Landing Page<br>Consul+ Orthodontic office</p>
-                        <div class="filter-content">
-                            <div class="tecnologies">
-                                <i class="fa-brands fa-html5 consul"></i>
-                                <i class="fa-brands fa-css3-alt consul"></i>
-                                <i class="fa-brands fa-js consul"></i>
-                            </div>
-                            <button class="github-project-button" id="consul-button">
-                                <i class="fa-brands fa-github"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <img src="src/images/consul-plus-main-page.png" alt="projeto de landing page para uma clínica ortodôntica">
-                </a>
-                <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024/">
-                    <div class="project-filter">
-                        <p class="unity" id="unity-p">Landing Page<br>[Clone] Unity Page</p>
-                        <div class="filter-content">
-                            <div class="tecnologies">
-                                <i class="fa-brands fa-html5 unity"></i>
-                                <i class="fa-brands fa-css3-alt unity"></i>
-                                <i class="fa-brands fa-js unity"></i> 
-                            </div>
-                            <button class="github-project-button" id="unity-button">
-                                <i class="fa-brands fa-github"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <img src="src/images/pagina-unity.png" alt="projeto de um clone da página da Unity">
-                </a>
-                <a target="_blank" href="https://github.com/Paulo-Mikhael/ModernDesignSoftware?tab=readme-ov-file#readme">
-                    <div class="project-filter">
-                        <p class="modern-software" id="modern-software-p">Software<br>Modern Design Software</p>
-                        <div class="filter-content">
-                            <div class="tecnologies">
-                                <i class="devicon-csharp-plain-wordmark modern-software"></i> 
-                            </div>
-                            <button class="github-project-button" id="modern-software-button">
-                                <i class="fa-brands fa-github"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <img src="src/images/modern-ui-software.png" alt="projeto de um design moderno para softwares">
-                </a>
-                <a target="_blank" href="https://paulo-mikhael.github.io/fastask/">
-                    <div class="project-filter">
-                        <p class="fastask" id="fastask-p">Web Application<br>Fastask - Task Manager</p>
-                        <div class="filter-content">
-                            <div class="tecnologies">
-                                <i class="fa-brands fa-html5 fastask"></i>
-                                <i class="fa-brands fa-css3-alt fastask"></i>
-                                <i class="fa-brands fa-js fastask"></i>
-                            </div>
-                            <button class="github-project-button" id="fastask-button">
-                                <i class="fa-brands fa-github"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <img src="src/images/fastask-gerenciador-de-tarefas.png" alt="projeto 'Fastask', uma aplicação web para gerenciamento de tarefas">
-                </a>
-                <a class="soon-card" href="#home">
-                    <div class="project-filter">
-                        <p class="soon">Soon</p>
-                    </div>
-                    <img src="src/images/soon.svg" alt="imagem de em breve">
-                </a>
-            </div>
-        </div>
-    </section>
     <footer>
         <div class="footer-one">
             <p class="text-weight letter-spacing" id="footer-letter-spacing">

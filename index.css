@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+.hidden{
+    display: none !important;
+}
+.text-weight{
+    font-size: 20px;
+    font-weight: 300;
+}
+.main-weight{
+    font-size: 49px;
+}
+.section-weight{
+    font-size: 40px;
+    font-weight: bold;
+}
+span.section-weight{
+    font-size: 30px;
+}
+.letter-spacing{
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.line{
+    width: 100px;
+    height: 5px;
+    background-color: var(--red);
+    border-radius: 10px;
+}
+.contact-button{
+    background-color: var(--red);
+    padding: 10px;
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+.contact-button:hover{
+    background-color: var(--dark-red);
+}
+.contact-button:after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--footer);
+    top: 0px;
+    bottom: auto;
+    left: -10px;
+    transform: skewX(-15deg);
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-button:hover:after{
+    width: 110%;
+    content: 'Contact me';
+    color: var(--gray-two);
+    font-weight: bolder;
+}
+body{
+    background-color: var(--background);
+}
+.main-header-mobile{
+    display: none;
+}
+#hamburguer-menu-sidebar{
+    display: none;
+}
+#mobile-menu-projects{
+    display: none;
+}
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .perfil-message{
+    width: 13.2pc;
+}
+header .perfil-message .line-one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .perfil-message .line-one img{
+    width: 50px;
+    cursor: pointer;
+}
+header .perfil-message .line-two{
+    width: 300px;
+}
+header .header-bar{
+    width: 630px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-bar a{
+    text-decoration: none;
+    transition: all 0.2s;
+    overflow: hidden;
+    position: relative;
+}
+header .header-bar a[href=""]{
+    color: var(--red);
+    font-weight: bold;
+}
+header .header-bar a:hover{
+    color: var(--red);
+}
+header .header-bar a[href=""]:hover{
+    color: white;
+}
+header .header-bar a:active{
+    color: white;
+}
+header .header-bar a:after{
+    position: absolute;
+    transition: 0.3s;
+    content: '';
+    left: 0;
+    bottom: auto;
+    top: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--red);
+    border-radius: 5px;
+}
+header .header-bar a:hover:after{
+    width: 100%;
+}
+header .header-bar a:active:after {
+    top: calc(100% - 3px);
+    background-color: white;
+}
+header .header-bar h2{
+    cursor: pointer;
+    font-size: 25px;
+}
+header .header-bar #header-image{
+    cursor: pointer;
+    width: 65px;
+    height: 70px;
+}
+@keyframes anima{
+    0%{
+        background-position-x: left;
+    }
+    100%{
+        background-position-x: center;
+    }
+}
+@keyframes changeColor {
+    0% {color: #3F51B5; }
+    4% {color: #009688; }
+    8% {color: #FF5722; }
+    12% {color: #607D8B; }
+    16% {color: #FF9800; }
+    20% {color: #9C27B0; }
+    24% {color: #2196F3; }
+    28% {color: #EA676C; }
+    32% {color: #E41A4A; }
+    36% {color: #5978BB; }
+    40% {color: #018790; }
+    44% {color: #0E3441; }
+    48% {color: #00B0AD; }
+    52% {color: #721D47; }
+    56% {color: #EA4833; }
+    60% {color: #EF937E; }
+    64% {color: #F37521; }
+    68% {color: #A12059; }
+    72% {color: #126881; }
+    76% {color: #8BC240; }
+    80% {color: #364D5B; }
+    84% {color: #C7DC5B; }
+    88% {color: #0094BC; }
+    92% {color: #E4126B; }
+    96% {color: #43B76E; }
+    100% {color: #7BCFE9; }
+}
+@keyframes translateRight{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(50deg);
+    }
+}
+@keyframes translateLeft{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-50deg);
+    }
+}
+@keyframes grow{
+    0%{
+        height: 0vh;
+    }
+    100%{
+        height: 35vh;
+    }
+}
