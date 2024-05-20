@@ -6,4 +6,9 @@ body{
     --gray-one: #18191D;
     --gray-two: #1D1E22;
     --footer: #FAFAFA;
+    --academia: #f07421;
+    --fastask: #228BE6;
+    --unity: white;
+    --consul: #408CFF;
+    --modern-software-anim: changeColor 26s infinite;
 }

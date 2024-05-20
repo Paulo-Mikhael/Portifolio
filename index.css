@@ -63,11 +63,12 @@ span.section-weight{
     align-items: center;
     justify-content: center;
 }
-.contact-button:hover:after{
+.contact-button:hover:after, .contact-button:focus:after{
     width: 110%;
     content: 'Contact me';
     color: var(--gray-two);
     font-weight: bolder;
+    outline: none;
 }
 body{
     background-color: var(--background);
@@ -214,5 +215,25 @@ header .header-bar #header-image{
     }
     100%{
         height: 35vh;
+    }
+}
+@keyframes carousel {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-102%);
+    }
+}
+@keyframes fadein {
+    0%{
+        display: block;
+        opacity: 0%;
+    }
+    10%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
     }
 }

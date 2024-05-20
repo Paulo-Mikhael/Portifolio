@@ -1,5 +1,5 @@
 body{
-    background-color: var(--gray-two);
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,7 +124,7 @@ section{
                                     font-size: 25px;
                                     font-weight: bold;
 
-                                    &:hover:after{
+                                    &:hover:after, &:focus:after{
                                         content: 'Send a message';
                                     }
                                 }
@@ -146,7 +146,7 @@ section{
                 transition: all .2s;
 
                 &:hover{
-                    color: var(--red);
+                    color: var(--gray-two);
                 }
             }
         }
