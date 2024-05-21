@@ -6,7 +6,13 @@ const returnSecondButton = document.querySelector('#return-second-button');
 const maximizeButton = document.querySelector('#maximize-button');
 const video = document.querySelector('#video video');
 const videoFilter = document.querySelector('#video #filter');
+const contactButton = document.querySelectorAll('.contact-button');
 
+contactButton.forEach(el => {
+    el.addEventListener('click', () => {
+        window.location.replace('../contacts/');
+    });
+});
 playButton.addEventListener('click', () => {
     video.play();
     playButton.style.display = 'none';
@@ -28,6 +34,7 @@ returnSecondButton.addEventListener('click', () => {
 maximizeButton.addEventListener('click', () => {
     colocarEmTelaCheia();
 });
+
 function colocarEmTelaCheia() {
     if (video.requestFullscreen) {
         video.requestFullscreen();
