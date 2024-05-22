@@ -6,9 +6,17 @@ body{
     --gray-one: #18191D;
     --gray-two: #1D1E22;
     --footer: #FAFAFA;
-    --academia: #f07421;
-    --fastask: #228BE6;
-    --unity: white;
-    --consul: #408CFF;
     --modern-software-anim: changeColor 26s infinite;
+}
+.academia-theme{
+    --theme: #f07421;
+}
+.fastask-theme{
+    --theme: #228BE6;
+}
+.unity-theme{
+    --theme: white;
+}
+.consul-theme{
+    --theme: #408CFF;
 }

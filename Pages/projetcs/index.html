@@ -52,24 +52,37 @@
             <div id="projects-content">
                 <div id="video">
                     <video loop muted>
-                        <source src="../../src/images/Paulo's Portifolio.mp4" type="video/mp4">
+                        <source src="../../src/images/consul-plus-video.mp4" type="video/mp4">
                         Seu navegador não suporta este tipo de vídeo
                     </video>
                     <div id="filter">
                         <div id="video-buttons">
-                            <button id="video-pause">
-                                <img src="../../src/images/pause-button.png" alt="">
-                            </button>
-                            <div id="buttons-right">
-                                <button id="return-second-button">
-                                    <img src="../../src/images/return-second-button.png" alt="">
-                                </button>
-                                <button id="moveon-second-button">
-                                    <img src="../../src/images/move-second-button.png" alt="">
-                                </button>
-                                <button id="maximize-button">
-                                    <img src="../../src/images/maximize-button.png" alt="">
-                                </button>
+                            <div id="buttons-container">
+                                <div id="buttons-left">
+                                    <button id="video-pause">
+                                        <img src="../../src/images/pause-button.png" alt="">
+                                    </button>
+                                    <div id="video-time">
+                                        <p>
+                                            00 / 00
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="buttons-right">
+                                    <button id="return-second-button">
+                                        <img src="../../src/images/return-second-button.png" alt="">
+                                    </button>
+                                    <button id="moveon-second-button">
+                                        <img src="../../src/images/move-second-button.png" alt="">
+                                    </button>
+                                    <button id="maximize-button">
+                                        <img src="../../src/images/maximize-button.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="progress-bar-container">
+                                <div id="progress-bar"></div>
+                                <div id="progress-bar-white"></div>
                             </div>
                         </div>
                     </div>
@@ -77,7 +90,7 @@
                         <img src="../../src/images/play-button.png" alt="">
                     </div>
                 </div>
-                <div id="project-text">
+                <div id="project-text" class="consul-theme">
                     <div id="project-description">
                         <h2 id="project-title">
                             Consul+ Odontologia e Estética
@@ -106,9 +119,11 @@
                             <img src="../../src/images/arrow-left.png" alt="">
                         </div>
                         <div id="status-circles">
+                            <div class="circle hidden-circle"></div>
                             <div class="circle left-circle"></div>
                             <div class="circle main-circle"></div>
                             <div class="circle right-circle"></div>
+                            <div class="circle static-circle"></div>
                         </div>
                         <div id="arrow-right">
                             <img src="../../src/images/arrow-right.png" alt="">
@@ -119,19 +134,19 @@
         </div>
         <div id="projects-carousel">
             <div id="images-line-one">
-                <img src="../../src/images/academia-landing-page.png" alt="">
-                <img src="../../src/images/consul-plus-main-page.png" alt="" class="project-selected">
-                <img src="../../src/images/fastask-gerenciador-de-tarefas.png" alt="">
-                <img src="../../src/images/pagina-unity.png" alt="">
-                <img src="../../src/images/modern-ui-software.png" alt="">
+                <img class="academia-carousel" src="../../src/images/academia-landing-page.png" alt="">
+                <img class="consul-carousel project-selected" src="../../src/images/consul-plus-main-page.png" alt="">
+                <img class="fastask-carousel" src="../../src/images/fastask-gerenciador-de-tarefas.png" alt="">
+                <img class="unity-carousel" src="../../src/images/pagina-unity.png" alt="">
+                <img class="software-carousel" src="../../src/images/modern-ui-software.png" alt="">
                 <img src="../../src/images/soon.svg" alt="">
             </div>
             <div id="images-line-two">
-                <img src="../../src/images/academia-landing-page.png" alt="">
-                <img src="../../src/images/consul-plus-main-page.png" alt="" class="project-selected">
-                <img src="../../src/images/fastask-gerenciador-de-tarefas.png" alt="">
-                <img src="../../src/images/pagina-unity.png" alt="">
-                <img src="../../src/images/modern-ui-software.png" alt="">
+                <img class="academia-carousel" src="../../src/images/academia-landing-page.png" alt="">
+                <img class="consul-carousel project-selected" src="../../src/images/consul-plus-main-page.png" alt="">
+                <img class="fastask-carousel" src="../../src/images/fastask-gerenciador-de-tarefas.png" alt="">
+                <img class="unity-carousel" src="../../src/images/pagina-unity.png" alt="">
+                <img class="software-carousel" src="../../src/images/modern-ui-software.png" alt="">
                 <img src="../../src/images/soon.svg" alt="">
             </div>
         </div>

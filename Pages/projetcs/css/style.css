@@ -36,7 +36,34 @@ section#projects{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
 
+                &:after{
+                    position: absolute;
+                    width: 0px;
+                    height: 100%;
+                    content: '';
+                    background-color: var(--red);
+                    top: 0;
+                    right: 0;
+                    z-index: 2;
+                }
+                &.previousVideo:after{
+                    animation: previousVideoAfter .2s linear alternate 2;
+                }
+                &:before{
+                    position: absolute;
+                    width: 0px;
+                    height: 100%;
+                    content: '';
+                    background-color: var(--red);
+                    top: 0;
+                    left: 0;
+                    z-index: 3;
+                }
+                &.nextVideo:before{
+                    animation: previousVideoAfter .2s linear alternate 2;
+                }
                 video{
                     width: inherit;
                     height: inherit;
@@ -53,23 +80,99 @@ section#projects{
                     justify-content: center;
                     position: absolute;
 
+                    #help-button{
+                        top: 0;
+                        right: 0;
+                        width: 37px;
+                        position: absolute;
+                        margin: 10px 10px 0px 0px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+
+                        button{
+                            width: 40px;
+                            height: 40px;
+                            border: none;
+                            cursor: pointer;
+                            transition: all .3s;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-between;
+                            overflow: hidden;
+                            background-color: transparent;
+
+                            &:hover{
+                                height: 100px;
+                            }
+                        }
+                    }
                     #video-buttons{
                         width: 100%;
-                        height: 30px;
+                        height: 40px;
                         display: none;
                         align-items: center;
                         justify-content: space-between;
                         background-color: #000000a1;
                         padding: 10px;
+                        flex-direction: column;
 
-                        button{
-                            cursor: pointer;
-                            border: none;
-                            background-color: transparent;
+                        #buttons-container{
+                            width: 100%;
+                            height: 30px;
+                            display: flex;
+                            justify-content: space-between;
+
+                            button{
+                                cursor: pointer;
+                                border: none;
+                                background-color: transparent;
+                            }
+                            #buttons-left{
+                                display: flex;
+                                align-items: center;
+
+                                p{
+                                    margin-left: 15px;
+                                }
+                            }
+                            #buttons-right{
+                                img{
+                                    margin-left: 10px;
+                                }
+                            }
                         }
-                        #buttons-right{
-                            img{
-                                margin-left: 10px;
+                        #progress-bar-container{
+                            width: 100%;
+                            height: 10px;
+                            display: flex;
+                            align-items: center;
+
+                            #progress-bar{
+                                width: 100%;
+                                height: 5px;
+                                background-color: var(--red);
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                z-index: 1;
+
+                                &:after{
+                                    content: '';
+                                    position: absolute;
+                                    width: 11px;
+                                    height: 11px;
+                                    border-radius: 50%;
+                                    background-color: var(--red);
+                                    right: 0;
+                                }
+                            }
+                            #progress-bar-white{
+                                width: 97%;
+                                height: 5px;
+                                background-color: white;
+                                position: absolute;
                             }
                         }
                     }
@@ -78,21 +181,11 @@ section#projects{
                     z-index: 2;
                     cursor: pointer;
                     position: absolute;
+                    left: 301px;
 
                     img{
                         width: 70px;
                         height: 70px;
-                    }
-                }
-                #minus-five, #plus-five{
-                    position: absolute;
-                    z-index: 1;
-                    cursor: default;
-
-                    p{
-                        font-weight: bold;
-                        font-size: 30px;
-                        color: var(--red);
                     }
                 }
             }
@@ -101,10 +194,12 @@ section#projects{
                 height: 100%;
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 gap: 20px;
 
                 h2, i{
-                    color: var(--consul);
+                    transition: all .5s;
+                    color: var(--theme);
                 }
                 #project-description{
 
@@ -150,18 +245,32 @@ section#projects{
                         align-items: center;
                         justify-content: center;
                         gap: 10px;
+                        position: relative;
+                        overflow: hidden;
 
                         .circle{
                             width: 10px;
                             height: 10px;
                             background-color: var(--red);
                             border-radius: 50%;
-
-                            &.main-circle{
+                            cursor: pointer;
+                            position: absolute;
+                            animation-duration: .5s;
+                            
+                            &:nth-child(1){
+                                left: -10px;
+                            }
+                            &:nth-child(2){
+                                left: 0;
+                            }
+                            &:nth-child(3){
                                 background-color: transparent;
+                                border: 2px solid var(--red);
                                 width: 12px;
                                 height: 12px;
-                                border: 2px solid var(--red);
+                            }
+                            &:nth-child(4){
+                                right: 1px;
                             }
                         }
                     }
@@ -191,10 +300,29 @@ section#projects{
         height: 20%;
         display: flex;
         align-items: center;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        overflow: scroll hidden;
         gap: 20px;
+        position: relative;
 
+        &:after{
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            content: '';
+            background-image: linear-gradient(to right, #000, #1110);
+        }
+        &:before{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 100px;
+            height: 100%;
+            content: '';
+            background-image: linear-gradient(to left, #000, #1110);
+            z-index: 1;
+        }
         &::-webkit-scrollbar{
             background-color: transparent;
         }
