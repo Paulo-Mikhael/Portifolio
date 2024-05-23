@@ -6,7 +6,6 @@ body{
     --gray-one: #18191D;
     --gray-two: #1D1E22;
     --footer: #FAFAFA;
-    --modern-software-anim: changeColor 26s infinite;
 }
 .academia-theme{
     --theme: #f07421;
@@ -15,8 +14,12 @@ body{
     --theme: #228BE6;
 }
 .unity-theme{
-    --theme: white;
+    --theme: #2196f3;
 }
 .consul-theme{
     --theme: #408CFF;
+}
+.software-theme{
+    --theme: white;
+    --software-anima: changeColor 26s infinite;
 }

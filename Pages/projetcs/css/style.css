@@ -49,7 +49,7 @@ section#projects{
                     z-index: 2;
                 }
                 &.previousVideo:after{
-                    animation: previousVideoAfter .2s linear alternate 2;
+                    animation: previousVideoAfter .1s linear alternate 2;
                 }
                 &:before{
                     position: absolute;
@@ -62,7 +62,7 @@ section#projects{
                     z-index: 3;
                 }
                 &.nextVideo:before{
-                    animation: previousVideoAfter .2s linear alternate 2;
+                    animation: previousVideoAfter .1s linear alternate 2;
                 }
                 video{
                     width: inherit;
@@ -197,9 +197,14 @@ section#projects{
                 justify-content: center;
                 gap: 20px;
 
-                h2, i{
+                h2, i, a{
                     transition: all .5s;
                     color: var(--theme);
+                    animation: var(--software-anima);
+                }
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
                 }
                 #project-description{
 
@@ -300,7 +305,7 @@ section#projects{
         height: 20%;
         display: flex;
         align-items: center;
-        overflow: scroll hidden;
+        overflow: hidden;
         gap: 20px;
         position: relative;
 

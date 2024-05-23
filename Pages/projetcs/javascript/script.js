@@ -23,6 +23,7 @@ const projectTextContainer = document.querySelector('#project-text');
 const projectTitle = document.querySelector('#project-title');
 const projectSubtitle = document.querySelector('#project-subtitle');
 const iconsTecnologiesContainer = document.querySelector('#icons');
+const projectsCarrousel = document.querySelectorAll('#projects-carousel img');
 let order = 0;
 const projectVideos = [
     {
@@ -40,6 +41,10 @@ const projectVideos = [
     {
         name: 'fastask',
         function: () => changeVideoToFastask()
+    },
+    {
+        name: 'software',
+        function: () => changeVideoToSoftware()
     }
 ]
 
@@ -198,34 +203,82 @@ function previousVideoContainer(){
     }
 }
 function changeVideoToConsul(){
+    changeCarouselSelected('consul');
+
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('consul-theme');
 
     projectTitle.textContent = 'Consul+ Dentistry and Aesthetics';
+    projectSubtitle.innerHTML = 'Neste projeto é apresentado a página de uma clínica odontógica, <a target="_blank" href="https://paulo-mikhael.github.io/consul-plus">a Consul+</a>, neste site é destacado um formulário para contato e os cards que apresentam os serviços, gerando atenção aos serviços da empresa.';
     video.children[0].setAttribute('src', '../../src/images/consul-plus-video.mp4');
+
+    video.load();
 }
 function changeVideoToAcademia(){
+    changeCarouselSelected('academia');
+
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('academia-theme');
 
     projectTitle.textContent = 'Academia Vitalidade Fitness';
+    projectSubtitle.innerHTML = 'Este projeto é uma página para uma academia, nela, é apresentado diversos cursos, sempre seguidos de mensagens motivadoras e que falam que a <a target="_blank" href="https://paulo-mikhael.github.io/academia-landing-page">Academia Vitalidade Fitness</a> é o lugar certo para sentirem sua evolução.';
     video.children[0].setAttribute('src', '../../src/images/academia-video.mp4');
+
+    video.load();
 }
 function changeVideoToFastask(){
+    changeCarouselSelected('fastask');
+
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('fastask-theme');
 
     projectTitle.textContent = 'Fastask - Task Manager';
-    video.children[0].setAttribute('src', '../../src/images/academia-video.mp4');
+    projectSubtitle.innerHTML = 'A <a target="_blank" href="https://paulo-mikhael.github.io/fastask">Fastask</a> é uma aplicação web que busca facilitar a gestão de tarefas, a página possui um design limpo e intuitivo, seu funcionamento consiste principalmente em criar, excluir e editar tarefas.';
+    video.children[0].setAttribute('src', '../../src/images/fastask-video.mp4');
+
+    video.load();
 }
 function changeVideoToUnity(){
+    changeCarouselSelected('unity');
+
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('unity-theme');
 
     projectTitle.textContent = '[Clone] Unity Page';
+    projectSubtitle.innerHTML = 'Neste projeto, decidi recriar o <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024">site da Unity</a> esta é uma boa página de vendas pois apesar de o principal da página ser a versão profissional do app, tenta redirecionar o usuário para outras páginas da empresa, gerando a retenção do cliente e favorecendo o SEO do site.';
     video.children[0].setAttribute('src', '../../src/images/unity-video.mp4');
+
+    video.load();
 }
-console.log(video.children[0]);
+function changeVideoToSoftware(){
+    changeCarouselSelected('software');
+
+    projectTextContainer.classList.remove(projectTextContainer.classList[0]);
+    projectTextContainer.classList.add('software-theme');
+
+    projectTitle.textContent = 'Modern Software UI';
+    projectSubtitle.innerHTML = 'Neste projeto, decidi recriar o <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024">site da Unity</a> esta é uma boa página de vendas pois apesar de o principal da página ser a versão profissional do app, tenta redirecionar o usuário para outras páginas da empresa, gerando a retenção do cliente e favorecendo o SEO do site.';
+    video.children[0].setAttribute('src', '../../src/images/modern-software-video.mp4');
+
+    video.load();
+}
+function changeCarouselSelected(projectVideoName){
+    for (let i = 0; i < projectVideos.length; i++){
+        if (projectVideos[i].name === projectVideoName){
+            order = i;
+        }
+    }
+
+    projectsCarrousel.forEach(el => {
+        if (el.classList.contains('project-selected')){
+            el.classList.remove('project-selected');
+        }
+
+        if (el.classList.contains(`${projectVideoName}-carousel`)){
+            el.classList.add('project-selected');
+        }
+    });
+}
 
 //Events
 contactButton.forEach(el => {
@@ -280,4 +333,18 @@ video.addEventListener('timeupdate', () => {
 });
 document.addEventListener('keydown', function(event) {
     controls(event);
+});
+projectsCarrousel.forEach(el => {
+    el.addEventListener('click', (evt) => {
+        const target = evt.target;
+
+        if (target.classList.contains('soon') == false && target.classList.contains('software-carousel') == false){
+            const className = target.classList[0];
+            const newClassName = className.replace('-carousel', '');
+
+            changeCarouselSelected(newClassName);
+            order--;
+            nextVideo();
+        }
+    });
 });
