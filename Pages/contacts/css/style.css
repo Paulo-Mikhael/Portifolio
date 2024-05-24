@@ -113,15 +113,20 @@ section{
                                     i{
                                         font-size: 30px;
                                         cursor: pointer;
+                                        position: relative;
+                                        display: flex;
+                                        align-items: start;
+                                        justify-content: center;
 
-                                        &.fa-github, &.fa-linkedin-in{
-                                            display: none;
+                                        &:hover .contact-bubble{
+                                            width: 150px;
                                         }
                                         &.fa-phone{
                                             font-size: 25px;
                                         }
                                         &.fa-whatsapp:hover, &.fa-whatsapp.contact-selected{
                                             color: #00FF38 !important;
+
                                         }
                                         &.fa-linkedin-in:hover, &.fa-linkedin-in.contact-selected{
                                             color: #0277b5 !important;
@@ -139,6 +144,16 @@ section{
                                         }
                                         &.fa-phone:hover, &.fa-phone.contact-selected{
                                             color: #ff0 !important;
+                                        }
+                                        & .contact-bubble{
+                                            transition: all .2s;
+                                            position: absolute;
+                                            border-radius: 50%;
+                                            width: 0px;
+                                            height: 150px;
+                                            background-color: #00FF38;
+                                            z-index: 1;
+                                            top: -165px;
                                         }
                                     }
                                 }

@@ -188,6 +188,7 @@ function nextVideoContainer(){
     }
 
     if (order < projectVideos.length){
+        clearTecnologies();
         projectVideos[order].function();
     }
 }
@@ -199,11 +200,14 @@ function previousVideoContainer(){
     }
     
     if (order >= 0){
+        clearTecnologies();
         projectVideos[order].function();
     }
 }
 function changeVideoToConsul(){
     changeCarouselSelected('consul');
+    appendTecnologiesClass('devicon-html5-plain');
+    appendTecnologiesClass('devicon-css3-plain');
 
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('consul-theme');
@@ -216,6 +220,9 @@ function changeVideoToConsul(){
 }
 function changeVideoToAcademia(){
     changeCarouselSelected('academia');
+    clearTecnologies();
+    appendTecnologiesClass('devicon-html5-plain');
+    appendTecnologiesClass('devicon-css3-plain');
 
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('academia-theme');
@@ -228,6 +235,9 @@ function changeVideoToAcademia(){
 }
 function changeVideoToFastask(){
     changeCarouselSelected('fastask');
+    appendTecnologiesClass('devicon-html5-plain');
+    appendTecnologiesClass('devicon-css3-plain');
+    appendTecnologiesClass('devicon-javascript-plain');
 
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('fastask-theme');
@@ -240,6 +250,9 @@ function changeVideoToFastask(){
 }
 function changeVideoToUnity(){
     changeCarouselSelected('unity');
+    appendTecnologiesClass('devicon-html5-plain');
+    appendTecnologiesClass('devicon-css3-plain');
+    appendTecnologiesClass('devicon-javascript-plain');
 
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('unity-theme');
@@ -252,12 +265,13 @@ function changeVideoToUnity(){
 }
 function changeVideoToSoftware(){
     changeCarouselSelected('software');
+    appendTecnologiesClass('devicon-csharp-plain');
 
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
     projectTextContainer.classList.add('software-theme');
 
     projectTitle.textContent = 'Modern Software UI';
-    projectSubtitle.innerHTML = 'Neste projeto, decidi recriar o <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024">site da Unity</a> esta é uma boa página de vendas pois apesar de o principal da página ser a versão profissional do app, tenta redirecionar o usuário para outras páginas da empresa, gerando a retenção do cliente e favorecendo o SEO do site.';
+    projectSubtitle.innerHTML = 'Neste projeto é apresentado um aplicativo com um design moderno e intuitivo facilitando o uso das funções que irão ser incluídas';
     video.children[0].setAttribute('src', '../../src/images/modern-software-video.mp4');
 
     video.load();
@@ -278,6 +292,17 @@ function changeCarouselSelected(projectVideoName){
             el.classList.add('project-selected');
         }
     });
+}
+function clearTecnologies(){
+    while (iconsTecnologiesContainer.childElementCount != 0){
+        iconsTecnologiesContainer.removeChild(iconsTecnologiesContainer.children[0]);
+    }
+}
+function appendTecnologiesClass(tecnologiesIClass){
+    const iElement = document.createElement('i');
+    iElement.classList.add(tecnologiesIClass);
+
+    iconsTecnologiesContainer.appendChild(iElement);
 }
 
 //Events
@@ -338,7 +363,7 @@ projectsCarrousel.forEach(el => {
     el.addEventListener('click', (evt) => {
         const target = evt.target;
 
-        if (target.classList.contains('soon') == false){
+        if (target.classList.contains('soon') == false && target.classList.contains('project-selected') == false){
             const className = target.classList[0];
             const newClassName = className.replace('-carousel', '');
 

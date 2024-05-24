@@ -30,7 +30,7 @@ body{
     --theme: #9b2626; 
 }
 #linkedin-theme{
-    --theme: #0277b5; 
+    --theme: #0277b5;
 }
 #github-theme{
     --theme: var(--gray-two);
