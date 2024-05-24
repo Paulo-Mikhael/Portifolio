@@ -163,7 +163,7 @@ section{
                                     font-weight: bold;
 
                                     &:hover:after, &:focus:after{
-                                        content: 'Send a message';
+                                        content: 'Mandar mensagem';
                                     }
                                 }
                             }

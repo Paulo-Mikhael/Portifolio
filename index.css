@@ -65,7 +65,7 @@ span.section-weight{
 }
 .contact-button:hover:after, .contact-button:focus:after{
     width: 110%;
-    content: 'Contact me';
+    content: 'Contate-me';
     color: var(--gray-two);
     font-weight: bolder;
     outline: none;
