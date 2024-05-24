@@ -47,23 +47,30 @@
             </abbr>
         </div>
     </header>
-    <section>
+    <section id="email-theme">
         <div id="contact-content">
             <span id="image-container">
                 <img src="../../src/images/mail-image-black.gif" alt="imagem de um telefone vibrando e um símbolo de email flutuando sobre ele">
             </span>
             <span id="form-container">
                 <div id="form-content">
-                    <form>
-                        <input autofocus tabindex="1" type="text" name="text-input" id="text-input" placeholder="Your name">
-                        <input tabindex="2" type="text" name="email-input" id="email-input" placeholder="Your number">
-                        <textarea tabindex="3" name="message-box" id="message-box" placeholder="Write a message"></textarea>
+                    <form method="POST" action="https://formsubmit.co/paulomiguel11111971@gmail.com" enctype="multipart/form-data">
+                        <h1 id="form-title">
+                            Send a message to my <a href="#text-input"><abbr title="Copy 'paulomiguel11111971@gmail.com' to clipboard">Email</abbr></a>!
+                        </h1>
+                        <input required autofocus tabindex="1" type="text" name="name" id="text-input" placeholder="Your name">
+                        <input required tabindex="2" type="email" name="email" id="email-input" placeholder="Your email">
+                        <input required tabindex="2" type="text" name="number" id="number-input" placeholder="Your number">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://paulo-mikhael.github.io/Portifolio/">
+                        <textarea required tabindex="3" name="message" id="message-box" placeholder="Write a message"></textarea>
                         <div id="contact-options">
-                            <i class="fa-regular fa-envelope"></i>
-                            <i class="fa-brands fa-whatsapp contact-selected"></i>
+                            <i class="fa-regular fa-envelope contact-selected"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
                             <i class="fa-brands fa-instagram"></i>
                             <i class="fa-brands fa-linkedin-in"></i>
                             <i class="fa-solid fa-phone"></i>
+                            <i class="fa-brands fa-github"></i>
                         </div>
                         <button tabindex="4" type="submit" class="contact-button">
                             Send a message
@@ -74,11 +81,50 @@
         </div>
         <div id="contact-message">
             <h2>
-                Send a message to my whatsapp through this form or 
-                <a target="_blank" href="https://api.whatsapp.com/send/?phone=5592992813253&text=Bom+dia%2C+gostaria+de+fazer+uma+oferta&type=phone_number&app_absent=0">click here</a> 
-                to redirect yourself to whatsapp app
+                Type a message to <a href="#text-input">paulomiguel11111971@gmail.com</a>
             </h2>
         </div>
     </section>
+    <footer>
+        <div class="footer-one">
+            <p class="text-weight letter-spacing" id="footer-letter-spacing">
+                So, What's Next ?
+            </p>
+            <h3 class="section-weight" id="footer-message">
+                No more talk! <span>Let's Work!</span>
+            </h3>
+            <button class="footer contact-button">
+                Contact me
+            </button>
+        </div>
+        <div class="footer-two">
+            <div class="footer-content">
+                <a id="logo" href="">
+                    <img src="../../src/images/perfil-message.svg" alt="logo">
+                </a>
+                <div id="contacts">
+                    <a target="_blank" href="https://paulo-mikhael.github.io/formulario-contato/">
+                        <img src="../../src/images/e-mail.svg" alt="e-mail">
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/paulo-miguel-4b706022b/">
+                        <img src="../../src/images/linkedin.svg" alt="linkedin">
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/pa__miguel?igsh=MWxoYzdqNGluZWcyaA==">
+                        <img src="../../src/images/instagram.svg" alt="instagram">
+                    </a>
+                    <a target="_blank" href="https://bit.ly/3VzmcVl">
+                        <img src="../../src/images/whatsapp.svg" alt="whatsapp">
+                    </a>
+                    <a target="_blank" href="https://bit.ly/3VzmcVl">
+                        <img src="../../src/images/telefone.svg" alt="fone">
+                    </a>
+                    <a target="_blank" href="https://github.com/Paulo-Mikhael">
+                        <img src="../../src/images/github.svg" alt="github">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/script.js"></script>
 </body>
 </html>

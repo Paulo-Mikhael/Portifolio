@@ -338,7 +338,7 @@ projectsCarrousel.forEach(el => {
     el.addEventListener('click', (evt) => {
         const target = evt.target;
 
-        if (target.classList.contains('soon') == false && target.classList.contains('software-carousel') == false){
+        if (target.classList.contains('soon') == false){
             const className = target.classList[0];
             const newClassName = className.replace('-carousel', '');
 

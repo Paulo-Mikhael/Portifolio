@@ -23,3 +23,22 @@ body{
     --theme: white;
     --software-anima: changeColor 26s infinite;
 }
+#whatsapp-theme{
+    --theme: #00FF38; 
+}
+#email-theme{
+    --theme: #9b2626; 
+}
+#linkedin-theme{
+    --theme: #0277b5; 
+}
+#github-theme{
+    --theme: var(--gray-two);
+}
+#instagram-theme{
+    --theme: #d1217f;
+    --instagram-gradient: linear-gradient(to right, #f07421, #ed342b, #d1217f);
+}
+#phone-theme{
+    --theme: #ff0;
+}

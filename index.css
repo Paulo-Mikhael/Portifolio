@@ -157,6 +157,61 @@ header .header-bar #header-image{
     width: 65px;
     height: 70px;
 }
+footer{
+    position: initial;
+    width: 100%;
+    height: 60vh;
+}
+footer .footer-one{
+    width: 100%;
+    height: 70%;
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+footer .footer-one h3 span{
+    color: var(--background);
+    border-bottom: 3px solid var(--background);
+}
+footer .footer-one button{
+    background-color: var(--gray-one);
+}
+footer .footer-one button:hover{
+    background-color: var(--gray-two);
+}
+footer .footer-two{
+    width: 100%;
+    height: 30%;
+    background-color: var(--footer);
+    display: flex;
+    justify-content: center;
+}
+footer .footer-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-content #logo{
+    width: 17%;
+    cursor: pointer;
+}
+footer .footer-content #logo img{
+    width: 100%;
+}
+footer .footer-content #contacts{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .footer-content #contacts img{
+    cursor: pointer;
+}
 @keyframes anima{
     0%{
         background-position-x: left;

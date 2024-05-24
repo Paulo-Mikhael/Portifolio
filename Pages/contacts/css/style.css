@@ -59,7 +59,7 @@ section{
                             }
                         }
                         &#form-content{
-                            height: 300px;
+                            height: 370px;
                             
                             form{
                                 width: 100%;
@@ -69,16 +69,34 @@ section{
                                 align-items: center;
                                 gap: 20px;
 
+                                h1{
+                                    font-size: 30px;
+                                    margin-bottom: 20px;
+
+                                    abbr{
+                                        color: inherit;
+                                        text-decoration: none;
+                                    }
+                                    a{
+                                        text-decoration: none;
+                                        color: var(--theme);
+                                    }
+                                }
+                                #number-input{
+                                    display: none;
+                                }
                                 input, textarea{
                                     padding: 10px;
                                     color: black;
                                     border: 2px solid white;
                                     width: 96%;
                                     border-radius: 5px;
+                                    position: relative;
+                                    z-index: 1;
     
                                     &:focus{
                                         outline: none;
-                                        border: 2px solid #00FF38;
+                                        border: 2px solid var(--theme);
                                     }
                                 }
                                 textarea{
@@ -96,6 +114,12 @@ section{
                                         font-size: 30px;
                                         cursor: pointer;
 
+                                        &.fa-github, &.fa-linkedin-in{
+                                            display: none;
+                                        }
+                                        &.fa-phone{
+                                            font-size: 25px;
+                                        }
                                         &.fa-whatsapp:hover, &.fa-whatsapp.contact-selected{
                                             color: #00FF38 !important;
                                         }
@@ -110,12 +134,11 @@ section{
                                         &.fa-envelope:hover, &.fa-envelope.contact-selected{
                                             color: #9b2626 !important;
                                         }
-                                        &.fa-phone, &.fa-phone.contact-selected{
-                                            font-size: 25px !important;
-
-                                            &:hover{
-                                                color: #0F0 !important;
-                                            }
+                                        &.fa-github:hover, &.fa-github.contact-selected{
+                                            color: var(--gray-two) !important;
+                                        }
+                                        &.fa-phone:hover, &.fa-phone.contact-selected{
+                                            color: #ff0 !important;
                                         }
                                     }
                                 }
@@ -141,9 +164,10 @@ section{
             justify-content: center;
 
             a{
-                color: #00FF38;
+                color: var(--theme);
                 text-decoration: none;
                 transition: all .2s;
+                cursor: pointer;
 
                 &:hover{
                     color: var(--gray-two);
