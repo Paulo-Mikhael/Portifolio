@@ -5,6 +5,8 @@ const pauseButton = document.querySelector('#video-pause');
 const moveOnSecondButton = document.querySelector('#moveon-second-button');
 const returnSecondButton = document.querySelector('#return-second-button');
 const maximizeButton = document.querySelector('#maximize-button');
+const helpButton = document.querySelector('#help-button');
+const helpContainer = document.querySelector('#help-container');
 const progressBar = document.querySelector('#progress-bar');
 const videoTimeP = document.querySelector('#video-time p');
 const videoContainer = document.querySelector('#video');
@@ -305,16 +307,21 @@ function loadVideo(src){
     video.src = src;
 
     video.onerror = function() {
-        alert('Não carregou');
+        alert('Ocorreu um problema com o vídeo, não foi possível carregar');
     };
 
     video.oncanplaythrough = function() {
-        alert('O vídeo está pronto para ser reproduzido!');
+        console.log('vídeo pronto');
     };
 
     video.load();
 }
 loadVideo('../../src/images/consul-plus-video.mp4');
+function helpButtonActive(target){
+    target.style.backgroundColor = 'lime';
+
+    
+}
 
 //Events
 contactButton.forEach(el => {
@@ -365,7 +372,11 @@ rightCircle.addEventListener('click', () => {
     nextVideo();
 });
 video.addEventListener('timeupdate', () => {
-    updateProgressBar();
+    if (playButton.style.display === 'none'){
+        updateProgressBar();
+    }else{
+        pauseVideo();
+    }
 });
 document.addEventListener('keydown', function(event) {
     controls(event);
@@ -383,4 +394,17 @@ projectsCarrousel.forEach(el => {
             nextVideo();
         }
     });
+});
+helpButton.addEventListener('click', () => {
+    if (helpButton.classList.contains('help-button-actived')){
+        helpButton.classList.remove('help-button-actived');
+        helpContainer.style.width = '0px';
+        helpContainer.style.height = '0px';
+        helpContainer.children[0].style.opacity = '0%';
+    }else{
+        helpButton.classList.add('help-button-actived');
+        helpContainer.style.width = '500px';
+        helpContainer.style.height = '200px';
+        helpContainer.children[0].style.opacity = '100%';
+    }
 });
