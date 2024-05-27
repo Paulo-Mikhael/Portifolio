@@ -214,9 +214,8 @@ function changeVideoToConsul(){
 
     projectTitle.textContent = 'Consul+ Dentistry and Aesthetics';
     projectSubtitle.innerHTML = 'Neste projeto é apresentado a página de uma clínica odontógica, <a target="_blank" href="https://paulo-mikhael.github.io/consul-plus">a Consul+</a>, neste site é destacado um formulário para contato e os cards que apresentam os serviços, gerando atenção aos serviços da empresa.';
-    video.children[0].setAttribute('src', '../../src/images/consul-plus-video.mp4');
 
-    video.load();
+    loadVideo('../../src/images/consul-plus-video.mp4');
 }
 function changeVideoToAcademia(){
     changeCarouselSelected('academia');
@@ -229,9 +228,8 @@ function changeVideoToAcademia(){
 
     projectTitle.textContent = 'Academia Vitalidade Fitness';
     projectSubtitle.innerHTML = 'Este projeto é uma página para uma academia, nela, é apresentado diversos cursos, sempre seguidos de mensagens motivadoras e que falam que a <a target="_blank" href="https://paulo-mikhael.github.io/academia-landing-page">Academia Vitalidade Fitness</a> é o lugar certo para sentirem sua evolução.';
-    video.children[0].setAttribute('src', '../../src/images/academia-video.mp4');
 
-    video.load();
+    loadVideo('../../src/images/academia-video.mp4');
 }
 function changeVideoToFastask(){
     changeCarouselSelected('fastask');
@@ -244,9 +242,8 @@ function changeVideoToFastask(){
 
     projectTitle.textContent = 'Fastask - Task Manager';
     projectSubtitle.innerHTML = 'A <a target="_blank" href="https://paulo-mikhael.github.io/fastask">Fastask</a> é uma aplicação web que busca facilitar a gestão de tarefas, a página possui um design limpo e intuitivo, seu funcionamento consiste principalmente em criar, excluir e editar tarefas.';
-    video.children[0].setAttribute('src', '../../src/images/fastask-video.mp4');
 
-    video.load();
+    loadVideo('../../src/images/fastask-video.mp4');
 }
 function changeVideoToUnity(){
     changeCarouselSelected('unity');
@@ -259,9 +256,8 @@ function changeVideoToUnity(){
 
     projectTitle.textContent = '[Clone] Unity Page';
     projectSubtitle.innerHTML = 'Neste projeto, decidi recriar o <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024">site da Unity</a> esta é uma boa página de vendas pois apesar de o principal da página ser a versão profissional do app, tenta redirecionar o usuário para outras páginas da empresa, gerando a retenção do cliente e favorecendo o SEO do site.';
-    video.children[0].setAttribute('src', '../../src/images/unity-video.mp4');
 
-    video.load();
+    loadVideo('../../src/images/unity-video.mp4');
 }
 function changeVideoToSoftware(){
     changeCarouselSelected('software');
@@ -272,9 +268,8 @@ function changeVideoToSoftware(){
 
     projectTitle.textContent = 'Modern Software UI';
     projectSubtitle.innerHTML = 'Neste projeto é apresentado um aplicativo com um design moderno e intuitivo facilitando o uso das funções que irão ser incluídas';
-    video.children[0].setAttribute('src', '../../src/images/modern-software-video.mp4');
 
-    video.load();
+    loadVideo('../../src/images/modern-software-video.mp4');
 }
 function changeCarouselSelected(projectVideoName){
     for (let i = 0; i < projectVideos.length; i++){
@@ -294,6 +289,8 @@ function changeCarouselSelected(projectVideoName){
     });
 }
 function clearTecnologies(){
+    video.removeAttribute('src');
+
     while (iconsTecnologiesContainer.childElementCount != 0){
         iconsTecnologiesContainer.removeChild(iconsTecnologiesContainer.children[0]);
     }
@@ -304,6 +301,20 @@ function appendTecnologiesClass(tecnologiesIClass){
 
     iconsTecnologiesContainer.appendChild(iElement);
 }
+function loadVideo(src){
+    video.src = src;
+
+    video.onerror = function() {
+        alert('Não carregou');
+    };
+
+    video.oncanplaythrough = function() {
+        alert('O vídeo está pronto para ser reproduzido!');
+    };
+
+    video.load();
+}
+loadVideo('../../src/images/consul-plus-video.mp4');
 
 //Events
 contactButton.forEach(el => {
