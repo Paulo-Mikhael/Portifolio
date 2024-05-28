@@ -26,8 +26,14 @@ const projectTitle = document.querySelector('#project-title');
 const projectSubtitle = document.querySelector('#project-subtitle');
 const iconsTecnologiesContainer = document.querySelector('#icons');
 const projectsCarrousel = document.querySelectorAll('#projects-carousel img');
-let order = 0;
+const loaderContainer = document.querySelector('#loader-container');
+let order = 0; //Order for select a item on array
+//Before insert a item, make sure that it have image on carousel in html with class 'name'-carousel, a color theme in vars.css and a video in src
 const projectVideos = [
+    {
+        name: 'alura-studies',
+        function: () => changeVideoToAluraStudies()
+    },
     {
         name: 'consul',
         function: () => changeVideoToConsul()
@@ -41,14 +47,15 @@ const projectVideos = [
         function: () => changeVideoToUnity()
     },
     {
-        name: 'fastask',
-        function: () => changeVideoToFastask()
-    },
-    {
         name: 'software',
         function: () => changeVideoToSoftware()
+    },
+    {
+        name: 'fastask',
+        function: () => changeVideoToFastask()
     }
 ]
+changeVideoToAluraStudies(); //Initial video (fisrt item on array)
 
 //Functions
 function pauseVideo(){
@@ -78,15 +85,6 @@ function previousVideo(){
     pauseVideo();
     video.currentTime = 0;
 
-    if (videoContainer.classList.contains('previousVideo'))
-    {
-        videoContainer.classList.remove('previousVideo');
-    }
-
-    setInterval(() => {
-        videoContainer.classList.add('previousVideo');
-    }, 500);
-
     circlesPreviousAnimation();
     previousVideoContainer();
 }
@@ -94,15 +92,6 @@ function nextVideo(){
     pauseVideo();
     video.currentTime = 0;
     
-    if (videoContainer.classList.contains('nextVideo'))
-    {
-        videoContainer.classList.remove('nextVideo');
-    }
-
-    setInterval(() => {
-        videoContainer.classList.add('nextVideo');
-    }, 500);
-
     circlesNextAnimation();
     nextVideoContainer();
 }
@@ -273,7 +262,22 @@ function changeVideoToSoftware(){
 
     loadVideo('../../src/images/modern-software-video.mp4');
 }
+function changeVideoToAluraStudies(){
+    changeCarouselSelected('alura-studies');
+    appendTecnologiesClass('devicon-react-original');
+    appendTecnologiesClass('devicon-sass-original');
+    appendTecnologiesClass('devicon-typescript-plain');
+
+    projectTextContainer.classList.remove(projectTextContainer.classList[0]);
+    projectTextContainer.classList.add('alura-studies-theme');
+
+    projectTitle.textContent = 'Alura Studies';
+    projectSubtitle.innerHTML = 'A Alura Studies é uma aplicação web onde você pode definir uma tarefa e um tempo, para depois selecionar essa tarefa e começar uma contagem regressiva a partir do tempo da mesma. Eu fiz esse projeto ao longo do curso de React na Alura, neste projeto utilizei componentes de função e de classe, props e hooks, que são conhecimentos essenciais para trabalhar com react.';
+
+    loadVideo('../../src/images/alura-studies-video.mp4');
+}
 function changeCarouselSelected(projectVideoName){
+    //Make sure that have a 'projectVideoName'-carousel on carousel in html
     for (let i = 0; i < projectVideos.length; i++){
         if (projectVideos[i].name === projectVideoName){
             order = i;
@@ -292,6 +296,7 @@ function changeCarouselSelected(projectVideoName){
 }
 function clearTecnologies(){
     video.removeAttribute('src');
+
     if (helpButton.classList.contains('help-button-actived')){
         helpButton.classList.remove('help-button-actived');
         helpContainer.style.width = '0px';
@@ -317,12 +322,13 @@ function loadVideo(src){
     };
 
     video.oncanplaythrough = function() {
-        console.log('vídeo pronto');
+        loaderContainer.style.display = 'none';
     };
+
+    loaderContainer.style.display = 'flex';
 
     video.load();
 }
-loadVideo('../../src/images/consul-plus-video.mp4');
 function openHelpContainer(){
     if (helpButton.classList.contains('help-button-actived')){
         helpButton.classList.remove('help-button-actived');

@@ -70,6 +70,16 @@ section#projects{
                     border: 3px solid var(--red);
                     position: absolute;
                 }
+                #loader-container{
+                    background-color: var(--gray-one);
+                    position: absolute;
+                    height: inherit;
+                    width: inherit;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 3;
+                }
                 #filter{
                     z-index: 1;
                     width: inherit;

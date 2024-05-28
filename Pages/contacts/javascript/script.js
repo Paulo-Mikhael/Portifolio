@@ -11,6 +11,7 @@ const formTitle = document.querySelector('#form-title');
 const contactMessage = document.querySelector('#contact-message h2');
 const contactButton = document.querySelector('.footer.contact-button');
 const emailInput = document.querySelector('#email-input');
+const emailWordTitle = document.querySelector('h1 abbr');
 
 //Functions
 function changeText(target){
@@ -35,6 +36,21 @@ function changeText(target){
         window.open('https://wa.me/5592992813253?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20oferta...', '_blank');
     }
 }
+function copyText(texto) {
+    const elementoTemporario = document.createElement('textarea');
+    elementoTemporario.value = texto;
+    
+    document.body.appendChild(elementoTemporario);
+    
+    elementoTemporario.select();
+    elementoTemporario.setSelectionRange(0, 99999); // Para dispositivos móveis
+    
+    document.execCommand('copy');
+    
+    document.body.removeChild(elementoTemporario);
+    
+    alert(`'${texto}'` + ' copiado para a área de transferência!');
+}
 
 //Events
 contactOptionContainer.forEach(el => {
@@ -45,4 +61,7 @@ contactOptionContainer.forEach(el => {
 });
 contactButton.addEventListener('click', () => {
     window.location.replace('');
+});
+emailWordTitle.addEventListener('click', () => {
+    copyText('paulomiguel11111971@gmail.com');
 });

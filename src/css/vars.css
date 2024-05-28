@@ -19,6 +19,9 @@ body{
 .consul-theme{
     --theme: #408CFF;
 }
+.alura-studies-theme{
+    --theme: #88bcd1;
+}
 .software-theme{
     --theme: white;
     --software-anima: changeColor 26s infinite;
