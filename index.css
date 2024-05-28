@@ -107,8 +107,9 @@ header .perfil-message .line-two{
 header .header-bar{
     width: 630px;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
+    gap: 20px;
 }
 header .header-bar a{
     text-decoration: none;

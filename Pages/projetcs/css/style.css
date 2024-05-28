@@ -120,13 +120,16 @@ section#projects{
 
                         #help-container{
                             background-color: var(--gray-two);
-                            width: 500px;
-                            height: 200px;
+                            width: 0px;
+                            height: 0px;
                             position: absolute;
                             top: 20px;
                             right: 20px;
                             transition: all .3s;
                             border-radius: 7px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
 
                             #help-container-content{
                                 padding: 10px;
@@ -136,8 +139,8 @@ section#projects{
                                 justify-content: center;
                                 gap: 10px;
                                 overflow: hidden;
-                                opacity: 100%;
-                                transition: all .1s;
+                                opacity: 0%;
+                                transition: all .2s;
 
                                 p{
                                     line-height: 200%;
@@ -399,7 +402,7 @@ section#projects{
             display: flex;
             align-items: center;
             gap: 20px;
-            /* animation: carousel 8s linear infinite; */
+            animation: carousel 8s linear infinite;
             height: 100%;
 
             img{

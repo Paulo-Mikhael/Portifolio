@@ -292,6 +292,12 @@ function changeCarouselSelected(projectVideoName){
 }
 function clearTecnologies(){
     video.removeAttribute('src');
+    if (helpButton.classList.contains('help-button-actived')){
+        helpButton.classList.remove('help-button-actived');
+        helpContainer.style.width = '0px';
+        helpContainer.style.height = '0px';
+        helpContainer.children[0].style.opacity = '0%';
+    }
 
     while (iconsTecnologiesContainer.childElementCount != 0){
         iconsTecnologiesContainer.removeChild(iconsTecnologiesContainer.children[0]);
@@ -317,10 +323,18 @@ function loadVideo(src){
     video.load();
 }
 loadVideo('../../src/images/consul-plus-video.mp4');
-function helpButtonActive(target){
-    target.style.backgroundColor = 'lime';
-
-    
+function openHelpContainer(){
+    if (helpButton.classList.contains('help-button-actived')){
+        helpButton.classList.remove('help-button-actived');
+        helpContainer.style.width = '0px';
+        helpContainer.style.height = '0px';
+        helpContainer.children[0].style.opacity = '0%';
+    }else{
+        helpButton.classList.add('help-button-actived');
+        helpContainer.style.width = '500px';
+        helpContainer.style.height = '200px';
+        helpContainer.children[0].style.opacity = '100%';
+    }
 }
 
 //Events
@@ -396,15 +410,5 @@ projectsCarrousel.forEach(el => {
     });
 });
 helpButton.addEventListener('click', () => {
-    if (helpButton.classList.contains('help-button-actived')){
-        helpButton.classList.remove('help-button-actived');
-        helpContainer.style.width = '0px';
-        helpContainer.style.height = '0px';
-        helpContainer.children[0].style.opacity = '0%';
-    }else{
-        helpButton.classList.add('help-button-actived');
-        helpContainer.style.width = '500px';
-        helpContainer.style.height = '200px';
-        helpContainer.children[0].style.opacity = '100%';
-    }
+    openHelpContainer();
 });
