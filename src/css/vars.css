@@ -22,6 +22,9 @@ body{
 .alura-studies-theme{
     --theme: #88bcd1;
 }
+.casa-verde-theme{
+    --theme: #ffcb47;
+}
 .software-theme{
     --theme: white;
     --software-anima: changeColor 26s infinite;

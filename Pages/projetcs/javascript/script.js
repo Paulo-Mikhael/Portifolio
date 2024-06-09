@@ -7,6 +7,7 @@ const returnSecondButton = document.querySelector('#return-second-button');
 const maximizeButton = document.querySelector('#maximize-button');
 const helpButton = document.querySelector('#help-button');
 const helpContainer = document.querySelector('#help-container');
+const helpContainerContent = document.querySelector('#help-container-content');
 const progressBar = document.querySelector('#progress-bar');
 const videoTimeP = document.querySelector('#video-time p');
 const videoContainer = document.querySelector('#video');
@@ -35,6 +36,10 @@ const projectVideos = [
         function: () => changeVideoToAluraStudies()
     },
     {
+        name: 'casa-verde',
+        function: () => changeVideoToCasaVerde()
+    },
+    {
         name: 'consul',
         function: () => changeVideoToConsul()
     },
@@ -47,15 +52,11 @@ const projectVideos = [
         function: () => changeVideoToUnity()
     },
     {
-        name: 'software',
-        function: () => changeVideoToSoftware()
-    },
-    {
         name: 'fastask',
         function: () => changeVideoToFastask()
     }
 ]
-changeVideoToAluraStudies(); //Initial video (fisrt item on array)
+changeVideoToCasaVerde(); //Initial video
 
 //Functions
 function pauseVideo(){
@@ -207,6 +208,10 @@ function changeVideoToConsul(){
     projectSubtitle.innerHTML = 'Neste projeto é apresentado a página de uma clínica odontógica, <a target="_blank" href="https://paulo-mikhael.github.io/consul-plus">a Consul+</a>, neste site é destacado um formulário para contato e os cards que apresentam os serviços, gerando atenção aos serviços da empresa.';
 
     loadVideo('../../src/images/consul-plus-video.mp4');
+    changeLinksHelp('https://paulo-mikhael.github.io/consul-plus/', 
+        'https://drive.google.com/drive/folders/1xjtcNhKtKOvbJU_L9Qb6QOUW7OzcUmW6?hl=pt_BR', 
+        'https://github.com/Paulo-Mikhael/consul-plus?tab=readme-ov-file#readme'
+    );
 }
 function changeVideoToAcademia(){
     changeCarouselSelected('academia');
@@ -221,6 +226,10 @@ function changeVideoToAcademia(){
     projectSubtitle.innerHTML = 'Este projeto é uma página para uma academia, nela, é apresentado diversos cursos, sempre seguidos de mensagens motivadoras e que falam que a <a target="_blank" href="https://paulo-mikhael.github.io/academia-landing-page">Academia Vitalidade Fitness</a> é o lugar certo para sentirem sua evolução.';
 
     loadVideo('../../src/images/academia-video.mp4');
+    changeLinksHelp('https://paulo-mikhael.github.io/academia-landing-page/',
+        'https://drive.google.com/drive/folders/1zgeYl-gR0xMGEpaVz2N994JK4wLCXq8L?hl=pt_BR',
+        'https://github.com/Paulo-Mikhael/academia-landing-page'
+    );
 }
 function changeVideoToFastask(){
     changeCarouselSelected('fastask');
@@ -235,6 +244,10 @@ function changeVideoToFastask(){
     projectSubtitle.innerHTML = 'A <a target="_blank" href="https://paulo-mikhael.github.io/fastask">Fastask</a> é uma aplicação web que busca facilitar a gestão de tarefas, a página possui um design limpo e intuitivo, seu funcionamento consiste principalmente em criar, excluir e editar tarefas.';
 
     loadVideo('../../src/images/fastask-video.mp4');
+    changeLinksHelp('https://paulo-mikhael.github.io/fastask/',
+        'https://drive.google.com/drive/folders/1f4Wq0-4xKMTeNsDwOT7qy-XSfVP_8LgA?hl=pt_BR',
+        'https://github.com/Paulo-Mikhael/fastask'
+    );
 }
 function changeVideoToUnity(){
     changeCarouselSelected('unity');
@@ -249,18 +262,10 @@ function changeVideoToUnity(){
     projectSubtitle.innerHTML = 'Neste projeto, decidi recriar o <a target="_blank" href="https://paulo-mikhael.github.io/pagina-unity-2024">site da Unity</a> esta é uma boa página de vendas pois apesar de o principal da página ser a versão profissional do app, tenta redirecionar o usuário para outras páginas da empresa, gerando a retenção do cliente e favorecendo o SEO do site.';
 
     loadVideo('../../src/images/unity-video.mp4');
-}
-function changeVideoToSoftware(){
-    changeCarouselSelected('software');
-    appendTecnologiesClass('devicon-csharp-plain');
-
-    projectTextContainer.classList.remove(projectTextContainer.classList[0]);
-    projectTextContainer.classList.add('software-theme');
-
-    projectTitle.textContent = 'Modern Software UI';
-    projectSubtitle.innerHTML = 'Neste projeto é apresentado um aplicativo com um design moderno e intuitivo facilitando o uso das funções que irão ser incluídas';
-
-    loadVideo('../../src/images/modern-software-video.mp4');
+    changeLinksHelp('https://paulo-mikhael.github.io/pagina-unity-2024/',
+        'https://unity.com/pages/unity-pro-buy-now?utm_source=google&utm_medium=cpc&utm_campaign=cc_dd_upr_amer_amer-t2_en_pu_sem-gg_acq_br-pr_2023-01_brand-at2_cc3022_ev-br_id:71700000105927803&utm_content=cc_dd_upr_amer_pu_sem_gg_ev-br_pros_x_npd_cpc_kw_sd_all_x_x_brand_id:58700008262791741&utm_term=unity&&&&&gad_source=1&gclid=Cj0KCQiA84CvBhCaARIsAMkAvkI2ixzlSyPBXVK_AWEly_Qv7z5Ha8boUhvPG9qHkCdl7v2hBftG1ZIaAszYEALw_wcB&gclsrc=aw.ds',
+        'https://github.com/Paulo-Mikhael/pagina-unity-2024'
+    );
 }
 function changeVideoToAluraStudies(){
     changeCarouselSelected('alura-studies');
@@ -272,9 +277,30 @@ function changeVideoToAluraStudies(){
     projectTextContainer.classList.add('alura-studies-theme');
 
     projectTitle.textContent = 'Alura Studies';
-    projectSubtitle.innerHTML = 'A Alura Studies é uma aplicação web onde você pode definir uma tarefa e um tempo, para depois selecionar essa tarefa e começar uma contagem regressiva a partir do tempo da mesma. Eu fiz esse projeto ao longo do curso de React na Alura, neste projeto utilizei componentes de função e de classe, props e hooks, que são conhecimentos essenciais para trabalhar com react.';
+    projectSubtitle.innerHTML = 'A <a target="_blank" href="https://paulo-mikhael.github.io/alura-studies/">Alura Studies</a> é uma aplicação web onde você pode definir uma tarefa e um tempo, para depois selecionar essa tarefa e começar uma contagem regressiva a partir do tempo da mesma.';
 
     loadVideo('../../src/images/alura-studies-video.mp4');
+    changeLinksHelp('https://paulo-mikhael.github.io/alura-studies/',
+        'https://drive.google.com/drive/folders/1Dq7Qg9mCQJhjcRto_f1QgMYKUGkgTe5e?hl=pt_BR',
+        'https://github.com/Paulo-Mikhael/alura-studies'
+    );
+}
+function changeVideoToCasaVerde(){
+    changeCarouselSelected('casa-verde');
+    appendTecnologiesClass('devicon-react-original');
+    appendTecnologiesClass('devicon-typescript-plain');
+
+    projectTextContainer.classList.remove(projectTextContainer.classList[0]);
+    projectTextContainer.classList.add('casa-verde-theme');
+
+    projectTitle.textContent = 'Casa Verde';
+    projectSubtitle.innerHTML = 'Nesta página <a target="_blank" href="https://casa-verde-pink-phi.vercel.app/">e-commerce de plantas</a> é apresentado ao cliente uma oferta para assinar a newsletter da empresa e as plantas a venda através de um sistema de pesquisa.';
+
+    loadVideo('../../src/images/casa-verde-video.mp4');
+    changeLinksHelp('https://casa-verde-pink-phi.vercel.app/',
+        'https://drive.google.com/drive/folders/1FDUmGb5dpcQ-bgL2nKn3uQvBO1X_rtb3?hl=pt_BR',
+        'https://github.com/Paulo-Mikhael/casa-verde'
+    );
 }
 function changeCarouselSelected(projectVideoName){
     //Make sure that have a 'projectVideoName'-carousel on carousel in html
@@ -341,6 +367,11 @@ function openHelpContainer(){
         helpContainer.style.height = '200px';
         helpContainer.children[0].style.opacity = '100%';
     }
+}
+function changeLinksHelp(page, design, github){
+    helpContainerContent.children[0].children[0].setAttribute('href', page);
+    helpContainerContent.children[1].children[0].setAttribute('href', design);
+    helpContainerContent.children[2].children[0].setAttribute('href', github);
 }
 
 //Events

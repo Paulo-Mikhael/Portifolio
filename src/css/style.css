@@ -4,12 +4,12 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url(../images/portifolio-background.png);
     background-repeat: no-repeat;
     background-position: left end;
-    scroll-snap-type: y mandatory;
     animation: anima 7s alternate infinite;
     background-attachment: fixed;
+    background-image: url(../images/portifolio-background.png);
+    scroll-snap-type: y mandatory;
 }
 #main-filter{
     position: absolute;
