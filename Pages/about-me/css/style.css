@@ -39,6 +39,6 @@ section .about-me-content .about-me-message{
     gap: 16px;
 
     #about-me-text{
-        font-size: 20px;
+        font-size: 18px;
     }
 }

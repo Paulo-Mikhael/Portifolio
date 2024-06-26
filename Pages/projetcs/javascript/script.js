@@ -32,8 +32,8 @@ let order = 0; //Order for select a item on array
 //Before insert a item, make sure that it have image on carousel in html with class 'name'-carousel, a color theme in vars.css and a video in src
 const projectVideos = [
     {
-        name: 'alura-studies',
-        function: () => changeVideoToAluraStudies()
+        name: 'xwriter',
+        function: () => changeVideoToXWriter()
     },
     {
         name: 'casa-verde',
@@ -56,7 +56,7 @@ const projectVideos = [
         function: () => changeVideoToFastask()
     }
 ]
-changeVideoToCasaVerde(); //Initial video
+changeVideoToXWriter(); //Initial video
 
 //Functions
 function pauseVideo(){
@@ -267,22 +267,22 @@ function changeVideoToUnity(){
         'https://github.com/Paulo-Mikhael/pagina-unity-2024'
     );
 }
-function changeVideoToAluraStudies(){
-    changeCarouselSelected('alura-studies');
+function changeVideoToXWriter(){
+    changeCarouselSelected('xwriter');
     appendTecnologiesClass('devicon-react-original');
-    appendTecnologiesClass('devicon-sass-original');
     appendTecnologiesClass('devicon-typescript-plain');
+    appendTecnologiesClass('devicon-tailwindcss-original');
+    appendTecnologiesClass('devicon-reactrouter-plain');
 
     projectTextContainer.classList.remove(projectTextContainer.classList[0]);
-    projectTextContainer.classList.add('alura-studies-theme');
+    projectTextContainer.classList.add('xwriter-theme');
 
-    projectTitle.textContent = 'Alura Studies';
-    projectSubtitle.innerHTML = 'A <a target="_blank" href="https://paulo-mikhael.github.io/alura-studies/">Alura Studies</a> é uma aplicação web onde você pode definir uma tarefa e um tempo, para depois selecionar essa tarefa e começar uma contagem regressiva a partir do tempo da mesma.';
+    projectTitle.textContent = 'XWriter';
+    projectSubtitle.innerHTML = 'Essa aplicação web tem o objetivo de logar usuários de uma base dados, através de um formulário de criar conta se necessário, e permitir à eles, postar mensagens.';
 
-    loadVideo('../../src/images/alura-studies-video.mp4');
-    changeLinksHelp('https://paulo-mikhael.github.io/alura-studies/',
-        'https://drive.google.com/drive/folders/1Dq7Qg9mCQJhjcRto_f1QgMYKUGkgTe5e?hl=pt_BR',
-        'https://github.com/Paulo-Mikhael/alura-studies'
+    loadVideo('../../src/images/xwriter-video.mp4');
+    changeLinksHelp('https://xwriter.vercel.app/',
+        '', 'https://github.com/Paulo-Mikhael/XWriter?tab=readme-ov-file#readme'
     );
 }
 function changeVideoToCasaVerde(){
